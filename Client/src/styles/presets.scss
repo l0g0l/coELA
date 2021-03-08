@@ -1,0 +1,57 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Muli:100,200,300,400,500,600,700,800,900|Space+Mono:wght@400;700&display=swap');
+
+$mainFont: 'Muli', sans-serif;
+$bitFont: 'Space Mono', monospace;
+
+// Colours
+
+/* HXD */
+$black: #101010;
+$white: #fff;
+$red: #bf0811;
+$blue: #34404f;
+
+/* DIMENSIONS */
+$footer: 60px;
+$margs: 20px;
+
+// animations
+$defaultLinear: all 0.15s linear;
+$transitionEase: all 0.5s ease;
+
+@keyframes opacity {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+// BREAKPOINTS
+@mixin for-size($size) {
+  @if $size == phone {                                                // phone-only
+    @media (max-width: 690px) { @content; }
+  } @else if $size == no-phone {                                      // tablet-portrait-up
+    @media (min-width: 691px) { @content; }
+  } @else if $size == tablet-portrait-up {                            // tablet-portrait-up
+    @media (max-width: 750px) { @content; }
+  } @else if $size == tablet-portait-only {                           // tablet-portait-only
+    @media (min-width: 600px) and (max-width: 899px) { @content; } 
+  } @else if $size == tablet {                                        // tablet-landscape-up
+    @media (max-width: 1000px) { @content; }
+  } @else if $size == tablet-landscape-only {                         // tablet-landscape-only
+    @media (min-width: 900px) and (max-width: 1269px) { @content; } 
+  } @else if $size == desktop-up {                                    // desktop-up
+    @media (max-width: 1200px) { @content; }
+  } @else if $size == desktop-only {                                  // desktop-only
+    @media (min-width: 1200px) and (max-width: 1799px) { @content; } 
+  } @else if $size == big-desktop-up {                                // big-desktop-up
+    @media (max-width: 1500px) { @content; }
+  } @else if $size == desktop-min {                                   // big-desktop-special-minsize 
+    @media (max-width: 1100px) { @content; }
+  } @else if $size == desktop {                                       // big-desktop-special-changesize
+    @media (max-width: 1275px) { @content; }
+  } @else if $size == skin {                                          // skin (for values of css sponsors)
+    @media (min-width: 1000px) { @content; }
+  } @else if $size == small-vertical-screen {                         // small vertical screen
+    @media (max-height: 670px) { @content; }
+  }
+}
