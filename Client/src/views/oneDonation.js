@@ -3,16 +3,18 @@ import Footer from '../components/footer'
 
 import '../styles/style.scss'
 
-const RoundUp  = () => {
+const OneDonation = () => {
   return (
     <div className="containerPrincipal">
       <div className="containerSecundario">
         
 
-     Redondeo
+      Donar ahora
       <Footer />
       </div>
     </div>
   )
 }
-export default RoundUp
+
+
+export default OneDonation

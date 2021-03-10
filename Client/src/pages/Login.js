@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
@@ -45,7 +44,7 @@ iniciarSesion = async () => {
             cookies.set('apellidos', respuesta.apellidos, {path: "/"})
             cookies.set('username', respuesta.username, {path: "/"})
             // alert("Bienvenido a LuzonApp")
-            window.location.href="."
+            window.location.href="./"
            
 
         }else{alert ("Usuario o Contraseña incorrecto") }
