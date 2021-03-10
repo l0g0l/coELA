@@ -1,19 +1,19 @@
 
 import React from 'react'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 import '../styles/style.scss'
 
 
 const Percent = () => {
   return (
-    <div className="containerPrincipal">
-      <div className="containerSecundario">
+    <div>
+  
+        
 
-
-        Donar porcentaje nomina
-      <Footer />
-      </div>
-    </div>
+    Porcentaje
+     <Footer />
+     
+   </div>
   )
 }
 export default Percent

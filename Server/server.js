@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'Client/build')));
 
 
 app.post('/api/', urlencodedParser, users.getLogin);
-app.get('/api/dashboard',urlencodedParser,  users.getDashboard);
+app.get('/api/home',urlencodedParser,  users.getHome);
 app.get('/api/onedonation', urlencodedParser, users.getUnaDonacion);
 app.get('/api/roundup', urlencodedParser, users.getRedondeo);
 app.get('/api/percent', urlencodedParser, users.getPorcentaje);

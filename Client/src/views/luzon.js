@@ -1,18 +1,18 @@
 import React from 'react'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 
 import '../styles/style.scss'
 
 const Luzon = () => {
   return (
-    <div className="containerPrincipal">
-      <div className="containerSecundario">
+    <div>
+  
         
 
-      Luzon
-      <Footer />
-      </div>
-    </div>
+    Luzón
+     <Footer />
+     
+   </div>
   )
 }
 

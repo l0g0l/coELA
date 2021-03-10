@@ -1,14 +1,15 @@
 body {
-    background: url(../images/background-app.jpg);
+    background: url('../images/background.svg');
+    background-color: #33404F;
   }
   
-  .container {
-    padding: $margs $margs 60px $margs;
-  }
-  .content {
-    padding: $margs;
-    background-color: $white#{'fff40'};
-    border-radius: 5px;
-    height: 80vh;
-  }
+  // .container {
+  //   padding: $margs $margs 60px $margs;
+  // }
+  // .content {
+  //   padding: $margs;
+  //   background-color: $white#{'fff40'};
+  //   border-radius: 5px;
+  //   height: 80vh;
+  // }
   

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import React from 'react';
 import Login from '../pages/Login'
-import Dashboard from '../views/dashboard';
+import Home from '../views/home';
 import OneDonation from '../views/oneDonation';
 import Percent from '../views/percent';
 import RoundUp from '../views/roundUp'; 
@@ -14,8 +14,8 @@ const Routes = () => {
       <Switch>
 
         <Route exact path='/' component={Login}></Route>
-        <Route  path="/dashboard" component={Dashboard}></Route>
-        <Route  path="/onedonation'" component={OneDonation}></Route>
+        <Route  path="/home" component={Home}></Route>
+        <Route  path="/onedonation" component={OneDonation}></Route>
         <Route  path="/roundup" component={RoundUp}></Route>
         <Route  path="/percent" component={Percent}></Route>
         <Route  path="/periodic" component={Periodic}></Route>

@@ -1,17 +1,17 @@
 import React from 'react'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 
 import '../styles/style.scss'
 
 const Periodic = () => {
   return (
-    <div className="containerPrincipal">
-      <div className="containerSecundario">
+    <div>
+  
         
 
-      Donación periódica
+     Periodica
       <Footer />
-      </div>
+      
     </div>
   )
 }

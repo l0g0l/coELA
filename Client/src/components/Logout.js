@@ -4,7 +4,7 @@ import Cookies from 'universal-cookie'
 
 const cookies = new Cookies();
 
-class Dashboard extends Component {
+class Logout extends Component {
 
     cerrarSesion = () => {
         cookies.remove('id', { path: "/" });
@@ -14,11 +14,11 @@ class Dashboard extends Component {
         window.location.href = "./"
     }
 
-    // componentDidMount() {
-    //     if (!cookies.get('username')) {
-    //         window.location.href = "./"
-    //     }
-    // }
+    componentDidMount() {
+        if (!cookies.get('username')) {
+            window.location.href = "/"
+        }
+    }
 
     render() {
 
@@ -29,14 +29,14 @@ class Dashboard extends Component {
         return (
             <div className="container">
                 <div className="content">
-                    <div>
-                        Menu principal
+                     <div>
+                    
 
                         <button onClick={() => this.cerrarSesion()}> Cerrar sesión</button>
-                    </div>
+                    </div> 
                 </div>
             </div>
         )
     }
 }
-export default Dashboard
+export default Logout

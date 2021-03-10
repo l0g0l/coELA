@@ -1,17 +1,14 @@
  
 import React from 'react';
-import Layout from './components/layout';
-import Dashboard from './views/dashboard';
+import Layout from './components/Layout';
+
 
 
 
 const App = () => {
   return (
-    <Layout>
-      
-      <Dashboard /> 
-   
-    </Layout>
+    <Layout />
+
   );
 }
 export default App

@@ -5,10 +5,11 @@ const Footer = () => {
   return(
     <footer className="footer">
       <ul>
-        <li><img src={Images.home.default} alt='Home' />Home</li>
-        <li><img src={Images.user.default} alt='Usuario' />Usuario</li>
+        <li><img src={Images.home.default} alt='Home' />Inicio</li>
+        <li><img src={Images.donations.default} alt='Donaciones' />Donaciones</li>
+        <li><img src={Images.comunity.default} alt='Comunidad' />Comunidad</li>
         <li><img src={Images.luzon.default} alt='Luzón' />Luzón</li>
-        <li><img src={Images.donations.default} alt='Donaciones' />Donación</li>
+        
       </ul>
     </footer>
   )
