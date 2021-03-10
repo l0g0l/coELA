@@ -1,32 +1,44 @@
-//  Finalmente nuestro src/server.js
+const express = require('express');
+const app = express();
+const cors = require('cors'); // compartir recursos en distintos dominios y orígenes (front-back)
+const path = require('path');
+const dotenv = require('dotenv').config(); 
+
+const bodyParser = require('body-parser');
+let urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
-import express, {json, urlencoded} from "express"
-import morgan from "morgan";
-import passport from "passport";
-import cors from "cors";
-const app = express()
+// Settings
+const port = process.env.PORT || 5000
 
-import('./src/passport/google-auth')
-import('./src/passport/verify-token')
-
-//middlewares
-app.use(passport.initialize());
+app.use(cors());
 app.use(morgan('dev'))// para ver los estados http de las peticiones
-app.use(express.json());
-app.use(express.urlencoded({extended:false}))
-app.use(cors())
+// Serve the static files from the React app
+app.use(express.static(path.join(__dirname, 'Client/build')));
 
-//importando rutas
-import routes from "./src/routes/routes";
-app.use('/', routes);
-import rutasProtegidas from "./src/routes/rutasProtegidas";
-app.use('/api', passport.authenticate('jwt', { session : false }), rutasProtegidas );
 
-//Creando servidor
-import  {conectarDatabase} from "./database"; //importando funcion para conectar ala base de datos
-let puerto = process.env.PORT || 4000
-app.listen(puerto, () => {
-    console.log(`server on port ${puerto}`)
-    conectarDatabase()
-})
+// routes
+
+
+app.post('/api/', urlencodedParser, users.getLogin);
+app.get('/api/dashboard',urlencodedParser,  users.getDashboard);
+app.get('/api/onedonation', urlencodedParser, users.getUnaDonacion);
+app.get('/api/roundup', urlencodedParser, users.getRedondeo);
+app.get('/api/percent', urlencodedParser, users.getPorcentaje);
+app.get('/api/periodic', urlencodedParser, users.getPeriodica);
+app.post('api/logout',urlencodedParser, users.logoutUser)
+
+
+
+
+// Handles any requests that don't match the ones above
+app.get('*', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/Client/build/index.html'));
+});
+
+
+app.listen(port);
+console.log('App is listening on port ' + port);
+
+
+
