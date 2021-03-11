@@ -1,15 +1,33 @@
+
 body {
     background: url('../images/background.svg');
-    background-color: #33404F;
+    background-color: $grey;
   }
-  
-  // .container {
-  //   padding: $margs $margs 60px $margs;
-  // }
-  // .content {
-  //   padding: $margs;
-  //   background-color: $white#{'fff40'};
-  //   border-radius: 5px;
-  //   height: 80vh;
-  // }
-  
+  .btn-ovalado-green {
+    background:$green;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: $bordergreen;
+    margin-bottom: 20px;
+    align-items: center;
+    padding: 10px 70px;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: bold;
+    color: $grey;
+    
+  }
+  .btn-ovalado-pink {
+    background:$green;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+    align-items: center;
+    padding: 10px 70px;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 93px;
+    border-radius:$borderpink;
+    color: $grey;
+
+
+  }

@@ -1,6 +1,7 @@
 
-import React from 'react'
-import Footer from '../components/Footer'
+import React from 'react';
+import Footer from '../components/Footer';
+import Logout from '../components/Logout';
 import '../styles/style.scss'
 
 
@@ -10,7 +11,8 @@ const Percent = () => {
   
         
 
-    Porcentaje
+   <p> Porcentaje</p>
+    <Logout />
      <Footer />
      
    </div>

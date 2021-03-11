@@ -1,5 +1,6 @@
-import React from 'react'
-import Footer from '../components/Footer'
+import React from 'react';
+import Footer from '../components/Footer';
+import Logout from '../components/Logout';
 
 import '../styles/style.scss'
 
@@ -10,6 +11,7 @@ const Luzon = () => {
         
 
     Luzón
+    <Logout />
      <Footer />
      
    </div>

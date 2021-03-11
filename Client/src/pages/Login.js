@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Botonovalado from '../components/botones/Botonovalado';
 import axios from 'axios';
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
 import TextField from '@material-ui/core/TextField';
-// import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
+import logo from '../images/logo.svg';
 import '../styles/_login.scss';
+
 
 const baseurl = 'http://localhost:5000/usuarios';
 const cookies = new Cookies();
@@ -41,10 +45,10 @@ class Login extends Component {
 
                 if (response.length > 0) {
                     let respuesta = response[0]
-                    cookies.set('id', respuesta.id, { path: "/" })
-                    cookies.set('nombre', respuesta.nombre, { path: "/" })
-                    cookies.set('apellidos', respuesta.apellidos, { path: "/" })
-                    cookies.set('username', respuesta.username, { path: "/" })
+                    cookies.set('id', respuesta.id, { path: "/login" })
+                    cookies.set('nombre', respuesta.nombre, { path: "/login" })
+                    cookies.set('apellidos', respuesta.apellidos, { path: "/login" })
+                    cookies.set('username', respuesta.username, { path: "/login" })
                     // alert("Bienvenido a LuzonApp")
                     window.location.href = "./home"
 
@@ -63,39 +67,45 @@ class Login extends Component {
 
     render() {
         return (
-            <div>
-              
-                        <div className="input">
-                            <br/><br/>
-                            {/* <input
-                                type="text"
-                                className="form-control"
-                                name="username"
-                                onChange={this.handleChange}
-                            /> */}
-                            <TextField
-                                name="username"
-                                onChange={this.handleChange}
-                                id="outlined-error-helper-text"
-                                size="small"
-                                label="Username"
-                                variant="outlined"
-                                className="input-user" />
 
-                            <br />
-                            <label>Contraseña: </label>
-                            <br />
-                            <input
-                                type="password"
-                                className="form-control"
-                                name="password"
-                                onChange={this.handleChange}
-                            />
-                            <br />
-                            <button className="btn btn-primary" onClick={() => this.iniciarSesion()}>Iniciar Sesión</button>
-                        </div>
+            <div className="input">
+
+                <h3 className="input-txt1">Bienvenido</h3>
+                <img className="input-img" src={logo} alt="logo Luzón" />
+
+                <div className="input-div">
+                    <TextField
+                        label="Usuario"
+                        id="outlined-size-small"
+                        autoComplete="off"
+                        variant="outlined"
+                        size="small"
+                        name="username"
+                        onChange={this.handleChange}
+                        className="input-div-btnuser" />
+
+                    <TextField
+                        label="Contraseña"
+                        id="outlined-size-small"
+                        variant="outlined"
+                        size="small"
+                        name="username"
+                        onChange={this.handleChange}
+                        className="input-div-btnuser"
+                        type="password" />
+
+                    <div className="input-div-txt">
+                        <p className="input-div-txt-2">¿Has olvidado la contraseña?</p>
+                        <p className="input-div-txt-3">¿No tienes cuenta? <Link className="input-div-txt-4" to href="!#">Registrate</Link></p>
                     </div>
-            
+
+                    <Botonovalado valor="Iniciar Sesión" color="btn-ovalado-green" pulsar={this.iniciarSesion} />
+
+
+                </div>
+            </div>
+
+
         )
     }
 }

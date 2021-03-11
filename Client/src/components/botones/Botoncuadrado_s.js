@@ -1,1 +1,0 @@
-<buttonxs className="js"></buttonxs>
