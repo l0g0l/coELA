@@ -96,7 +96,7 @@ class Login extends Component {
 
                     <div className="input-div-txt">
                         <p className="input-div-txt-2">¿Has olvidado la contraseña?</p>
-                        <p className="input-div-txt-3">¿No tienes cuenta? <Link className="input-div-txt-4" to href="!#">Registrate</Link></p>
+                        <p className="input-div-txt-3">¿No tienes cuenta? <a className="input-div-txt-4" href="./">Registrate</a></p>
                     </div>
 
                     <Botonovalado valor="Iniciar Sesión" color="btn-ovalado-green" pulsar={this.iniciarSesion} />
