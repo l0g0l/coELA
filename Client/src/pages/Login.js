@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Botonovalado from '../components/botones/Botonovalado';
 import axios from 'axios';
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
 import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
 import logo from '../images/logo.svg';
 import '../styles/_login.scss';
 

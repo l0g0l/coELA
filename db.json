@@ -27,6 +27,85 @@
         "password": "827ccb0eea8a706c4c34a16891f84e7b"
       },
       "id": 4
+    },
+    {
+      "email": "lucia@gmail.com",
+      "password": "1234Lucia!",
+      "id": 5
+    },
+    {
+      "email": "lucia@gmail.com",
+      "password": "1234Lucia!",
+      "id": 6
+    },
+    {
+      "email": "lucia@gmail.com",
+      "password": "1234Lucia!!",
+      "id": 7
+    },
+    {
+      "email": "lucia@gmail.com",
+      "password": "1234Lucia!",
+      "id": 8
+    },
+    {
+      "nombre": "Lucía",
+      "email": "luciag.lara@gmail.com",
+      "password": "1234Lucia!",
+      "id": 9
+    },
+    {
+      "nombre": "Lucía",
+      "dni": "47551244D",
+      "email": "luciag.lara@gmail.com",
+      "password": "1234Lucia!",
+      "id": 10
+    },
+    {
+      "nombre": "Lucía",
+      "dni": "47551244D",
+      "email": "luciag.lara@gmail.com",
+      "id": 11
+    },
+    {
+      "nombre": "Lucía",
+      "email": "luciag.lara@gmail.com",
+      "password": "1234Lucia!",
+      "id": 12
+    },
+    {
+      "nombre": "Lucía",
+      "email": "luciag.lara@gmail.com",
+      "password": "1234Lucia!",
+      "id": 13
+    },
+    {
+      "nombre": "Lucía",
+      "email": "luciag.lara@gmail.com",
+      "password": "1234Lucia!",
+      "dni": "47551244D",
+      "id": 14
+    },
+    {
+      "nombre": "Lucía",
+      "dni": "47551244D",
+      "email": "luciag.lara@gmail.com",
+      "password": "1234Lucia!",
+      "id": 15
+    },
+    {
+      "nombre": "Lucía",
+      "dni": "47551244D",
+      "email": "luciag.lara@gmail.com",
+      "password": "1234Lucia!",
+      "id": 16
+    },
+    {
+      "nombre": "Lucía",
+      "dni": "47551244D",
+      "email": "luciag.lara@gmail.com",
+      "password": "1234Lucia!",
+      "id": 17
     }
   ]
 }
