@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useForm } from 'react-hook-form';
+
 import '../styles/_signup.scss';
 
 
@@ -30,12 +31,12 @@ export default function SignUp() {
 
       <form className="form-div" onSubmit={handleSubmit(onSubmit)}>
 
-        <div className="form-control">
-          <label>Nombre completo</label>
           <input
             type="text"
             name="nombre"
             className="form-input"
+            autoFocus
+            placeholder="Nombre completo"
             ref={register({
               required: {
                 value: true,
@@ -45,11 +46,12 @@ export default function SignUp() {
             })}
           />
           {errors.nombre && <p className="errorMsg">{errors.nombre.message}</p>}
-          <label>DNI</label>
+         
           <input
             type="text"
             name="dni"
             className="form-input"
+            placeholder="DNI"
             ref={register({
               required: {
                 value: true,
@@ -63,13 +65,11 @@ export default function SignUp() {
           />
           {errors.dni && <p className="errorMsg">{errors.dni.message}</p>}
 
-
-
-          <label>Email</label>
           <input
             type="text"
             name="email"
             className="form-input"
+            placeholder="Email"
             ref={register({
               required: {
                 value: true,
@@ -83,10 +83,26 @@ export default function SignUp() {
           />
           {errors.email && <p className="errorMsg">{errors.email.message}</p>}
 
-          <label>Password</label>
+          <input
+            type="text"
+            name="usuario"
+            className="form-input"
+            autoFocus
+            placeholder="Usuario"
+            ref={register({
+              required: {
+                value: true,
+                message: <p>Por favor introduzca Usuario</p>
+              },
+
+            })}
+          />
+          {errors.usuario && <p className="errorMsg">{errors.usuario.message}</p>}
+
           <input
             type="password"
             name="password"
+            placeholder="Password"
             ref={register({
               required: {
                 value: true,
@@ -102,11 +118,12 @@ export default function SignUp() {
             <p className="errorMsg">{errors.password.message}</p>
           )}
 
-        </div>
-        <div className="form-control">
-          <label></label>
-          <button type="submit">registrate</button>
-        </div>
+       
+        
+        <p className="form-div-txt-1">¿Ya tienes cuenta?<a href='./login' id="Inicia sesión" className="form-div-txt-2" >Inicia sesión</a></p>
+
+          <button className="form-div-btn" type="submit">Registrarme</button>
+      
       </form>
     </div>
   );

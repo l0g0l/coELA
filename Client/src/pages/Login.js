@@ -33,7 +33,7 @@ class Login extends Component {
     }
 
     iniciarSesion = async () => {
-        await axios.get(baseurl, { params: { username: this.state.form.username, password: md5(this.state.form.password) } })
+        await axios.post(baseurl, { params: { username: this.state.form.username, password: md5(this.state.form.password) } })
             .then(response => {
                 console.log(response.data);
 
@@ -94,7 +94,7 @@ class Login extends Component {
 
                     <div className="input-div-txt">
                         <p className="input-div-txt-2">¿Has olvidado la contraseña?</p>
-                        <p className="input-div-txt-3">¿No tienes cuenta? <a className="input-div-txt-4" href="./">Registrate</a></p>
+                        <p className="input-div-txt-3">¿No tienes cuenta? <a className="input-div-txt-4" href="./">Regístrate</a></p>
                     </div>
 
                     <Botonovalado valor="Iniciar Sesión" color="btn-ovalado-green" pulsar={this.iniciarSesion} />

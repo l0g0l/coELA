@@ -106,6 +106,54 @@
       "email": "luciag.lara@gmail.com",
       "password": "1234Lucia!",
       "id": 17
+    },
+    {
+      "dni": "47551244D",
+      "email": "luciag.lara@gmail.com",
+      "id": 18
+    },
+    {
+      "dni": "47551244D",
+      "email": "luciag.lara@gmail.com",
+      "password": "12345Lucia!",
+      "id": 19
+    },
+    {
+      "nombre": "Lucía",
+      "dni": "47551244D",
+      "email": "luciag.lara@gmail.com",
+      "password": "1234Lucia!",
+      "id": 20
+    },
+    {
+      "nombre": "Lucía",
+      "dni": "47551244D",
+      "email": "luciag.lara@gmail.com",
+      "password": "12345Lucia!",
+      "id": 21
+    },
+    {
+      "nombre": "Lucia",
+      "dni": "47488174M",
+      "email": "luciag.lara@gmail.com",
+      "usuario": "lo",
+      "password": "1234Lucia!",
+      "id": 22
+    },
+    {
+      "nombre": "Lucía",
+      "dni": "47551244D",
+      "email": "luciag.lara@gmail.com",
+      "usuario": "lo",
+      "password": "1234Lucia!",
+      "id": 23
+    },
+    {
+      "params": {
+        "username": "12345",
+        "password": "d41d8cd98f00b204e9800998ecf8427e"
+      },
+      "id": 24
     }
   ]
 }
