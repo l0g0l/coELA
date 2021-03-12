@@ -2,31 +2,50 @@ const express = require('express');
 const app = express();
 const cors = require('cors'); // compartir recursos en distintos dominios y orígenes (front-back)
 const path = require('path');
-const dotenv = require('dotenv').config(); 
-
 const bodyParser = require('body-parser');
-let urlencodedParser = bodyParser.urlencoded({ extended: false })
+const dotenv = require('dotenv').config(); 
+const morgan = require('morgan');
+const mongo = require('./config/db');
+const routes = require('./routes/index');
+
+
+conectarDB = require('./config/db')
+
+//Habilitando body parser
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // Settings
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 4000
 
+
+// Habilitar Cors
+// const opcionesCors = {
+//   origin: process.env.FRONTEND_URL
+// }
+// app.use(cors(opcionesCors) );
 app.use(cors());
+
 app.use(morgan('dev'))// para ver los estados http de las peticiones
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'Client/build')));
 
 
+
+
 // routes
+app.use('/api', routes());
 
 
-app.post('/api/', urlencodedParser, users.getLogin);
-app.get('/api/home',urlencodedParser,  users.getHome);
-app.get('/api/onedonation', urlencodedParser, users.getUnaDonacion);
-app.get('/api/roundup', urlencodedParser, users.getRedondeo);
-app.get('/api/percent', urlencodedParser, users.getPorcentaje);
-app.get('/api/periodic', urlencodedParser, users.getPeriodica);
-app.post('api/logout',urlencodedParser, users.logoutUser)
+app.use('/api/users', require('./routes/index'));
+
+// app.get('/api/home',urlencodedParser,  users.getHome);
+// app.get('/api/onedonation', urlencodedParser, users.getUnaDonacion);
+// app.get('/api/roundup', urlencodedParser, users.getRedondeo);
+// app.get('/api/percent', urlencodedParser, users.getPorcentaje);
+// app.get('/api/periodic', urlencodedParser, users.getPeriodica);
+// app.post('api/logout',urlencodedParser, users.logoutUser)
 
 
 
@@ -39,6 +58,5 @@ app.get('*', (req,res) =>{
 
 app.listen(port);
 console.log('App is listening on port ' + port);
-
 
 
