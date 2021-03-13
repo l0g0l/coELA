@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Botonovalado from '../components/botones/Botonovalado';
 import axios from 'axios';
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
@@ -7,8 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import logo from '../images/logo.svg';
 import '../styles/_login.scss';
 
-
-const baseurl = 'http://localhost:5000/usuarios';
+const baseurl = 'http://localhost:4000/api/user';
 const cookies = new Cookies();
 
 
@@ -33,7 +31,9 @@ class Login extends Component {
     }
 
     iniciarSesion = async () => {
-        await axios.post(baseurl, { params: { username: this.state.form.username, password: md5(this.state.form.password) } })
+        let url = `${baseurl}/${this.state.form.username}/${this.state.form.password}`
+        await axios.post(baseurl, {username: this.state.form.username, password: md5(this.state.form.password)})
+
             .then(response => {
                 console.log(response.data);
 
@@ -41,13 +41,8 @@ class Login extends Component {
             })
             .then(response => {
 
-                if (response.length > 0) {
-                    let respuesta = response[0]
-                    cookies.set('id', respuesta.id, { path: "/login" })
-                    cookies.set('nombre', respuesta.nombre, { path: "/login" })
-                    cookies.set('apellidos', respuesta.apellidos, { path: "/login" })
-                    cookies.set('username', respuesta.username, { path: "/login" })
-                    // alert("Bienvenido a LuzonApp")
+                if (response.mensaje === 'login OK') {
+                    cookies.set('username', this.state.form.username, { path: "/" })
                     window.location.href = "./home"
 
 
@@ -83,11 +78,11 @@ class Login extends Component {
                         className="input-div-btnuser" />
 
                     <TextField
-                        label="Contraseña"
+                        label="Contraseña"  
                         id="outlined-size-small"
                         variant="outlined"
                         size="small"
-                        name="username"
+                        name="password"
                         onChange={this.handleChange}
                         className="input-div-btnuser"
                         type="password" />
@@ -97,7 +92,7 @@ class Login extends Component {
                         <p className="input-div-txt-3">¿No tienes cuenta? <a className="input-div-txt-4" href="./">Regístrate</a></p>
                     </div>
 
-                    <Botonovalado valor="Iniciar Sesión" color="btn-ovalado-green" pulsar={this.iniciarSesion} />
+                    <button onClick={this.iniciarSesion}className="form-div-btn" type="submit">Iniciar sesión</button>
 
 
                 </div>

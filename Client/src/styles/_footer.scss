@@ -2,7 +2,9 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: $blue#{'0e'};
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     ul {
       display: flex;
       justify-content: space-between;
@@ -12,13 +14,12 @@
         align-items: center;
         justify-content: center;
         padding: 10px;
-        color: $white;
-        &:hover {
-          background-color: $blue;
-        }
+        color: #33404F;
+        font-size: 12px;
+    
         img {
-          width: 30px;
-          filter: invert(100%);
+          width: 35px;
+          // filter: invert(100%);
         }
       }
     }

@@ -14,11 +14,11 @@ class Logout extends Component {
         window.location.href = "./login"
     }
 
-    componentDidMount() {
-        if (!cookies.get('username')) {
-            window.location.href = "/login"
-        }
-    }
+    // componentDidMount() {
+    //     if (!cookies.get('username')) {
+    //         window.location.href = "/login"
+    //     }
+    // }
 
     render() {
 
