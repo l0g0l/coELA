@@ -7,13 +7,14 @@ import Percent from '../views/percent';
 import RoundUp from '../views/roundUp'; 
 import Periodic from '../views/periodic';
 import Luzon from '../views/luzon';
+import SignUp from '../views/signUp';
 
 const Routes = () => {
   return (
     <Router>
       <Switch>
-
-        <Route exact path='/' component={Login}></Route>
+        <Route exact path='/' component={SignUp}></Route>
+        <Route  path='/login' component={Login}></Route>
         <Route  path="/home" component={Home}></Route>
         <Route  path="/onedonation" component={OneDonation}></Route>
         <Route  path="/roundup" component={RoundUp}></Route>

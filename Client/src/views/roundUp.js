@@ -1,5 +1,6 @@
-import React from 'react'
-import Footer from '../components/Footer'
+import React from 'react';
+import Footer from '../components/Footer';
+import Logout from '../components/Logout';
 
 import '../styles/style.scss'
 
@@ -9,7 +10,8 @@ const RoundUp  = () => {
   
         
 
-     Redondeo
+    <p> Redondeo</p>
+     <Logout />
       <Footer />
       
     </div>
