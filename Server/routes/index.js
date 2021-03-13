@@ -15,7 +15,7 @@ module.exports = function(){
 
 //Obtiene usuario de BBDD
    
-    router.get('/user/:id', userController.userLoged)
+    router.post('/user', userController.userLoged)
 
 //Modifica User
 

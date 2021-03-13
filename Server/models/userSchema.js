@@ -5,7 +5,7 @@ const userSchema = new Schema ({
     username: "",
     nombre:"",
     apellidos:"",
-    pasword: "",
+    password: "",
     email:""
 })
 

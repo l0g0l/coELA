@@ -7,6 +7,9 @@ const dotenv = require('dotenv').config();
 const morgan = require('morgan');
 const mongo = require('./config/db');
 const routes = require('./routes/index');
+const crypto = require('crypto')
+
+let hash = crypto.createHash('md5').update('some_string').digest("hex")
 
 
 conectarDB = require('./config/db')

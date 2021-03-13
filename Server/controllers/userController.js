@@ -1,5 +1,7 @@
 const User = require('../models/userSchema');
+const crypto = require('crypto')
 
+//Crea nuevo usuario
 exports.newUser = async (req, res, next)=>{
    
    const user = new User(req.body)
@@ -12,15 +14,31 @@ exports.newUser = async (req, res, next)=>{
     }
     
 }
-//Usuarios por ID
+//Comprueba usuario y contraseña
 exports.userLoged = async (req, res, next)=>{
+    console.log(req.body)
 
+    let result = {}
     try {
-        const user = await User.findById(req.params.id);
-        res.json(user)
+        const user = await User.findOne({username:req.body.username}).then((data)=>{
+            // let hash = crypto.createHash('md5').update(req.body.password).digest("hex")   
+        console.log(req.body.password)
+        console.log(data.password)
+    
+        if(data.password == req.body.password){
+            res.json({mensaje: 'login OK'})
+            res.end();
+        }else {
+            res.json({mensaje: 'login KO'})
+            res.end();
+        }});
+        
+        
     } catch (error) {
-        console.log('no esta logado');
-        next();
+        console.log(error)
+        res.json({mensaje: 'usuario inexistente'});
+        res.end();
+    
     }
 }
 
