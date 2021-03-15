@@ -1,61 +1,73 @@
 const mongoose = require('mongoose')
 const Schema  = mongoose.Schema;
 
-const userSchema = new Schema ({
-    username: "",
-    nombre:"",
-    apellidos:"",
-    password: "",
-    email:""
-})
+// esquema de prueba
 
-
-// const userSchema = new Schema({
-//     username: {
-//         type: String,
-//         require: true,
-//         maxlength: [50,"Nombre muy largo"],
-//         trim: true
-//     },
-
-//     nombre: {
-//         type: String,
-//         require: true,
-//         maxlength: [20,"Username muy grande"],
-//         unique: true,
-//         trim: true
-//     },
-     
-//     apellido: {
-//         type: String,
-//         require: true,
-//         maxlength: [20,"Password muy grande"],
-//         trim: true
-//     },
-  
-   
-//     //Pasword encriptada 
-//     email: {
-//         type: String,
-//         require: true,
-//         maxlength: [50,"Apellido muy largo"],
-//         trim: true
-//     },
-//     luzones: {
-//         type: String,
-//         require: true,
-//         maxlength: [50,"Apellido muy largo"],
-//         trim: true
-//     },
-//     insignia: {
-//         type: String,
-//         require: true,
-//         maxlength: [50,"Apellido muy largo"],
-//         trim: true
-//     }
-   
-  
+//const userSchema = new Schema ({
+//     username: "",
+//     nombre:"",
+//     password: "",
+//     email:"",
+//     dni:"",
 // })
+
+const userSchema = new Schema({
+    username: {
+        type: String,
+        trim: true,
+        unique: true
+
+    },
+    name: {
+        type: String,
+        trim: true
+    },
+    dni: {
+        type: String,
+        unique: true,
+        trim: true
+    },
+    email: {
+        type: String,
+        trim: true,
+        unique: true
+    },
+    password: {
+        type: String,
+        trim: true
+    },
+    
+    luzonesTotal: {
+        type: Number,
+        trim: true
+    },
+    luzonesLast: {
+        type: Number,
+        trim: true
+    },
+    payby: {
+        card: {
+        type: Boolean,
+        trim: true
+        },
+        paypal: {
+        type:  Boolean,
+        trim: true
+        },
+        ccc: {
+        type:  Boolean,
+        trim: true
+        },
+        cripto: {
+        type:  Boolean,
+        trim: true
+        }
+    },
+   
+
+   
+  
+})
 
 
 

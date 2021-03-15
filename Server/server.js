@@ -40,8 +40,9 @@ app.use(express.static(path.join(__dirname, 'Client/build')));
 // routes
 app.use('/api', routes());
 
-
+//esto es necesario o me vale con la de arriba??
 app.use('/api/users', require('./routes/index'));
+app.use('/api/registro', require('./routes/index'));
 
 // app.get('/api/home',urlencodedParser,  users.getHome);
 // app.get('/api/onedonation', urlencodedParser, users.getUnaDonacion);
