@@ -1,38 +1,94 @@
 .encabezado {
     text-align: center;
-    padding-top: 68px;
     background: #1F3044;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+
+    &-wifi {
+            text-align: center;
+            padding-bottom: 30px;
+    }
+
+    &-2 {
     display: flex;
     justify-content: center;
-
+    }   
         &-txt-1 {
             font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
+            font-weight: 700;
+            font-size: 20px;
             color: #FFFFFF;
-            margin-left: 10px;     
+            margin-right: 25px;
+            padding-bottom: 25px;
+            
         }
     }
+.screen1 {
+    display: flex;
+    flex-direction: column;
+    
+}
+.screen2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.screen-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.screen-btnrect {
+    text-align: center;
+}
+.txt {
+    display: flex;
+    margin-right: 20px;
+
       
-.screen {
-
-        &-txt-1 {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 15px;
-            color: #FFFFFF;
-        }
-
-
-
-
-
-
-
-
+    &-1 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        color: #FFFFFF;
+        margin:20px 199px 20px 21px;
     }
+    &-2 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        color: #FFFFFF;
+        margin:40px 20px 20px 21px;
+    }
+    &-3 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        color: #FFFFFF;
+        margin-bottom: 15px;
+    
+    }
+   
+}
+.screen-btnrect {
+    text-align: center;
+}
+.transferencia {
+    text-align: center;
+}
+.btn-ovalado {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+    
 
 
 

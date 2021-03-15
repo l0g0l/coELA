@@ -1,0 +1,106 @@
+.encabezadoperfil {
+    text-align: center;
+    background: #1F3044;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    &-1 {
+        margin-bottom: 10px;
+        text-align: right;
+        margin-right: 20px;
+    
+        &-ruedecita {
+            text-align: right;
+        }
+    }
+    &-img {
+
+        width: 100px;
+    }
+
+    &-2 {
+    display: flex;
+    justify-content: space-evenly;
+
+    }
+        &-txt-1 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 35px;
+            color: #FFFFFF;     
+            
+        }
+    &-3 {
+        display: flex; 
+
+    }
+        &-txt-2 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            color: #00DDA3;
+            margin-left: 55px;
+            margin-right: 10px;
+        }
+
+    }
+    .carrusel {
+        text-align: center;
+
+        &-1 {
+            width: 355px;
+            margin-top: 20px;
+        }
+    }
+    .insignias {
+        text-align: center;
+
+        &-1 {
+            width: 368px;
+            margin-top: -6px;
+            margin-bottom: 15px;
+        }
+    }
+    .txthome {
+        text-align: left;
+
+        &-1 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        color: #FFFFFF;
+        margin:20px 0 0 10px;
+    }
+}
+.configdonaciones {
+
+    &-btn {
+        width: 120px;
+        background: transparent;
+        border: none;
+        outline: none;
+
+        &-1 {
+         
+            width: 150px;
+        }
+        &-2 {
+
+            width: 150px; 
+        }
+        &-3 {
+            width: 150px;
+            
+        }
+
+    }
+
+       
+
+
+
+}
+  
+      
+      
+    

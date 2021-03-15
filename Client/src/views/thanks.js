@@ -5,6 +5,11 @@ import Logout from '../components/Logout';
 import '../styles/style.scss'
 
 const Thanks  = () => {
+  componentDidMount() {
+    if (!cookies.get('username')) {
+        window.location.href = "/login"
+    }
+}
   return (
     <div>
   

@@ -5,6 +5,7 @@ import Logout from '../components/Logout';
 import '../styles/style.scss'
 
 const Periodic = () => {
+
   return (
     <div>
   

@@ -6,6 +6,7 @@ import '../styles/style.scss'
 
 
 const Percent = () => {
+
   return (
     <div>
   

@@ -1,19 +1,19 @@
 .form {
     text-align: center;
-    margin-top: 58px;   
+    margin-top: 109px;   
 
     &-txt {
         color: white;
         font-style: normal;
         font-weight: bold;
         font-size: 30px;
-        margin:0 0 30px 0;
+        margin:0 0 64px 0;
     }
     &-div {
         background-color:#1F3044;
-        padding:29px;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
+        padding: 60px 0 108px 0;
+        border-top-left-radius: 45px;
+        border-top-right-radius: 45px;
         div:focus{
             outline: none;
             color:#00DDA3 ;
@@ -23,14 +23,17 @@
             color: #00DDA3;
         } 
     input{
-        border:1px solid #00DDA3; 
+        border:2px solid #00DDA3; 
         margin-bottom: 14px; 
         color: white;
         padding: 15px 23px;
+        width: 271px;
+        height: 26px;
+        font-size: 25px;
     }
     ::placeholder {
         color: #00DDA3;
-        font-size: 15px;
+        font-size: 19px;
         text-align: center;
       }
         &-error {
@@ -40,34 +43,34 @@
         &-txt-1 {
             font-style: normal;
             font-weight: normal;
-            font-size: 11px;
+            font-size: 17px;
             color: #FFFFFF;
-            margin-bottom: 25px;
+            margin-bottom: 110px;
+            margin-top: 20px;
             
         }
         &-txt-2 {
             font-style: normal;
             font-weight: normal;
-            font-size: 11px;
+            font-size: 18px;
             color:#00DDA3;
-            margin-bottom: 25px;
+            margin-bottom: 110px;
             text-decoration-line: underline;
             margin-left: 5px;
+            margin-top: 20px;
         }
         &-btn {
-            background:#00DDA3;
+            background: #00DDA3;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 38px;
             margin-bottom: 20px;
             align-items: center;
-            padding: 10px 85px;
+            padding: 17px 98px;
             font-style: normal;
-            font-size: 15px;
+            font-size: 19px;
             font-weight: bold;
-            color: #33404F
+            color: #33404F;
         }
-
-
     }
 
 

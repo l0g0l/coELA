@@ -5,6 +5,8 @@ import Logout from '../components/Logout';
 import '../styles/style.scss'
 
 const Luzon = () => {
+
+
   return (
     <div>
   

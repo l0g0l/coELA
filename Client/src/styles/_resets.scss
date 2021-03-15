@@ -77,19 +77,19 @@ section {
   margin: 0; 
 }
 input {
-  background-color: $white;
+  background-color: transparent;
   color: $black;
-  outline: 0px;
+  outline: none;
   background: none; 
 }
 a {
   transition: $defaultLinear;
-  color: $red;
+  color: #33404F;
   text-decoration: none;
-  &:hover {
-    transition: $defaultLinear;
-    color: $black;
-  }
+  // &:hover {
+  //   transition: $defaultLinear;
+  //   color: $black;
+  // }
 }
 
 strong, b {
