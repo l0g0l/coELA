@@ -3,30 +3,29 @@ body {
     background: url('../images/background.svg');
     background-color: $grey;
   }
-  // // .btn-ovalado-green {
-  //   background: #00DDA3;
-  //   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-  //   border-radius: 38px;
-  //   margin-bottom: 20px;
-  //   align-items: center;
-  //   padding: 17px 98px;
-  //   font-style: normal;
-  //   font-size: 18px;
-  //   font-weight: bold;
-  //   color: #33404F;
+  .btn-ovalado-green {
+    background: #00DDA3;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 38px;
+    margin-bottom: 20px;
+    align-items: center;
+    padding: 17px 98px;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: bold;
+    color: #33404F;
     
-  // // }
+   }
   .btn-ovalado-pink {
-    background:$pink;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #F19174;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     margin-bottom: 20px;
     font-style: normal;
     font-size: 18px;
     font-weight: bold;
     padding: 17px 146px;
-    border-radius:$borderpink;
-    color: $grey;
-   
+    border-radius: 50px;
+    color: #33404F;
 
   }
   .flecha {

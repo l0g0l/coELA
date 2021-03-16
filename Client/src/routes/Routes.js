@@ -8,6 +8,9 @@ import RoundUp from '../views/roundUp';
 import Periodic from '../views/periodic';
 import Luzon from '../views/luzon';
 import SignUp from '../views/signUp';
+import CreditCard from '../views/creditCard';
+
+
 
 const Routes = () => {
   return (
@@ -17,6 +20,7 @@ const Routes = () => {
         <Route  path='/signup' component={SignUp}></Route>
         <Route  path="/home" component={Home}></Route>
         <Route  path="/onedonation" component={OneDonation}></Route>
+        <Route  path="/payment" component={CreditCard}></Route>
         <Route  path="/roundup" component={RoundUp}></Route>
         <Route  path="/percent" component={Percent}></Route>
         <Route  path="/periodic" component={Periodic}></Route>
