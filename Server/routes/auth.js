@@ -10,13 +10,13 @@ router.post('/',
         check('usuario', 'Agrega un email válido').not().isEmpty(),
         check('password', 'El password no puede ir vacio').not().isEmpty()
     ],
-    authController.autenticarUsuario
+    authController.authUser
 );
 
 
 router.get('/',
     auth,
-    authController.usuarioAutenticado
+    authController.authUser
 );
 
 

@@ -13,8 +13,8 @@ module.exports = (req, res, next ) => {
         if(token) {
             // comprobar el JWT
             try {
-                const usuario = jwt.verify(token, process.env.SECRETA );
-                req.usuario = usuario;
+                const user = jwt.verify(token, process.env.SECRETA );
+                req.user = user;
             } catch (error) {
                 console.log(error);
                 console.log('JWT no valido');

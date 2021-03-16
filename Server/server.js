@@ -1,7 +1,8 @@
 const express = require('express');
 const conectarDB = require('./config/db');
 const cors = require('cors');
-const routes=require('./routes')
+const routes = require('./routes');
+
 
 // crear el servidor
 const app = express();
@@ -26,7 +27,7 @@ app.use( express.json() );
 // routes
 //app.use('/', routes());
 // Rutas de la app
-app.use('/api/registro', require('./routes/user'));
+app.use('/api/signup', require('./routes/newUser'));
 app.use('/api/user', require('./routes/auth'));
 // app.use('/api/donations', require('./routes/donations'));
 

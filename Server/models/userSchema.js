@@ -1,39 +1,28 @@
 const mongoose = require('mongoose')
 const Schema  = mongoose.Schema;
 
-// esquema de prueba
-
-//const userSchema = new Schema ({
-//     username: "",
-//     nombre:"",
-//     password: "",
-//     email:"",
-//     dni:"",
-// })
-
-//Unificar con front
-
 const userSchema = new Schema({
    
-    nombre: {
+    name: {
         type: String,
         trim: true
     }, 
-    usuario: {
+    user: {
         type: String,
         trim: true,
-        // unique: true
+        Date: Date.now(),
+        unique: true
 
     },
     dni: {
         type: String,
-        // unique: true,
+        unique: true,
         trim: true
     },
     email: {
         type: String,
         trim: true,
-        //unique: true
+        unique: true
     },
     password: {
         type: String,
@@ -47,6 +36,11 @@ const userSchema = new Schema({
     luzonesLast: {
         type: Number,
         trim: true
+    },
+    lastDonation: {
+        type: Number,
+        //Date: Date.Now,
+
     },
     payby: {
         card: {
