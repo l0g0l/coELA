@@ -11,26 +11,29 @@ const Schema  = mongoose.Schema;
 //     dni:"",
 // })
 
-const userSchema = new Schema({
-    username: {
-        type: String,
-        trim: true,
-        unique: true
+//Unificar con front
 
-    },
-    name: {
+const userSchema = new Schema({
+   
+    nombre: {
         type: String,
         trim: true
+    }, 
+    usuario: {
+        type: String,
+        trim: true,
+        // unique: true
+
     },
     dni: {
         type: String,
-        unique: true,
+        // unique: true,
         trim: true
     },
     email: {
         type: String,
         trim: true,
-        unique: true
+        //unique: true
     },
     password: {
         type: String,
