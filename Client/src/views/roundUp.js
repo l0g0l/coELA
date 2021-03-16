@@ -2,43 +2,55 @@ import React from 'react';
 import Footer from '../components/Footer';
 import Encabezadocomun from '../components/Encabezadocomun';
 import Botoncuadradopeq from '../components/botones/Botoncuadradopeq';
-import Botondespleg from '../components/botones/Botondespleg';
+import Desplegable from '../components/Desplegable';
+import DesplegableOptions from '../components/DesplegableOptions';
+import Botonovalado from '../components/botones/Botonovalado';
+import { useHistory } from 'react-router-dom';
+import quesitoblanco from '../images/quesitoblanco.svg';
 
 
 // import Logout from '../components/Logout';
 
 import '../styles/_roundup.scss'
-import Desplegable from '../components/Desplegable';
+
 
 const RoundUp = () => {
 
+  let history = useHistory();
+  const send = () => {
+    history.push("/home");
+  }
+
   return (
     <div>
-      <Encabezadocomun />
+      <Encabezadocomun texto={'Redondeo de mis compras'} src={quesitoblanco}/>
       <div className="redondeo">
         <p className="redondeo-txt"> Acelerador de solidaridad</p>
       </div>
 
       <div className="redondeo-btnmed">
-        <Botoncuadradopeq />
-        <Botoncuadradopeq />
-        <Botoncuadradopeq />
+        <Botoncuadradopeq valor={'x1'} />
+        <Botoncuadradopeq valor={'x2'} />
+        <Botoncuadradopeq valor={'x3'} />
       </div>
       <div className="redondeo-txt-2">
         <p>Ejemplo: Si escoges x1 y compras un café de 0,80€ donarás 0,20€</p>
       </div>
 
-      
-    <Desplegable />
+        <Desplegable />
 
-     
+      <div >
+        <p className="redondeo-txt">Tipo de donación</p>
+        </div>
 
+        <div className="desplegable">
+        <DesplegableOptions />
 
-      <div className="redondeo-txt">
-        <p>Tipo de donación</p>
-        <Botondespleg />
       </div>
+      <div className="btnend">
+      <Botonovalado  pulsar={send} texto={'Guardar'} color="btn-ovalado-pink" />
 
+      </div>
 
 
       {/* <Logout /> */}

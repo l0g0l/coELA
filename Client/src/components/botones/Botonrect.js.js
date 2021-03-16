@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Botonorect = () => {
+const Botonrect = ({texto}) => {
 
     return (
         <div >
-         <input className="btnrect" type="text" placeholder="Otra cantidad"/>
+         <input className="btnrect" type="text" placeholder={texto}/>
 
         </div>
     )
 }
 
-export default Botonorect
+export default Botonrect

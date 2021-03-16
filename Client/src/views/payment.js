@@ -5,12 +5,17 @@ import Flecha from '../components/Flecha.js';
 import wifi from '../images/wifi.svg';
 import mastercard from '../images/mastercard.svg';
 import tarjetacreditopage from '../images/tarjetacreditopage.svg';
-import '../styles/_creditCard.scss'
+import { useHistory } from 'react-router-dom';
+
+import '../styles/_payment.scss'
 
 
-function CreditCard() {
+function Payment() {
+    let history1 = useHistory();
+    const sendthanks = () => {
+      history1.push("/thanks");
+    }
 
-    
     return (
         <div>
             <div className="encabezado" >
@@ -24,42 +29,48 @@ function CreditCard() {
             </div>
 
             <div className="encabezado-txt">
-                <form action="!#">
                 <p className="encabezado-txt-tarjeta">Tarjeta bancaria</p>
-                <img src={tarjetacreditopage} alt=""/>
-                </form>
+                <img src={tarjetacreditopage} alt="" />
+
             </div>
 
             <div className="tarjeta">
-                <div className="tarjeta-input">
-                    <p className="tarjeta-input-txt">Titular</p>
-                    <input type="text" className="tarjeta-input-txt-1" />
-                    <input className="encabezado-txt-tarjeta-mastercard-1" type="image" src={mastercard}/>
 
+                <p className="tarjeta-input-txt">Titular</p>
+                <div className="tarjeta-input">
+                    <input type="text" className="tarjeta-input-txt-1" />
+                    <img className="tarjeta-input-mastercard" src={mastercard} />
                 </div>
 
-                <div className="tarjeta-input">
+                <div >
                     <p className="tarjeta-input-txt">Número de tarjeta</p>
                     <input src={mastercard} type="text" className="tarjeta-input-txt-2"></input>
                 </div>
-                <div className="tarjeta-input-div">
-                    <div className="tarjeta-input">
-                        <p className="tarjeta-input-div-txt">Fecha de caducidad</p>
-                        <input type="text" className="tarjeta-input-div-3" />
+
+                <div className="div">
+
+                    <div className="div-1">
+                        <p className="div-1-p">Fecha de caducidad</p>
+                        <input type="text" className="div-1-in" />
+
                     </div>
 
-                    <div className="tarjeta-input">
-                        <p className="tarjeta-input-div-txt">CVC</p>
-                        <input type="text" className="tarjeta-input-div-4" />
+
+                    <div className="div-2">
+                        <p className="div-2-p">CVC</p>
+                        <input type="text" className="div-2-in" />
                     </div>
+                   
                 </div>
-                <Botonovalado />
-            </div>
+                <div className="btnguardar">
+                        <Botonovalado pulsar={sendthanks} texto={'Siguiente'} color='btn-ovalado-pink '/>
+                    </div>
 
-        <Footer />
-        </div>
+                <Footer />
+            </div> 
+    </div>        
     )
 }
 
-export default CreditCard
+export default Payment
 

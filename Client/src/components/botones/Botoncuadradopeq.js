@@ -2,12 +2,12 @@ import React from 'react'
 
 
 
-function Botoncuadradopeq (pulsar,texto) {
+function Botoncuadradopeq ({pulsar,valor}) {
 
     return (
         <div className="cuadradopeq">
             
-            <button onClick={pulsar} className="cuadradopeq-btn"></button>
+            <button onClick={pulsar} className="cuadradopeq-btn">{valor}</button>
         </div>
         
     )

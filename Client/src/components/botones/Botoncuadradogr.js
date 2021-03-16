@@ -4,12 +4,12 @@ import React from 'react'
 
 
 
-function Botoncuadradogr(pulsar,color, valor) {
+function Botoncuadradogr({pulsar,imagen, valor}) {
 
     return (
         <div className="cuadradogr">
-            <img src="../../images/flor1.svg" alt="icono flor"/>
-            <button onClick={pulsar} className="cuadradogr_btn">5€</button>
+            <img  className="cuadradogr-img"src={imagen} alt="icono flor"/>
+            <button onClick={pulsar} className="cuadradogr-btn">{valor}</button>
         </div>
         
     )
