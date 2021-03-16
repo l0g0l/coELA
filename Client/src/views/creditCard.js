@@ -1,3 +1,5 @@
+import React from 'react'
+import Botonovalado from '../components/botones/Botonovalado';
 import Footer from '../components/Footer'
 import Flecha from '../components/Flecha.js';
 import wifi from '../images/wifi.svg';
@@ -6,11 +8,9 @@ import tarjetacreditopage from '../images/tarjetacreditopage.svg';
 import '../styles/_creditCard.scss'
 
 
-
-import React from 'react'
-import Botonovalado from '../components/botones/Botonovalado';
-
 function CreditCard() {
+
+    
     return (
         <div>
             <div className="encabezado" >

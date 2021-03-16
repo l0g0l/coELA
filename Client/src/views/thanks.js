@@ -1,15 +1,20 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+
 import Footer from '../components/Footer';
 import Logout from '../components/Logout';
 import doshojitas from '../images/doshojitas.svg'
 import cientificos from '../images/cientificos.svg'
 import wifi from '../images/wifi.svg';
 
-
-
 import '../styles/_thanks.scss'
 
 const Thanks = () => {
+  let history = useHistory();
+  const send = () => {
+    history.push("/home");
+  }
+
   //   componentDidMount() {
   //     if (!cookies.get('username')) {
   //         window.location.href = "/login"
@@ -31,9 +36,9 @@ const Thanks = () => {
         <div className="thanks-cientificos-img">
           <img src={cientificos} alt="" />
           </div>
-          <button className="thanks-fondo-btn" type="submit">Cerrar</button>
+          <button className="thanks-fondo-btn" type="submit" onClick={send}>Cerrar</button>
           
-      </div>
+      </div>  
 
 
       {/* <Logout /> */}
