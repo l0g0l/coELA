@@ -1,0 +1,17 @@
+.encabezadocomun {
+    text-align: center;
+    background: #1F3044;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+        &-wifi {
+            text-align: center;
+            padding-bottom: 35px;
+}
+
+        &-img-1 {
+            text-align: center;
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+}

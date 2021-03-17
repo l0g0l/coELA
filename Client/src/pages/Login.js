@@ -7,7 +7,7 @@ import wifi from '../images/wifi.svg';
 
 import '../styles/_login.scss';
 
-const baseurl = 'http://localhost:4000/api/user';
+const baseurl = 'http://localhost:4000/api/login';
 const cookies = new Cookies();
 
 
@@ -16,7 +16,7 @@ class Login extends Component {
     state = {
 
         form: {
-            username: "",
+            user: "",
             password: ""
         }
     }
@@ -32,8 +32,8 @@ class Login extends Component {
     }
 
     iniciarSesion = async () => {
-        let url = `${baseurl}/${this.state.form.username}/${this.state.form.password}`
-        await axios.post(baseurl, { username: this.state.form.username, password: md5(this.state.form.password) })
+        // let url = `${baseurl}/${this.state.form.user}/${this.state.form.password}`
+        await axios.post(baseurl, { user: this.state.form.user, password: md5(this.state.form.password) })
 
             .then(response => {
                 console.log(response.data);
@@ -42,8 +42,8 @@ class Login extends Component {
             })
             .then(response => {
 
-                if (response.mensaje === 'login OK') {
-                    cookies.set('username', this.state.form.username)
+                if (response.token != "") {
+                    cookies.set('user', this.state.form.user,{path: "/"})
                     window.location.href = "./home"
 
 
@@ -54,7 +54,7 @@ class Login extends Component {
             })
     }
     componentDidMount() {
-        if (cookies.get('username')) {
+        if (cookies.get('user')) {
             window.location.href = "/home"
         }
     }
@@ -72,7 +72,7 @@ class Login extends Component {
                     <input
                         placeholder="Usuario"
                         autoComplete="off"
-                        name="username"
+                        name="user"
                         onChange={this.handleChange}
                         className="input-div-btnuser" />
 
