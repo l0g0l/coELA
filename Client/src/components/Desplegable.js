@@ -17,7 +17,8 @@ class Desplegable extends React.Component {
             "app__toggle--active": this.state.isOpen1
           })}
           onClick={() => this.toggle(1)}
-        >
+          
+        >{this.state.isOpen1==true? 'Ajustes avanzados':""}
           <span className="app__toggle-text"></span>
           <div className="rotate90">
             <svg

@@ -9,12 +9,13 @@ import { useHistory } from 'react-router-dom';
 import quesitoblanco from '../images/quesitoblanco.svg';
 
 
-// import Logout from '../components/Logout';
+import Logout from '../components/Logout';
 
 import '../styles/_roundup.scss'
 
 
 const RoundUp = () => {
+  
 
   let history = useHistory();
   const send = () => {
@@ -43,7 +44,7 @@ const RoundUp = () => {
         <p className="redondeo-txt">Tipo de donación</p>
         </div>
 
-        <div className="desplegable">
+        <div className="desplegable1">
         <DesplegableOptions />
 
       </div>
@@ -53,7 +54,7 @@ const RoundUp = () => {
       </div>
 
 
-      {/* <Logout /> */}
+     <Logout />
       <Footer />
 
     </div>

@@ -82,10 +82,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-radius: 5px;
-      background: #44505E;
-      box-shadow: inset 0px 0px 50px rgba(51, 64, 79, 0.15);
+      // border-radius: 5px;
+      background: transparent;
+      // box-shadow: inset 0px 0px 50px rgba(51, 64, 79, 0.15);
       transition: background-color 300ms;
+      border: none;
       outline: none;
       &--active {
         background-color: #44505E;

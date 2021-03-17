@@ -8,10 +8,7 @@ import imagen1carr from '../images/carrusel/imagen1carr.svg';
 import puntos from '../images/carrusel/puntos.svg';
 import insignias from '../images/insignias.svg'
 import botondonar from '../images/botondonar.svg'
-import periodica from '../images/botones_config_donac/periodica.svg';
-import porcentaje from '../images/botones_config_donac/porcentaje.svg';
 import redondeo from '../images/botones_config_donac/redondeo.svg';
-import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 
 // import Logout from '../components/Logout'

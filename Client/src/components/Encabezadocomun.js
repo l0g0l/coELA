@@ -1,7 +1,6 @@
 import React from 'react';
 import Flecha from '../components/Flecha';
 import wifi from '../images/wifi.svg';
-import quesitoblanco from '../images/quesitoblanco.svg';
 
 import '../styles/_roundup.scss'
 
