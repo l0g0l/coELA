@@ -1,65 +1,37 @@
 const express = require('express');
+const conectarDB = require('./config/db');
+const cors = require('cors');
+const routes = require('./routes');
+
+
+// crear el servidor
 const app = express();
-const cors = require('cors'); // compartir recursos en distintos dominios y orígenes (front-back)
-const path = require('path');
-const bodyParser = require('body-parser');
-const dotenv = require('dotenv').config(); 
-const morgan = require('morgan');
-const mongo = require('./config/db');
-const routes = require('./routes/index');
-const crypto = require('crypto')
-
-let hash = crypto.createHash('md5').update('some_string').digest("hex")
 
 
-conectarDB = require('./config/db')
-
-//Habilitando body parser
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }));
-
-
-// Settings
-const port = process.env.PORT || 4000
-
+// Conectar a la base de datos
+conectarDB();
 
 // Habilitar Cors
-// const opcionesCors = {
-//   origin: process.env.FRONTEND_URL
-// }
-// app.use(cors(opcionesCors) );
-app.use(cors());
+const opcionesCors = {
+    origin: process.env.FRONTEND_URL
+}
+app.use( cors(opcionesCors) );
 
-app.use(morgan('dev'))// para ver los estados http de las peticiones
-// Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'Client/build')));
+// Puerto de la app
+const port = process.env.PORT || 4000;
 
-
+// Habilitar leer los valores de un body
+app.use( express.json() );
 
 
 // routes
-app.use('/api', routes());
+//app.use('/', routes());
+// Rutas de la app
+app.use('/api/', require('./routes/newUser'));
+app.use('/api/login', require('./routes/auth'));
+// app.use('/api/donations', require('./routes/donations'));
 
 
-app.use('/api/users', require('./routes/index'));
-
-// app.get('/api/home',urlencodedParser,  users.getHome);
-// app.get('/api/onedonation', urlencodedParser, users.getUnaDonacion);
-// app.get('/api/roundup', urlencodedParser, users.getRedondeo);
-// app.get('/api/percent', urlencodedParser, users.getPorcentaje);
-// app.get('/api/periodic', urlencodedParser, users.getPeriodica);
-// app.post('api/logout',urlencodedParser, users.logoutUser)
-
-
-
-
-// Handles any requests that don't match the ones above
-app.get('*', (req,res) =>{
-    res.sendFile(path.join(__dirname+'/Client/build/index.html'));
-});
-
-
-app.listen(port);
-console.log('App is listening on port ' + port);
-
-
+// Arrancar la app
+app.listen(port)
+    console.log(`El servidor esta funcionando en el puerto ${port}`);

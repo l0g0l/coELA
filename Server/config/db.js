@@ -1,20 +1,22 @@
+const mongoose = require('mongoose');
+require('dotenv').config({ path: 'variables.env'});
 
-const mongoose =require('mongoose')
-require('dotenv').config({path: '.env'})
-//conecta a mongo compas
+const conectarDB = async () => {
+    try {
+        await mongoose.connect( process.env.DB_MONGO_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useFindAndModify: false,
+            useCreateIndex: true
+        } );
+        console.log('DB Conectada');
+    } catch (error) {
+        console.log('Hubo un error');
+        console.log(error);
+        process.exit(1); 
+    }
+}
 
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/luzonApp', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false
-});
-
-const conectarDB = mongoose.connection;
-conectarDB.on('error', console.error.bind(console, 'connection error:')); 
-conectarDB.once('open', () => {
-  console.log('Conexion a BBDD correcta');
-
-});
+module.exports = conectarDB;
 
 // Solo se conecta en local a la BBDD, hay que darle una vuelta con Atlas
