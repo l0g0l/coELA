@@ -6,7 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import logo from '../images/logo.svg';
 import '../styles/_login.scss';
 
-const baseurl = 'http://localhost:4000/api/user';
+const baseurl = 'http://localhost:4000/api/login';
 const cookies = new Cookies();
 
 
@@ -15,7 +15,7 @@ class Login extends Component {
     state = {
 
         form: {
-            username: "",
+            user: "",
             password: ""
         }
     }
@@ -31,8 +31,8 @@ class Login extends Component {
     }
 
     iniciarSesion = async () => {
-        let url = `${baseurl}/${this.state.form.username}/${this.state.form.password}`
-        await axios.post(baseurl, {username: this.state.form.username, password: md5(this.state.form.password)})
+        //let url = `${baseurl}/${this.state.form.user}/${this.state.form.password}`
+        await axios.post(baseurl, {user: this.state.form.user, password: md5(this.state.form.password)})
 
             .then(response => {
                 console.log(response.data);
@@ -40,9 +40,9 @@ class Login extends Component {
                 return response.data
             })
             .then(response => {
-
-                if (response.mensaje === 'login OK') {
-                    cookies.set('username', this.state.form.username, { path: "/" })
+                if (response.token != "") {
+                //if (response.mensaje === 'login OK') {
+                    cookies.set('user', this.state.form.user, { path: "/" })
                     window.location.href = "./home"
 
 
@@ -52,8 +52,10 @@ class Login extends Component {
                 console.log(error)
             })
     }
+    
+
     componentDidMount() {
-        if (cookies.get('username')) {
+        if (cookies.get('user')) {
             window.location.href = "/home"
         }
     }
@@ -73,7 +75,7 @@ class Login extends Component {
                         autoComplete="off"
                         variant="outlined"
                         size="small"
-                        name="username"
+                        name="usuario"
                         onChange={this.handleChange}
                         className="input-div-btnuser" />
 

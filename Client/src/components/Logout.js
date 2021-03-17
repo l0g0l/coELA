@@ -10,7 +10,7 @@ class Logout extends Component {
         cookies.remove('id', { path: "/login" });
         cookies.remove('nombre', { path: "/login" });
         cookies.remove('apellidos', { path: "/login" });
-        cookies.remove('username', { path: "/login" });
+        cookies.remove('usuario');
         window.location.href = "./login"
     }
 
@@ -25,7 +25,7 @@ class Logout extends Component {
         console.log('id: ' +cookies.get('id'));
         console.log('nombre: '+cookies.get('nombre'));
         console.log('apellido: '+cookies.get('apellido'));
-        console.log('username: '+cookies.get('username'));
+        console.log('usuario: '+cookies.get('usuario'));
         return (
             <div className="container">
                 <div className="content">

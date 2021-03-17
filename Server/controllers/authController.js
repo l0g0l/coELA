@@ -1,11 +1,11 @@
-const User = require('../models/userSchema');
+ const User = require('../models/userSchema');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 require('dotenv').config({ path: 'variables.env'});
 const { validationResult } = require('express-validator');
 
 exports.authUser = async (req, res, next) => {
-    console.log('autenticarUsuario')
+    //console.log('autenticarUsuario')
     // Revisar si hay errores
     const errors = validationResult(req);
     if(!errors.isEmpty()) {

@@ -29,6 +29,7 @@ app.use( express.json() );
 // Rutas de la app
 app.use('/api/', require('./routes/newUser'));
 app.use('/api/login', require('./routes/auth'));
+//app.use('/api/home', require('./routes/home')); me voy a traer nombre, luzones y configuraciones(?)
 // app.use('/api/donations', require('./routes/donations'));
 
 

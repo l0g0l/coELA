@@ -1,18 +1,21 @@
 
+import md5 from 'md5';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+
 
 import '../styles/_signup.scss';
 
 
 export default function SignUp() {
   const { register, handleSubmit, errors } = useForm();
-  const baseurl = 'http://localhost:5000/usuarios'
+  const baseurl = 'http://localhost:4000/api/'
 
   const onSubmit = async (data, e) => {
     e.target.reset();
 
-    // conseguir que lance un POST en vez de GET
+
+    data.password = md5(data.password)
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -33,7 +36,7 @@ export default function SignUp() {
 
           <input
             type="text"
-            name="nombre"
+            name="name"
             className="form-input"
             autoFocus
             placeholder="Nombre completo"
@@ -45,7 +48,7 @@ export default function SignUp() {
 
             })}
           />
-          {errors.nombre && <p className="errorMsg">{errors.nombre.message}</p>}
+          {errors.name && <p className="errorMsg">{errors.name.message}</p>}
          
           <input
             type="text"
@@ -85,7 +88,7 @@ export default function SignUp() {
 
           <input
             type="text"
-            name="usuario"
+            name="user"
             className="form-input"
             autoFocus
             placeholder="Usuario"
@@ -97,7 +100,7 @@ export default function SignUp() {
 
             })}
           />
-          {errors.usuario && <p className="errorMsg">{errors.usuario.message}</p>}
+          {errors.user && <p className="errorMsg">{errors.user.message}</p>}
 
           <input
             type="password"
