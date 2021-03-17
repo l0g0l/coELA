@@ -1,10 +1,10 @@
 .footer {
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 101%;
     background-color: white;
     border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-right-radius: 10px;
     ul {
       display: flex;
       justify-content: space-between;
@@ -13,12 +13,14 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 10px;
+        padding: 20px;
         color: #33404F;
-        font-size: 12px;
+        font-size: 14px;
+        text-decoration: none;
+        text-align: center;
     
         img {
-          width: 35px;
+          width: 40px;
           // filter: invert(100%);
         }
       }

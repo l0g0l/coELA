@@ -8,19 +8,29 @@ import RoundUp from '../views/roundUp';
 import Periodic from '../views/periodic';
 import Luzon from '../views/luzon';
 import SignUp from '../views/signUp';
+import Payment from '../views/payment';
+import Thanks from '../views/thanks'
+
+
 
 const Routes = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path='/' component={SignUp}></Route>
-        <Route  path='/login' component={Login}></Route>
+        <Route  exact path='/' component={Login}></Route>
+        <Route  path='/signup' component={SignUp}></Route>
         <Route  path="/home" component={Home}></Route>
         <Route  path="/onedonation" component={OneDonation}></Route>
+        <Route  path="/payment" component={Payment}></Route>
+        <Route  path="/thanks" component={Thanks}></Route>
         <Route  path="/roundup" component={RoundUp}></Route>
         <Route  path="/percent" component={Percent}></Route>
         <Route  path="/periodic" component={Periodic}></Route>
         <Route  path="/luzon" component={Luzon}></Route> 
+        <Route  path="/mydonations" component={Luzon}></Route> 
+        <Route  path="/community" component={Luzon}></Route> 
+
+
 
 
       </Switch>

@@ -1,18 +1,21 @@
-
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
+import md5 from 'md5';
+
 
 import '../styles/_signup.scss';
 
 
 export default function SignUp() {
   const { register, handleSubmit, errors } = useForm();
-  const baseurl = 'http://localhost:5000/usuarios'
+  const baseurl = 'http://localhost:4000/api/'
 
   const onSubmit = async (data, e) => {
     e.target.reset();
 
     // conseguir que lance un POST en vez de GET
+    data.password= md5(data.password)
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -33,7 +36,7 @@ export default function SignUp() {
 
           <input
             type="text"
-            name="nombre"
+            name="name"
             className="form-input"
             autoFocus
             placeholder="Nombre completo"
@@ -45,7 +48,7 @@ export default function SignUp() {
 
             })}
           />
-          {errors.nombre && <p className="errorMsg">{errors.nombre.message}</p>}
+          {errors.name && <p className="errorMsg">{errors.name.message}</p>}
          
           <input
             type="text"
@@ -58,7 +61,8 @@ export default function SignUp() {
                 message: <p>Por favor introduzca su DNI</p>
               },
               pattern: {
-                value: /^(\d{8})([A-Z])$/,
+                value1: /^(\d{8})([A-Z])$/,
+                value2:/^[XYZ]\d{7,8}[A-Z]$/,
                 message: <p>Por favor introduzca un DNI válido</p>
               },
             })}
@@ -85,9 +89,8 @@ export default function SignUp() {
 
           <input
             type="text"
-            name="usuario"
+            name="user"
             className="form-input"
-            autoFocus
             placeholder="Usuario"
             ref={register({
               required: {
@@ -97,7 +100,7 @@ export default function SignUp() {
 
             })}
           />
-          {errors.usuario && <p className="errorMsg">{errors.usuario.message}</p>}
+          {errors.user && <p className="errorMsg">{errors.user.message}</p>}
 
           <input
             type="password"
@@ -120,9 +123,10 @@ export default function SignUp() {
 
        
         
-        <p className="form-div-txt-1">¿Ya tienes cuenta?<a href='./login' id="Inicia sesión" className="form-div-txt-2" >Inicia sesión</a></p>
-
+        <p className="form-div-txt-1">¿Ya tienes cuenta?<a href='./' id="Inicia sesión" className="form-div-txt-2" >Inicia sesión</a></p>
+        <Link to="/">
           <button className="form-div-btn" type="submit">Registrarme</button>
+          </Link>
       
       </form>
     </div>

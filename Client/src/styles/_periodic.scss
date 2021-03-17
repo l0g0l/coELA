@@ -1,0 +1,58 @@
+.periodica {
+    text-align: center;
+    margin: 20px 70px 20px 84px;
+    width: 250px;
+    height: 45px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 50px rgb(51 64 79 / 15%);
+    padding-top: 4px 15px 4px 15px;
+
+    &-img {
+        width: 25px;
+        padding: 12px 4px 0 4px;
+    }
+    &-input {
+        background: transparent;
+        border: none;
+        font-size: 13px;
+        text-align: center;
+    }
+
+
+    &-txt {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        color: #FFFFFF;
+        margin: 20px 25px;
+
+        &-2 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 15px;
+            text-align: center;
+            color: #FFFFFF;
+            opacity: 0.5;
+        }
+    }  
+    &-btnmed {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 28px;
+    }
+    &-btnrect {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+  }
+  .desplegable1 {
+    margin-bottom: 170px;
+    margin-left: 18px;
+   
+}
+
+

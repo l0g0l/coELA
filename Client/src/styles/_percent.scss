@@ -1,0 +1,45 @@
+.porcentaje {
+
+    &-txt {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        color: #FFFFFF;
+        margin: 20px 25px;
+
+        &-2 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 15px;
+            text-align: center;
+            color: #FFFFFF;
+            opacity: 0.5;
+        }
+    }       
+  }
+
+.porcentaje-btnmed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 28px;
+}
+.porcentaje-btnrect {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .btnguardar {
+        text-align: center;
+        
+
+        &-1 {
+            margin-bottom: 9px;
+        }
+    }
+    .desplegable {
+        margin-bottom: 130px;
+        margin-left: 18px;
+       
+    }

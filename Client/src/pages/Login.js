@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
-import TextField from '@material-ui/core/TextField';
 import logo from '../images/logo.svg';
+import wifi from '../images/wifi.svg';
+
 import '../styles/_login.scss';
 
-const baseurl = 'http://localhost:4000/api/user';
+const baseurl = 'http://localhost:4000/api/login';
 const cookies = new Cookies();
 
 
@@ -15,7 +16,7 @@ class Login extends Component {
     state = {
 
         form: {
-            username: "",
+            user: "",
             password: ""
         }
     }
@@ -31,8 +32,8 @@ class Login extends Component {
     }
 
     iniciarSesion = async () => {
-        let url = `${baseurl}/${this.state.form.username}/${this.state.form.password}`
-        await axios.post(baseurl, {username: this.state.form.username, password: md5(this.state.form.password)})
+        // let url = `${baseurl}/${this.state.form.user}/${this.state.form.password}`
+        await axios.post(baseurl, { user: this.state.form.user, password: md5(this.state.form.password) })
 
             .then(response => {
                 console.log(response.data);
@@ -41,8 +42,8 @@ class Login extends Component {
             })
             .then(response => {
 
-                if (response.mensaje === 'login OK') {
-                    cookies.set('username', this.state.form.username, { path: "/" })
+                if (response.token != "") {
+                    cookies.set('user', this.state.form.user,{path: "/"})
                     window.location.href = "./home"
 
 
@@ -53,7 +54,7 @@ class Login extends Component {
             })
     }
     componentDidMount() {
-        if (cookies.get('username')) {
+        if (cookies.get('user')) {
             window.location.href = "/home"
         }
     }
@@ -61,27 +62,22 @@ class Login extends Component {
     render() {
         return (
 
-            <div className="input">
+            <div className="input"> 
+             <img className="encabezado-1-wifi" src={wifi} alt=""/>
 
                 <h3 className="input-txt1">Bienvenido</h3>
                 <img className="input-img" src={logo} alt="logo Luzón" />
 
                 <div className="input-div">
-                    <TextField
-                        label="Usuario"
-                        id="outlined-size-small"
+                    <input
+                        placeholder="Usuario"
                         autoComplete="off"
-                        variant="outlined"
-                        size="small"
-                        name="username"
+                        name="user"
                         onChange={this.handleChange}
                         className="input-div-btnuser" />
 
-                    <TextField
-                        label="Contraseña"  
-                        id="outlined-size-small"
-                        variant="outlined"
-                        size="small"
+                    <input
+                        placeholder="Contraseña"
                         name="password"
                         onChange={this.handleChange}
                         className="input-div-btnuser"
@@ -89,10 +85,10 @@ class Login extends Component {
 
                     <div className="input-div-txt">
                         <p className="input-div-txt-2">¿Has olvidado la contraseña?</p>
-                        <p className="input-div-txt-3">¿No tienes cuenta? <a className="input-div-txt-4" href="./">Regístrate</a></p>
+                        <p className="input-div-txt-3">¿No tienes cuenta? <a className="input-div-txt-4" href="./signup">Regístrate</a></p>
                     </div>
 
-                    <button onClick={this.iniciarSesion}className="form-div-btn" type="submit">Iniciar sesión</button>
+                    <button onClick={this.iniciarSesion} className="input-div-btnses" type="submit">Iniciar sesión</button>
 
 
                 </div>

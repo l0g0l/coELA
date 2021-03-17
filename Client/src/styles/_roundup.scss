@@ -1,0 +1,38 @@
+.redondeo {
+
+    &-txt {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        color: #FFFFFF;
+        margin: 20px 25px;
+
+        &-2 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 15px;
+            text-align: center;
+            color: #FFFFFF;
+            opacity: 0.5;
+        }
+    }
+    
+        
+    }
+    .desplegable {
+        margin-bottom: 170px;
+        margin-left: 18px;
+       
+       
+    }
+
+.redondeo-btnmed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 28px;
+}
+.btnend {
+    text-align: center;
+}

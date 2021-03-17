@@ -17,13 +17,13 @@ const SignUp = () => {
 
     const onSubmit = (data, event) => {
         console.log(data)
-        // event.target.reset();
+        event.target.reset();
 
     }
 
     return (
         <Fragment>
-  form          <div className="">
+           <div className="">
                 <h3 className="form-txt" >Regístrate</h3>
                 <form className="form-div" onSubmit={handleSubmit(onSubmit)} >
 
