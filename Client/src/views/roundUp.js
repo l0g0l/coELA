@@ -2,13 +2,11 @@ import React from 'react';
 import Footer from '../components/Footer';
 import Encabezadocomun from '../components/Encabezadocomun';
 import Botoncuadradopeq from '../components/botones/Botoncuadradopeq';
-import Desplegable from '../components/Desplegable';
+import Desplegableredondeo from '../components/Desplegableredondeo';
 import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
 import { useHistory } from 'react-router-dom';
 import quesitoblanco from '../images/quesitoblanco.svg';
-
-
 import Logout from '../components/Logout';
 
 import '../styles/_roundup.scss'
@@ -37,8 +35,12 @@ const RoundUp = () => {
       <div className="redondeo-txt-2">
         <p>Ejemplo: Si escoges x1 y compras un café de 0,80€ donarás 0,20€</p>
       </div>
+      <div  className="txt-despleg1">
+        <p>Ajustes avanzados</p>
 
-        <Desplegable />
+        </div>
+
+        <Desplegableredondeo />
 
       <div >
         <p className="redondeo-txt">Tipo de donación</p>

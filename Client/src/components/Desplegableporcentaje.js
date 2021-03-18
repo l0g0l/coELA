@@ -1,9 +1,13 @@
 import React from "react";
 import cx from "classnames";
 import Collapse from "@kunukn/react-collapse";
-import "../styles/_desplegable.scss";
 
-class Desplegable extends React.Component {
+
+
+
+import "../styles/_desplegableporcentaje.scss";
+
+class Desplegableporcentaje extends React.Component {
   state = {
     isOpen1: false,
 
@@ -17,8 +21,8 @@ class Desplegable extends React.Component {
             "app__toggle--active": this.state.isOpen1
           })}
           onClick={() => this.toggle(1)}
-          
-        >{this.state.isOpen1==true? 'Ajustes avanzados':""}
+
+        >{this.state.isOpen1 == true ? '' : ""}
           <span className="app__toggle-text"></span>
           <div className="rotate90">
             <svg
@@ -37,22 +41,31 @@ class Desplegable extends React.Component {
           }
         >
           <div className="app__content">
-            <p className="app__content-txt">Selecciona los días</p>
-            <button className="app__content-btn-red">L</button>
-            <button className="app__content-btn-red">M</button>
-            <button className="app__content-btn-red">X</button>
-            <button className="app__content-btn-red">J</button>
-            <button className="app__content-btn-red">V</button>
-            <button className="app__content-btn-red">S</button>
-            <button className="app__content-btn-red">D</button>
-            <p className="app__content-txt-2">Selecciona categorías</p>
+          
+            <div className="app__content-div1">
+              <p className="app__content-div1-txt">Tu nómina anual</p>
+              <input type="text" className="app__content-div1-inp"/>
+              <input type="text" className="app__content-div1-inp"/>
+            </div>
+          
+            <div className="app__content-div2">
+              <p className="app__content-div2-txt">Donarás al año</p>
+              <input type="text" className="app__content-div2-inp"/>
+            </div>
 
-            <img
-              className="image"
-              alt="random"
-              src="https://source.unsplash.com/user/erondu/500x200" />
+            <div className="app__content-div3">
+              <p className="app__content-div3-txt">Te desgravarás</p>
+              <input type="text" className="app__content-div3-inp"/>
+            </div>
+
+            <div className="app__content-div4">
+              <p className="app__content-div4-txt">Te desgravarás el 80% de los primeros 150€, y el 35% de los siguientes</p>
+            </div>
+
 
           </div>
+
+        
         </Collapse>
 
 
@@ -67,4 +80,4 @@ class Desplegable extends React.Component {
   };
 }
 
-export default Desplegable;
+export default Desplegableporcentaje;

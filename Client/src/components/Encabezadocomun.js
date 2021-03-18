@@ -14,8 +14,6 @@ const Encabezadocomun = ({texto, src}) => {
         <div className="encabezado-2">
           <Flecha />
           <p className="encabezado-txt-1">{texto}</p>
-        </div>
-        <div className="encabezadocomun-img" >
         <img className="encabezadocomun-img-1" src={src} alt=""/>
         </div>
        

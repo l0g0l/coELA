@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import md5 from 'md5';
 
@@ -8,6 +9,12 @@ import '../styles/_signup.scss';
 
 
 export default function SignUp() {
+
+  let history = useHistory();
+  const send = () => {
+    history.push("/login");
+  }
+
   const { register, handleSubmit, errors } = useForm();
   const baseurl = 'http://localhost:4000/api/'
 
@@ -124,9 +131,9 @@ export default function SignUp() {
        
         
         <p className="form-div-txt-1">¿Ya tienes cuenta?<a href='./' id="Inicia sesión" className="form-div-txt-2" >Inicia sesión</a></p>
-        <Link to="/">
-          <button className="form-div-btn" type="submit">Registrarme</button>
-          </Link>
+       
+          <button pulsar={send}className="form-div-btn" type="submit">Registrarme</button>
+          
       
       </form>
     </div>

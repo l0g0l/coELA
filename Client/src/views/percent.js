@@ -8,6 +8,8 @@ import Botonrect from '../components/botones/Botonrect.js';
 import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
 import porcentajeblanco from '../images/porcentajeblanco.svg';
+import Desplegableporcentaje from '../components/Desplegableporcentaje';
+
 
 
 import '../styles/_percent.scss'
@@ -44,6 +46,14 @@ const Percent = () => {
       <div className="porcentaje-txt-2">
         <p>Ejemplo: Si configuras el 0,5% y tienes una nómina de 1000€, donarás 5€</p>
       </div>
+
+      <div  className="txt-despleg1">
+        <p>Calcula tu desgravación</p>
+
+        </div>
+
+      <Desplegableporcentaje />
+      
        <div >
         <p className="porcentaje-txt">Tipo de donación</p>
         </div>

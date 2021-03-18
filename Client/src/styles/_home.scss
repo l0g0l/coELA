@@ -63,6 +63,7 @@
     }
     .insignias {
         text-align: center;
+        margin-top: 20px;
 
         &-1 {
             width: 368px;
@@ -112,8 +113,52 @@
         height: 182px;
         z-index: 1;
         margin-left: 135px;
-        
+   
 }
+}
+
+.carruseldiv {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    background-color: #683bb7;
+    color: #fff;
+    margin: 15px;
+    font-size: 4em;
+}
+
+.item {
+    
+    display: flex;
+    justify-content: center;
+    
+    height: 110px;
+    width: 50%;
+    margin: 15px 0 0 0;
+    outline: none;
+    box-shadow: none;
+    
+  }
+  button.rec-dot{
+    margin-top: 0px;
+    background-color: #F19174;
+    box-shadow: 0 0 1px 3px #F19174;
+    height: 3px;
+    width: 3px;
+  }
+  button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+    box-shadow: 0 0 1px 3px #F19174;
+  }
+  .rec.rec-arrow {
+    background:transparent !important;
+}
+
+.rec.rec-arrow:hover {
+    background-color:transparent !important;
+ 
 }
       
       

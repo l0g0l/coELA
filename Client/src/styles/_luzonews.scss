@@ -1,0 +1,39 @@
+.encabezadocomun1 {
+    
+    background: #1F3044;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.encabezadocomun1txt {
+
+    &-1 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        color: #EDEDED;
+        text-align: left;
+        margin-left: 20px;
+        margin-bottom: 30px;
+
+    }
+}
+.encabezadocomun1txt2 {
+    display: flex;
+    justify-content: space-around;
+
+    &-2 {
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+        text-decoration: #00DDA3;
+      
+        }
+}
+.noticias {
+    margin-top: 20px;
+}

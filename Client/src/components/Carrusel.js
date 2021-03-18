@@ -1,25 +1,29 @@
-import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+// import React from "react";
+// // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// // import { Carousel } from 'react-responsive-carousel';
+// import luzon from '../images/carrusel/luzon.jpg'
 
 
-function RemindersPage() {
-  return (
-    <div className="reminders-page">
-       <Carousel infiniteLoop className="ey">
-                <div>
-                    <img src={process.env.PUBLIC_URL + '/assets/one.jpg'} />
-                    <p className="legend">Tus contactos</p>
-                </div>
-                <div>
-                <img src={process.env.PUBLIC_URL + '/assets/two.jpg'} />
-                    <p className="legend">Tu información</p>
-                </div>
-                <div>
-                <img src={process.env.PUBLIC_URL + '/assets/three.jpg'} />
-                </div>
-            </Carousel>
-    </div>
-  );
-}
-export default RemindersPage;
+
+
+
+// function Carrusel() {
+//   return (
+//     <div className="reminders-page">
+//       <Carousel infiniteLoop className="carrusel">
+//         <div>
+//           <img src={luzon} />
+
+//         </div>
+//         <div>
+//           <img src={luzon} />
+
+//         </div>
+//         <div>
+//           <img src={luzon} />
+//         </div>
+//       </Carousel>
+//     </div>
+//   );
+// }
+// export default Carrusel;

@@ -6,16 +6,16 @@ const cookies = new Cookies();
 
 class Logout extends Component {
 
-    cerrarSesion = () => {
-        cookies.remove('user');
-        window.location.href = "./login"
-    }
+    // cerrarSesion = () => {
+    //     cookies.remove('user');
+    //     window.location.href = "./"
+    // }
 
-    componentDidMount() {
-        if (!cookies.get('user')) {
-            window.location.href = "/login"
-        }
-    }
+    // componentDidMount() {
+    //     if (!cookies.get('user')) {
+    //         window.location.href = "/"
+    //     }
+    // }
 
     render() {
 
