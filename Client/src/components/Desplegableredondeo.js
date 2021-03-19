@@ -31,7 +31,7 @@ class Desplegableredondeo extends React.Component {
           })}
           onClick={() => this.toggle(1)}
 
-        >{this.state.isOpen1 == true ? '' : ""}
+        >{this.state.isOpen1 === true ? '' : ""}
           <span className="app__toggle-text"></span>
           <div className="rotate90">
             <svg
