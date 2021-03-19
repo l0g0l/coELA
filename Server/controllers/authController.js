@@ -5,7 +5,7 @@ require('dotenv').config({ path: 'variables.env'});
 const { validationResult } = require('express-validator');
 
 exports.authUser = async (req, res, next) => {
-    console.log('autenticarUsuario')
+    //console.log('autenticarUsuario')
     // Revisar si hay errores
     const errors = validationResult(req);
     if(!errors.isEmpty()) {
@@ -41,10 +41,8 @@ exports.authUser = async (req, res, next) => {
         res.status(401).json({msg: "Password Incorrecto"});
         return next();
     }
-
-    
 }
 
-exports.authUser = (req, res, next) => {
-    res.json({user: req.user } );
-}
+// exports.authUser = (req, res, next) => {
+//     res.json({user: req.user } );
+// }
