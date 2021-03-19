@@ -42,8 +42,8 @@ class Login extends Component {
             })
             .then(response => {
 
-                if (response.token != "") {
-                    cookies.set('user', this.state.form.user,{path: "/"})
+                if (response.token !== "") {
+                    cookies.set('user', this.state.form.user)
                     window.location.href = "./home"
 
 

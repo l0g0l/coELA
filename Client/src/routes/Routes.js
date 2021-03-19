@@ -10,6 +10,11 @@ import Luzon from '../views/luzon';
 import SignUp from '../views/signUp';
 import Payment from '../views/payment';
 import Thanks from '../views/thanks'
+import Luzonews from '../views/luzonews'
+import MyDonations from '../views/myDonations'
+import Community from '../views/community'
+import CommunityChallenges from '../views/communityChallenges'
+import CommunityRanking from '../views/communityRanking'
 
 
 
@@ -27,8 +32,11 @@ const Routes = () => {
         <Route  path="/percent" component={Percent}></Route>
         <Route  path="/periodic" component={Periodic}></Route>
         <Route  path="/luzon" component={Luzon}></Route> 
-        <Route  path="/mydonations" component={Luzon}></Route> 
-        <Route  path="/community" component={Luzon}></Route> 
+        <Route  path="/luzonews" component={Luzonews}></Route> 
+        <Route  path="/mydonations" component={MyDonations}></Route> 
+        <Route  path="/community" component={Community}></Route> 
+        <Route  path="/challenges" component={CommunityChallenges}></Route> 
+        <Route  path="/ranking" component={CommunityRanking}></Route> 
 
 
 

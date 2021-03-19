@@ -1,8 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-
 import Footer from '../components/Footer';
-import Logout from '../components/Logout';
+// import Logout from '../components/Logout';
 import doshojitas from '../images/doshojitas.svg'
 import cientificos from '../images/cientificos.svg'
 import wifi from '../images/wifi.svg';

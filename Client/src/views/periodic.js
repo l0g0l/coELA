@@ -4,12 +4,14 @@ import Encabezadocomun from '../components/Encabezadocomun';
 // import Logout from '../components/Logout';
 import { useHistory } from 'react-router-dom';
 import Botoncuadradopeq from '../components/botones/Botoncuadradopeq';
-import Botonrect from '../components/botones/Botonrect.js';
 import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
 import euro from '../images/euro.svg';
+import Desplegableporcentaje from '../components/Desplegableporcentaje'
 import flor1 from '../images/flor1.svg';
 import calendarioblanco from '../images/calendarioblanco.svg';
+
+
 
 import '../styles/_periodic.scss'
 
@@ -45,6 +47,12 @@ const Periodic = () => {
       <div className="periodica-txt-2">
         <p>Otros usuarios de la comunidad con tus mismas características donan una media de 1€ al día</p>
       </div>
+      <div  className="txt-despleg1">
+        <p>Calcula tu desgravación</p>
+
+        </div>
+
+      <Desplegableporcentaje />
 
       <div >
         <p className="periodica-txt">Tipo de donación</p>

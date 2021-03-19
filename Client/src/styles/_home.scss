@@ -1,9 +1,18 @@
+.containerencandonation {
+    padding: 164px 0 0 0; 
+    & .encabezadoperfil {
+        position: fixed;
+        top: 0;
+    }
+}
+
 .encabezadoperfil {
     text-align: center;
     background: #1F3044;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     padding-bottom: 15px;
+    
 
     &-1 {
         margin-bottom: 10px;
@@ -63,6 +72,7 @@
     }
     .insignias {
         text-align: center;
+        margin-top: 20px;
 
         &-1 {
             width: 368px;
@@ -78,11 +88,12 @@
         font-weight: 700;
         font-size: 18px;
         color: #FFFFFF;
-        margin:20px 0 0 10px;
+        margin:20px 0 20px 20px;
     }
 }
 .configdonaciones {
     display: flex;
+    justify-content: space-around;
     
 
     &-btn {
@@ -92,7 +103,8 @@
         outline: none;
 
         &-1 {
-         width: 148px;
+         width: 110px;
+         
      
         }
       
@@ -102,18 +114,71 @@
 }
 .footerhome {
     display: flex;
-    z-index: 2;
-    &-btn {
-     
+    justify-content: center;
+    position: fixed;
+    bottom: 71px;
+    z-index: 10;
+    width: 100%;
+   
+  
+    &-1 {
+        width: 95px;
+        border-radius: 50%;
+        border-bottom: 4px solid #33404f;
+        border-right: 4px solid #33404f;
+        border-left: 4px solid #33404f;
+        
     }
 
     &-img {
-        width: 169px;
-        height: 182px;
-        z-index: 1;
-        margin-left: 135px;
+       
+        width: 100%
         
 }
+}
+
+.carruseldiv {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    background-color: #683bb7;
+    color: #fff;
+    margin: 15px;
+    font-size: 4em;
+}
+
+.item {
+    
+    display: flex;
+    justify-content: center;
+    
+    height: 110px;
+    width: 50%;
+    margin: 15px 0 0 0;
+    outline: none;
+    box-shadow: none;
+    
+  }
+  button.rec-dot{
+    margin-top: 0px;
+    background-color: #F19174;
+    box-shadow: 0 0 1px 3px #F19174;
+    height: 3px;
+    width: 3px;
+  }
+  button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+    box-shadow: 0 0 1px 3px #F19174;
+  }
+  .rec.rec-arrow {
+    background:transparent !important;
+}
+
+.rec.rec-arrow:hover {
+    background-color:transparent !important;
+ 
 }
       
       

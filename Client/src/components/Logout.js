@@ -7,20 +7,20 @@ const cookies = new Cookies();
 class Logout extends Component {
 
     // cerrarSesion = () => {
-    //     cookies.remove('username');
-    //     window.location.href = "./login"
+    //     cookies.remove('user');
+    //     window.location.href = "./"
     // }
 
     // componentDidMount() {
-    //     if (!cookies.get('username')) {
-    //         window.location.href = "/login"
+    //     if (!cookies.get('user')) {
+    //         window.location.href = "/"
     //     }
     // }
 
     render() {
 
       
-        console.log('username: '+cookies.get('username'));
+        console.log('user: '+cookies.get('user'));
         return (
             <div className="container">
                 <div className="content">

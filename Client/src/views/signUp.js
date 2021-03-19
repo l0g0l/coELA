@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import md5 from 'md5';
 
 
@@ -8,6 +8,12 @@ import '../styles/_signup.scss';
 
 
 export default function SignUp() {
+
+  // let history = useHistory();
+  // const send = () => {
+  //   history.push("/login");
+  // }
+
   const { register, handleSubmit, errors } = useForm();
   const baseurl = 'http://localhost:4000/api/'
 
@@ -25,7 +31,10 @@ export default function SignUp() {
     const response = await fetch([baseurl], requestOptions);
     const jsonData = await response.json();
 
-    console.log(jsonData);
+    if(jsonData.msg == "Usuario Creado Correctamente") {
+      window.location.href = "./"
+    }else {alert ('Usuario inexistente')}
+    
   }
 
   return (
@@ -124,9 +133,9 @@ export default function SignUp() {
        
         
         <p className="form-div-txt-1">¿Ya tienes cuenta?<a href='./' id="Inicia sesión" className="form-div-txt-2" >Inicia sesión</a></p>
-        <Link to="/">
+       
           <button className="form-div-btn" type="submit">Registrarme</button>
-          </Link>
+          
       
       </form>
     </div>
