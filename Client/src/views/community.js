@@ -15,7 +15,7 @@ function Community() {
       history.push("/onedonation");
     }
     return (
-        <div>
+        <div className="containercommunity">
             <div className="encabezadocomun1" >
                 <img className="encabezadocomun1-wifi" src={wifi} alt="wifi" />
 

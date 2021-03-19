@@ -14,7 +14,7 @@ export default function CommunityRanking() {
         history.push("/onedonation");
     }
     return (
-        <div>
+        <div className="containerranking">
             <div className="encabezadocomun1" >
                 <img className="encabezadocomun1-wifi" src={wifi} alt="wifi" />
 
@@ -23,9 +23,9 @@ export default function CommunityRanking() {
                 </div>
 
                 <div className="encabezadocomun1txt2">
-                    <p className="encabezadocomun1txt2-1">Gente como tú</p>
-                    <p className="encabezadocomun1txt2-1">Challenges</p>
-                    <p className="encabezadocomun1txt2-2">Rankings</p>
+                    <a href="./community"  className="encabezadocomun1txt2-1"><p>Gente como tú</p></a>
+                    <a href="./challenges" className="encabezadocomun1txt2-1"><p>Challenges</p></a>
+                    <a href="./ranking"className="encabezadocomun1txt2-2"><p>Ranking</p></a>
                 </div>
 
             </div>
