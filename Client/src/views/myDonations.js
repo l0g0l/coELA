@@ -25,7 +25,7 @@ const MyDonations = () => {
   }
 
   return (
-    <div>
+    <div className="containerencandonation">
 
       <div className="encabezadoperfil" >
         <img src={wifi} alt="" />

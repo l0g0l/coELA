@@ -14,10 +14,12 @@
         align-items: center;
         justify-content: center;
         padding: 20px;
-        color: red;
         font-size: 14px;
         text-decoration: none;
         text-align: center;
+        a {
+          color: white;
+        }
     
         img {
           width: 40px;

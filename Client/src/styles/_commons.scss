@@ -163,6 +163,13 @@ body {
     width: 373px;
     text-align: center;
     height: 30px;
+    option {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 373px;
+    }
+
 }
 .btn-peq-green{
     background: #00DDA3;
@@ -199,7 +206,7 @@ body {
   flex-direction: column;
   font-style: normal;
   font-weight: 500;
-  
+  margin: 0 10px;
   color: #33404F;
   width: 100px;
   height: 61px;

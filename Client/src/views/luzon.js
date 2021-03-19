@@ -53,26 +53,51 @@ const Luzon = () => {
 
       <div className="botonesdonaciones">
         {/* <button type="text" className="botonesdonaciones-1" ><a href="https://ffluzon.org/colabora-ela/hazte-socio/"></a>Hazte socio</button> */}
-        <a href="https://ffluzon.org/colabora-ela/hazte-socio/"><p className="botonesdonaciones-1">Hazte socio</p></a>
-        <button type="text" className="botonesdonaciones-2" pulsar={sendluzonreto}>Crea tu reto por la ELA</button>
+
+        <a href="https://ffluzon.org/colabora-ela/hazte-socio/">
+          <div className="botondonaciones">
+            <p className="botonesdonaciones-1">Hazte socio</p>
+          </div>
+
+        </a>
+        <a href="https://ffluzon.org/colabora-ela/hazte-socio/">
+          <div>
+            <p className="botonesdonaciones-1">Hazte socio</p>
+          </div>
+
+        </a>
+        <a href="https://ffluzon.org/colabora-ela/hazte-socio/">
+          <div>
+            <p className="botonesdonaciones-1">Hazte socio</p>
+          </div>
+
+        </a>
+        <a href="https://ffluzon.org/colabora-ela/hazte-socio/">
+          <div>
+            <p className="botonesdonaciones-1">Hazte socio</p>
+          </div>
+
+        </a>
+
+        {/* <button type="text" className="botonesdonaciones-2" pulsar={sendluzonreto}>Crea tu reto por la ELA</button>
         <button type="text" className="botonesdonaciones-3" >Hazte Voluntario</button>
         <button type="text" className="botonesdonaciones-4">Celebración solidaria</button>
-       
+        */}
       </div>
 
-      <p className="txt">Transparencia</p>  
+      <p className="txt">Transparencia</p>
       <p className="txtxs">Saber más</p>
 
       <div>
-        <img src={comonosfinanciamos} alt=""/>
+        <img src={comonosfinanciamos} alt="" />
       </div>
 
       <div>
-        <img src={comosedistr} alt=""/>
+        <img src={comosedistr} alt="" />
       </div>
 
       <div className="acreditacion">
-        <img  src={acreditacion} alt=""/>
+        <img src={acreditacion} alt="" />
       </div>
 
 

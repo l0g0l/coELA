@@ -49,21 +49,30 @@
 .noticias {
     margin-top: 20px;
 }
+.botondonaciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 92px;
+    height: 92px;
+    background: #44505E;
+
+}
 .botonesdonaciones {
     display: flex;
     justify-content: space-around;
     margin-right: 10px;
+  
 
     &-1{
-        background: #44505E;
+       
         border-radius: 10px;
-        width: 92px;
-        height: 92px;
+     
         font-style: normal;
         font-weight: 700;
         font-size: 14px;
         color: #FFFFFF;
-        margin: 13px 0 10px 11px;
+     
         outline: none;
         text-align: center;
     }

@@ -39,15 +39,16 @@
                 margin-bottom: 20px;
                 font-size: 22px;
                 padding-top: 12px;
+                &::placeholder {
+                    font-weight: 500;
+                    font-size: 22px;
+                    text-align: left;
+                    text-transform: capitalize;
+                    color:#1F3044;
+                  }
               
             }
-            ::placeholder {
-                font-weight: 500;
-                font-size: 18px;
-                text-align: left;
-                text-transform: capitalize;
-                color:#1F3044;
-              }
+        
        
             &-2 {
                 background: #FFFFFF;
@@ -57,15 +58,16 @@
                 width: 372px;
                 height: 45px;   
                 margin-bottom: 20px;   
+                &::placeholder {
+                    font-weight: 500;
+                    font-size: 18px;
+                    text-align: left;
+                    text-transform: capitalize;
+                    color:#1F3044;
+                  }
                
             }
-            ::placeholder {
-                font-weight: 500;
-                font-size: 18px;
-                text-align: left;
-                text-transform: capitalize;
-                color:#1F3044;
-              }
+        
             
         }
           

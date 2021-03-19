@@ -7,11 +7,11 @@ import wifi from '../images/wifi.svg';
 import imagen1carr from '../images/carrusel/imagen1carr.svg';
 import imagen2carr from '../images/carrusel/imagen2carr.svg';
 import imagen3carr from '../images/carrusel/imagen3carr.svg';
-
-
 import insignias from '../images/insignias.svg'
-import botondonar from '../images/botondonar.svg'
-import redondeo from '../images/botones_config_donac/redondeo.svg';
+import botondonar from '../images/botondonar.png'
+import boton1 from '../images/boton1.png';
+import boton2 from '../images/boton2.png';
+import boton3 from '../images/boton3.png';
 import { useHistory } from 'react-router-dom';
 import Carousel from "react-elastic-carousel";
 // import Item from "./Item";
@@ -52,7 +52,7 @@ const Home = () => {
 
 
   return (
-    <div >
+    <div  >
       <div className="encabezadoperfil" >
         <img src={wifi} alt="" />
         <div className="encabezadoperfil-1">
@@ -100,22 +100,26 @@ const Home = () => {
       <div className="configdonaciones">
 
 
-        <img onClick={sendroundup} className="configdonaciones-btn-1" src={redondeo} alt=""></img>
+        <img onClick={sendroundup} className="configdonaciones-btn-1" src={boton1} alt=""/>
 
 
-        <img onClick={sendpercent} className="configdonaciones-btn-1" src={redondeo} alt=""></img>
+        <img onClick={sendpercent} className="configdonaciones-btn-1" src={boton2} alt=""/>
 
-        <img onClick={sendperiodic} className="configdonaciones-btn-1" src={redondeo} alt=""></img>
-
+        <img onClick={sendperiodic} className="configdonaciones-btn-1" src={boton3} />
 
 
       </div>
 
       {/* <Logout /> */}
       <div className="footerhome">
+        <div className="footerhome-1">
         <img onClick={sendonedonation} className="footerhome-img" src={botondonar} alt="" />
-        <Footer />
+
+        </div>
+       
       </div>
+
+      <Footer />
 
 
 
