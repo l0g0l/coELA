@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import wifi from '../images/wifi.svg';
 import ranking from '../images/ranking.svg';
 import { useHistory } from 'react-router-dom';
-import botondonar from '../images/botondonar.svg'
+import botondonar from '../images/botondonar.png'
 
 import '../styles/_communityRanking.scss'
 
@@ -36,12 +36,15 @@ export default function CommunityRanking() {
 
 
 
-
-
             <div className="footerhome">
-                <img onClick={sendonedonation} className="footerhome-img" src={botondonar} alt="" />
-                <Footer />
+                <div className="footerhome-1">
+                    <img onClick={sendonedonation} className="footerhome-img" src={botondonar} alt="" />
+
+                </div>
+
             </div>
+
+            <Footer />
 
         </div>
     )

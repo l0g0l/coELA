@@ -5,7 +5,7 @@ import ruedecita from '../images/ruedecita.svg';
 import fotoperfil from '../images/fotoperfil.svg';
 import informacion from '../images/informacion.svg';
 import wifi from '../images/wifi.svg';
-import botondonar from '../images/botondonar.svg';
+import botondonar from '../images/botondonar.png'
 import Botonovalado from '../components/botones/Botonovalado'
 import Switch from '@material-ui/core/Switch';
 import grafico from '../images/misdonaciones/grafico.svg';
@@ -23,6 +23,7 @@ const MyDonations = () => {
   const sendhome = () => {
     history1.push("/home");
   }
+
 
   return (
     <div className="containerencandonation">
@@ -52,7 +53,7 @@ const MyDonations = () => {
             defaultChecked
             color="default"
             inputProps={{ 'aria-label': 'checkbox with default color' }} />
-          <p className="encabezadoperfil-txt-3">Anónimas</p>
+          <p className="encabezadoperfil-txt-3">Públicas</p>
 
         </div>
 
@@ -76,11 +77,16 @@ const MyDonations = () => {
     </div>
 
 
-      {/* <Logout /> */}
-      <div className="footerhome">
-        <img onClick={sendhome} className="footerhome-img" src={botondonar} alt=""/>
-      <Footer />
+    <div className="footerhome">
+        <div className="footerhome-1">
+          <img onClick={sendhome} className="footerhome-img" src={botondonar} alt="" />
+
+        </div>
+
       </div>
+
+      <Footer />
+
     </div>
   )
 }

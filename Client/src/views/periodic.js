@@ -31,10 +31,11 @@ const Periodic = () => {
   return (
     <div className="containerperiodica">
       <Encabezadocomun texto={'Donación periódica'} src={calendarioblanco} />
+
       <div className="periodica">
         <img className="periodica-img" src={flor1} alt="" />
         <input className="periodica-input" type="text" />
-        <img className="periodica-img-2" src={euro} alt="" />
+        {/* <img className="periodica-img-2" src={euro} alt="" /> */}
 
       </div>
 
