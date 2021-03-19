@@ -1,3 +1,7 @@
+.containerperiodica {
+    padding: 140px 0 0 0;
+}
+
 .periodica {
     text-align: center;
     margin: 20px 70px 20px 84px;
@@ -25,7 +29,7 @@
         font-weight: 700;
         font-size: 20px;
         color: #FFFFFF;
-        margin: 20px 25px;
+        margin: 0 20px 25px;
 
         &-2 {
             font-style: normal;
@@ -50,9 +54,20 @@
     }
 
   }
-  .desplegable1 {
-    margin-bottom: 233px;
+  .btndesactivar {
+    border: none;
+    background: transparent;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    outline: none;
+}
+  .desplegable2 {
+    margin-bottom: 155px;
     margin-left: 18px;
+    
    
 }
 

@@ -14,9 +14,7 @@ import boton2 from '../images/boton2.png';
 import boton3 from '../images/boton3.png';
 import { useHistory } from 'react-router-dom';
 import Carousel from "react-elastic-carousel";
-// import Item from "./Item";
 
-// import Logout from '../components/Logout'
 
 import '../styles/_home.scss'
 
@@ -27,8 +25,6 @@ const breakPoints = [
   { width: 768, itemsToShow: 3 },
 
 ];
-
-
 
 const Home = () => {
 
@@ -77,15 +73,12 @@ const Home = () => {
       </div>
 
       <div>
-        {/* <img className="carrusel-1" src={imagen1carr} alt="imagen carrusel" />
-        <img className="carrusel-2" src={puntos} alt="imagen carrusel" />
-        <Carrusel /> */}
 
         <Carousel breakPoints={breakPoints}>
-          <div className="item"><img src={imagen1carr} alt=""/></div>
-          <div className="item"><img src={imagen2carr} alt=""/></div>
-          <div className="item"><img src={imagen3carr} alt=""/></div>
-   
+          <div className="item"><img src={imagen1carr} alt="" /></div>
+          <div className="item"><img src={imagen2carr} alt="" /></div>
+          <div className="item"><img src={imagen3carr} alt="" /></div>
+
         </Carousel>
       </div>
 
@@ -99,29 +92,23 @@ const Home = () => {
 
       <div className="configdonaciones">
 
-
-        <img onClick={sendroundup} className="configdonaciones-btn-1" src={boton1} alt=""/>
-
-
-        <img onClick={sendpercent} className="configdonaciones-btn-1" src={boton2} alt=""/>
-
+        <img onClick={sendroundup} className="configdonaciones-btn-1" src={boton1} alt="" />
+        <img onClick={sendpercent} className="configdonaciones-btn-1" src={boton2} alt="" />
         <img onClick={sendperiodic} className="configdonaciones-btn-1" src={boton3} />
 
 
       </div>
 
-      {/* <Logout /> */}
+
       <div className="footerhome">
         <div className="footerhome-1">
-        <img onClick={sendonedonation} className="footerhome-img" src={botondonar} alt="" />
+          <img onClick={sendonedonation} className="footerhome-img" src={botondonar} alt="" />
 
         </div>
-       
+
       </div>
 
       <Footer />
-
-
 
     </div>
   )

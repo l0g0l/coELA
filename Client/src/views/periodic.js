@@ -29,7 +29,7 @@ const Periodic = () => {
   }
 
   return (
-    <div>
+    <div className="containerperiodica">
       <Encabezadocomun texto={'Donación periódica'} src={calendarioblanco} />
       <div className="periodica">
         <img className="periodica-img" src={flor1} alt="" />
@@ -58,7 +58,7 @@ const Periodic = () => {
         <p className="periodica-txt">Tipo de donación</p>
       </div>
 
-      <div className="desplegable1">
+      <div className="desplegable2">
         <DesplegableOptions />
 
       </div>
@@ -70,12 +70,11 @@ const Periodic = () => {
 
         </div>
 
-        <div className="btnguardar-1">
-          <Botonovalado pulsar={sendhome2} texto={'Desactivar'} color='btn-ovalado-white' />
-
+        <div >
+          <button className="btndesactivar">Desactivar</button>
         </div>
+
       </div>
-      {/* <Logout /> */}
 
       <Footer />
     </div>

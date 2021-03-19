@@ -1,3 +1,10 @@
+.containerpayment {
+    padding:120px 0 0 0;
+}
+.encabezadocomun-txt {
+    text-align: center;
+}
+
 
 .tarjeta {
 
@@ -45,6 +52,7 @@
                     text-align: left;
                     text-transform: capitalize;
                     color:#1F3044;
+                    padding-left: 10px;
                   }
               
             }
@@ -60,10 +68,12 @@
                 margin-bottom: 20px;   
                 &::placeholder {
                     font-weight: 500;
-                    font-size: 18px;
+                    font-size: 22px;
                     text-align: left;
                     text-transform: capitalize;
                     color:#1F3044;
+                    padding-left: 10px;
+                    
                   }
                
             }
@@ -86,7 +96,6 @@
         letter-spacing: -0.41px;
         color: white;
         text-align: left;
-        
         margin-bottom: 10px;
 
         &-p{
@@ -103,14 +112,17 @@
             height: 45px;
             margin-bottom: 20px;
             font-size: 22px;
+          
         }
         ::placeholder {
             font-weight: 500;
-            font-size: 20px;
-            text-align: center;
+            font-size: 22px;
+            text-align: left;
             text-transform: capitalize;
             color:#1F3044;
+            padding-left: 10px;
           }
+       
     }
     &-2 {
         font-style: normal;
@@ -119,7 +131,6 @@
         letter-spacing: -0.41px;
         color: white;
         text-align: left;
-        
         margin-bottom: 10px;
 
 
@@ -136,15 +147,18 @@
             width: 165px;
             height: 45px;
             margin-bottom: 20px;
-            font-size: 22px;
+          
         }
+         
         ::placeholder {
             font-weight: 500;
-            font-size: 20px;
-            text-align: center;
+            font-size: 22px;
+            text-align: left;
             text-transform: capitalize;
             color:#1F3044;
+            padding-left: 10px;
           }
+      
     }
 
 }
@@ -157,9 +171,10 @@
     color: #FFFFFF;
  }
 .botongr {
-text-align: center;
-width: 200px;
-margin-left: 40px;
+   
+    width: 200px;
+    margin-left: 40px;
+    
     }
 .txt-tarjeta {
    text-align: left;

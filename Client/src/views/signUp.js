@@ -33,7 +33,7 @@ export default function SignUp() {
 
     if(jsonData.msg == "Usuario Creado Correctamente") {
       window.location.href = "./"
-    }else {alert ('Usuario inexistente')}
+    }else {alert(jsonData.msg)}
     
   }
 

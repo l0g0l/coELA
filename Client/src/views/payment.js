@@ -18,8 +18,8 @@ function Payment() {
     }
 
     return (
-        <div>
-            <div className="encabezado" >
+        <div className="containerpayment">
+            <div className="encabezadocomun" >
 
                 <img className="encabezado-wifi" src={wifi} alt="" />
 
@@ -31,7 +31,7 @@ function Payment() {
 
             <p className="txt-tarjeta">Vas a donar</p>
 
-            <div className="encabezado-txt">
+            <div className="encabezadocomun-txt">
 
                 <img className="botongr"src={botoncuadradogr} alt=""/>
 

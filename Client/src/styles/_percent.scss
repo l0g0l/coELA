@@ -1,3 +1,6 @@
+.containerporcentaje {
+    padding:158px 0 0 0;
+}
 .porcentaje {
 
     &-txt {
@@ -5,7 +8,7 @@
         font-weight: 700;
         font-size: 20px;
         color: #FFFFFF;
-        margin: 20px 25px;
+        margin: 0 0 20px 25px;
 
         &-2 {
             font-style: normal;
@@ -19,7 +22,6 @@
         }
     }       
   }
-
 .porcentaje-btnmed {
     display: flex;
     flex-direction: row;
@@ -31,16 +33,23 @@
     margin-bottom: 20px;
 }
 
-    .btnguardar {
-        text-align: center;
-        
+.btnguardar {
+    text-align: center;
 
-        &-1 {
-         
-        }
-    }
-    .desplegable {
-        margin-bottom: 130px;
-        margin-left: 18px;
-       
-    }
+}
+.btndesactivar {
+    border: none;
+    background: transparent;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    outline: none;
+}
+.desplegable {
+    margin-bottom: 120px;
+    margin-left: 18px;
+  
+    
+}
