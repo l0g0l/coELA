@@ -36,16 +36,15 @@ class Login extends Component {
         await axios.post(baseurl, { user: this.state.form.user, password: md5(this.state.form.password) })
 
             .then(response => {
-                console.log(response.data);
+                console.log(response);
 
                 return response.data
             })
             .then(response => {
 
-                if (response.token !== "") {
+                if (response.token && response.token !== "") {
                     cookies.set('user', this.state.form.user)
                     window.location.href = "./home"
-
 
                 } else { alert("Usuario o Contraseña incorrecto") }
             })

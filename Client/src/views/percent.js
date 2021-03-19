@@ -28,7 +28,7 @@ const Percent = () => {
 
 
   return (
-    <div>
+    <div className="containerporcentaje">
       <Encabezadocomun texto={'Porcentaje de la nómina'} src={porcentajeblanco} />
       <div className="porcentaje">
         <p className="porcentaje-txt"> Acelerador de solidaridad</p>
@@ -47,18 +47,18 @@ const Percent = () => {
         <p>Ejemplo: Si configuras el 0,5% y tienes una nómina de 1000€, donarás 5€</p>
       </div>
 
-      <div  className="txt-despleg1">
+      <div className="txt-despleg1">
         <p>Calcula tu desgravación</p>
 
-        </div>
+      </div>
 
       <Desplegableporcentaje />
-      
-       <div >
-        <p className="porcentaje-txt">Tipo de donación</p>
-        </div>
 
-        <div className="desplegable">
+      <div >
+        <p className="porcentaje-txt">Tipo de donación</p>
+      </div>
+
+      <div className="desplegable">
         <DesplegableOptions />
 
       </div>
@@ -69,13 +69,13 @@ const Percent = () => {
 
         </div>
 
-        <div className="btnguardar-1">
-          <Botonovalado pulsar={sendhome2} texto={'Desactivar'} color='btn-ovalado-white' />
-
+        <div >
+          <button className="btndesactivar">Desactivar</button>
         </div>
+
       </div>
 
-      {/* <Logout /> */}
+
       <Footer />
 
     </div>

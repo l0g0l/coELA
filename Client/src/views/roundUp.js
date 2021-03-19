@@ -21,7 +21,7 @@ const RoundUp = () => {
   }
 
   return (
-    <div>
+    <div className="containerredondeo">
       <Encabezadocomun texto={'Redondeo de mis compras'} src={quesitoblanco}/>
       <div className="redondeo">
         <p className="redondeo-txt"> Acelerador de solidaridad</p>
