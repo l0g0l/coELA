@@ -29,6 +29,7 @@ app.use( express.json() );
 // Rutas de la app
 app.use('/api/', require('./routes/newUser'));
 app.use('/api/login', require('./routes/auth'));
+app.use('/api/profile', require('./routes/profile'));
 // app.use('/api/donations', require('./routes/donations'));
 
 
