@@ -25,9 +25,9 @@ const OneDonation = () => {
 
 
   let history = useHistory();
-  const send = () => {
-    history.push("/roundup");
-  }
+  // const send = () => {
+  //   history.push("/home");
+  // }
   let history2 = useHistory();
   const sendcreditcard = () => {
     history2.push("/payment");
@@ -57,9 +57,9 @@ const OneDonation = () => {
       <div className="screen1">
         <div className="screen2">
          
-            <Botoncuadradogr valor={'5€'} imagen={flor1} pulsar={send}/>
-            <Botoncuadradogr valor={'25€'} imagen={flor2} pulsar={send}/>
-            <Botoncuadradogr valor={'50€'} imagen={flor3} pulsar={send}/>
+            <Botoncuadradogr valor={'5€'} imagen={flor1} />
+            <Botoncuadradogr valor={'25€'} imagen={flor2}/>
+            <Botoncuadradogr valor={'50€'} imagen={flor3}/>
         </div>
     
        <div className="screen-btnrect">
@@ -87,11 +87,11 @@ const OneDonation = () => {
 
 
 
-      <div className="btn-ovalado">
+      {/* <div className="btn-ovalado">
         <Botonovalado pulsar={send} texto="Siguiente" color="btn-ovalado-pink" />
-      </div>
+      </div> */}
 
-      {/* <Logout /> */}
+    
       <Footer />
 
     </div>

@@ -18,7 +18,7 @@ const Luzon = () => {
 
 
   return (
-    <div>
+    <div className="containerluzon">
       <div className="encabezadocomun1" >
         <img className="encabezadocomun1-wifi" src={wifi} alt="wifi" />
 

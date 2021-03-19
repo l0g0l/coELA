@@ -4,7 +4,7 @@ import flecha2 from '../images/flecha2.png';
 import '../styles/_flecha.scss'
 
 
-function Flecha() {
+function Flecha(back) {
 
     return (
         <div>
