@@ -16,7 +16,7 @@ router.post('/',
 
 router.get('/',
     auth,
-    authController.authUser
+    authController.getUser
 );
 
 

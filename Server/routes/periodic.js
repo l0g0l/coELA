@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const donationController = require('../controllers/donationController')
+const periodicController = require('../controllers/periodicController')
 
 router.post('/', 
  
-    donationController.donation
+periodicController.periodic
 );
 
 module.exports = router;

@@ -7,7 +7,6 @@ const routes = require('./routes');
 // crear el servidor
 const app = express();
 
-
 // Conectar a la base de datos
 conectarDB();
 
@@ -23,14 +22,15 @@ const port = process.env.PORT || 4000;
 // Habilitar leer los valores de un body
 app.use( express.json() );
 
-
-// routes
-//app.use('/', routes());
 // Rutas de la app
 app.use('/api/', require('./routes/newUser'));
 app.use('/api/login', require('./routes/auth'));
-app.use('/api/profile', require('./routes/profile'));
-// app.use('/api/donations', require('./routes/donations'));
+app.use('/api/profile', require('./routes/auth'));
+app.use('/api/profile/donations', require('./routes/donations'));
+app.use('/api/profile/donations/onedonation', require('./routes/onedonation'));
+app.use('/api/profile/donations/percent', require('./routes/percent'));
+app.use('/api/profile/donations/roundup', require('./routes/roundup'));
+app.use('/api/profile/donations/periodic', require('./routes/periodic'));
 
 
 // Arrancar la app
