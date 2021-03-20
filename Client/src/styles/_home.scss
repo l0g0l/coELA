@@ -1,5 +1,5 @@
 .containerencandonation {
-    padding: 164px 0 0 0; 
+    padding: 242px 0 0 0;
     & .encabezadoperfil {
         position: fixed;
         top: 0;
@@ -10,7 +10,7 @@
     background: #1F3044;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     &-1 {
         margin-bottom: 10px;
         text-align: right;
@@ -48,10 +48,20 @@
             font-weight: 700;
             font-size: 20px;
             color: #00DDA3;
-            margin-top: 5px;
-            margin-right: 10px;
+            margin-top: 10px;
+            margin-right: 27px;
+            margin-left: 11px;
         }
+        &-txt-02 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            color: #00DDA3;
+            margin-top: 14px;
+            margin-right: 10px;
+            margin-left: 19px;
     }
+}
     .carrusel {
         text-align: center;
         &-1 {
@@ -134,8 +144,8 @@
     margin-top: 0px;
     background-color: #F19174;
     box-shadow: 0 0 1px 3px #F19174;
-    height: 3px;
-    width: 3px;
+    height: 8px;
+    width: 8px;
   }
   button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
     box-shadow: 0 0 1px 3px #F19174;

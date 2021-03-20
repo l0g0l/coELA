@@ -3,7 +3,7 @@
     background: #1F3044;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 
     &-1 {
         margin-bottom: 10px;
@@ -48,8 +48,13 @@
             font-weight: 700;
             font-size: 20px;
             color: #00DDA3;
-            margin-top: 5px;
+            margin-top: 13px;
             margin-right: 10px;
+            margin-left: 10px;
+        }
+        &-txt-3 {
+            margin-left: 11px;
+            margin-top: 8px;
         }
     &-barra {
     display: flex;
@@ -63,24 +68,35 @@
         }
 
     }
-    .desgravacion {
+.desgravacion {
         text-align: center;
         margin-top: 20px;
     }
-    .donaciones-txt {
+.donaciones-txt {
         font-style: normal;
         font-weight: 700;
         font-size: 14px;
         color: #FFFFFF;
         margin: 20px 0 20px 20px;
     }
-    .grafico {
+.grafico {
         text-align: center;
     
     }
-    .calendario {
+.calendario {
         text-align: center;
     }
-    .movimientos {
+.movimientos {
         text-align: center; 
     }
+.MuiIconButton-label {
+
+    color:#00DDA3;
+} 
+.modalbtn2 {
+    top:50%,;
+    padding:4px 0px 0px 20px;
+    background: #1F3044;
+    border: none;
+    outline: none;
+}

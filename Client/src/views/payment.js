@@ -1,7 +1,7 @@
 import React from 'react'
 import Botonovalado from '../components/botones/Botonovalado';
 import Footer from '../components/Footer'
-import Flecha from '../components/Flecha.js';
+import flecha2 from '../images/flecha2.png';
 import wifi from '../images/wifi.svg';
 import mastercard from '../images/mastercard.svg';
 import { useHistory } from 'react-router-dom';
@@ -24,7 +24,8 @@ function Payment() {
                 <img className="encabezado-wifi" src={wifi} alt="" />
 
                 <div className="encabezado-2">
-                    <Flecha />
+                    <a href="./onedonation"><img  className="flecha"  src={flecha2} alt=""/></a>  
+
                     <p className="encabezado-txt-1">Hacer una donación ahora</p>
                 </div>
             </div>
@@ -33,45 +34,45 @@ function Payment() {
 
             <div className="encabezadocomun-txt">
 
-                <img className="botongr"src={botoncuadradogr} alt=""/>
+                <img className="botongr" src={botoncuadradogr} alt="" />
 
             </div>
             <p className="txt-tarjeta">Introduce tu tarjeta bancaria</p>
-                <div className="tarjeta">
+            <div className="tarjeta">
 
-                    <p className="tarjeta-input-txt">Titular</p>
-                    <div className="tarjeta-input">
-                        <input type="text" className="tarjeta-input-txt-1" placeholder="Clara Smith García" />
-                        <img className="tarjeta-input-mastercard" src={mastercard} />
-                    </div>
-
-                    <div >
-                        <p className="tarjeta-input-txt">Número de tarjeta</p>
-                        <input src={mastercard} type="text" className="tarjeta-input-txt-2" placeholder="**** **** **** 4747"></input>
-                    </div>
-
-                    <div className="div">
-
-                        <div className="div-1">
-                            <p className="div-1-p">Fecha de caducidad</p>
-                            <input type="text" className="div-1-in" placeholder="07/21"/>
-
-                        </div>
-
-
-                        <div className="div-2">
-                            <p className="div-2-p">CVC</p>
-                            <input type="text" className="div-2-in" placeholder="4*4" />
-                        </div>
-
-                    </div>
-                    <div className="btnguardar">
-                        <Botonovalado pulsar={sendthanks} texto={'Donar ahora'} color='btn-ovalado-pink ' />
-                    </div>
-
-                    <Footer />
+                <p className="tarjeta-input-txt">Titular</p>
+                <div className="tarjeta-input">
+                    <input type="text" className="tarjeta-input-txt-1" placeholder="Clara Smith García" />
+                    <img className="tarjeta-input-mastercard" src={mastercard} />
                 </div>
+
+                <div >
+                    <p className="tarjeta-input-txt">Número de tarjeta</p>
+                    <input src={mastercard} type="text" className="tarjeta-input-txt-2" placeholder="**** **** **** 4747"></input>
+                </div>
+
+                <div className="div">
+
+                    <div className="div-1">
+                        <p className="div-1-p">Fecha de caducidad</p>
+                        <input type="text" className="div-1-in" placeholder="07/21" />
+
+                    </div>
+
+
+                    <div className="div-2">
+                        <p className="div-2-p">CVC</p>
+                        <input type="text" className="div-2-in" placeholder="4*4" />
+                    </div>
+
+                </div>
+                <div className="btnguardar">
+                    <Botonovalado pulsar={sendthanks} texto={'Dona'} color='btn-ovalado-pink ' />
+                </div>
+
+                <Footer />
             </div>
+        </div>
     )
 }
 

@@ -1,12 +1,10 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Encabezadocomun from '../components/Encabezadocomun';
-// import Logout from '../components/Logout';
 import { useHistory } from 'react-router-dom';
 import Botoncuadradopeq from '../components/botones/Botoncuadradopeq';
 import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
-import euro from '../images/euro.svg';
 import Desplegableporcentaje from '../components/Desplegableporcentaje'
 import flor1 from '../images/flor1.svg';
 import calendarioblanco from '../images/calendarioblanco.svg';
@@ -23,18 +21,16 @@ const Periodic = () => {
   const sendhome = () => {
     history1.push("/home");
   }
-  let history2 = useHistory();
-  const sendhome2 = () => {
-    history2.push("/home");
-  }
+
 
   return (
     <div className="containerperiodica">
       <Encabezadocomun texto={'Donación periódica'} src={calendarioblanco} />
+
       <div className="periodica">
         <img className="periodica-img" src={flor1} alt="" />
         <input className="periodica-input" type="text" />
-        <img className="periodica-img-2" src={euro} alt="" />
+        {/* <img className="periodica-img-2" src={euro} alt="" /> */}
 
       </div>
 

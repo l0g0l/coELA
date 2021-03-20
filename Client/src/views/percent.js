@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Encabezadocomun from '../components/Encabezadocomun';
-// import Logout from '../components/Logout';
 import { useHistory } from 'react-router-dom';
 import Botoncuadradopeq from '../components/botones/Botoncuadradopeq';
 import Botonrect from '../components/botones/Botonrect.js';
@@ -21,11 +20,7 @@ const Percent = () => {
   const sendhome = () => {
     history1.push("/home");
   }
-  let history2 = useHistory();
-  const sendhome2 = () => {
-    history2.push("/home");
-  }
-
+ 
 
   return (
     <div className="containerporcentaje">

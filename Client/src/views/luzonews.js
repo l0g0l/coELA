@@ -9,19 +9,19 @@ import noticia4 from '../images/noticias/noticia4.svg';
 import noticia5 from '../images/noticias/noticia5.svg';
 import noticia6 from '../images/noticias/noticia6.svg';
 import { useHistory } from 'react-router-dom';
-import botondonar from '../images/botondonar.svg'
+import botondonar from '../images/botondonar.png'
 
 import '../styles/_luzonews.scss'
 
 const Luzonews = () => {
   let history = useHistory();
-  const sendluzonews = () => {
-    history.push("/luzonews");
+  const sendonedonation = () => {
+    history.push("/onedonation");
   }
 
 
   return (
-    <div>
+    <div className="containerluzonews">
       <div className="encabezadocomun1" >
         <img className="encabezadocomun1-wifi" src={wifi} alt="wifi" />
 
@@ -30,9 +30,10 @@ const Luzonews = () => {
         </div>
 
         <div className="encabezadocomun1txt2">
-          <p className="encabezadocomun1txt2-2">Noticias</p>
-          <p className="encabezadocomun1txt2-2">La Fundación</p>
+        <a href="./luzon"  className="encabezadocomun1txt2-1"><p>La Fundación</p></a>
+        <a href="./luzonews"  className="encabezadocomun1txt2-2"><p>Noticias</p></a>
         </div>
+
         </div>
 
         <div className="noticias">
@@ -44,14 +45,15 @@ const Luzonews = () => {
           <img src={noticia6} alt="" className="noticia6"/>
         </div>
 
-      {/*   
-      <Logout /> */}
+        <div className="footerhome">
+        <div className="footerhome-1">
+          <img onClick={sendonedonation} className="footerhome-img" src={botondonar} alt="" />
 
-      <div className="footerhome">
-        <img onClick={sendluzonews} className="footerhome-img" src={botondonar} alt="" />
-        <Footer />
+        </div>
+
       </div>
 
+      <Footer />
 
     </div>
   )

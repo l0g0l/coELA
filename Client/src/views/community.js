@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../components/Footer';
 import wifi from '../images/wifi.svg';
 import { useHistory } from 'react-router-dom';
-import botondonar from '../images/botondonar.svg'
+import botondonar from '../images/botondonar.png'
 
 import '../styles/_community.scss'
 
@@ -15,7 +15,7 @@ function Community() {
       history.push("/onedonation");
     }
     return (
-        <div>
+        <div className="containercommunity">
             <div className="encabezadocomun1" >
                 <img className="encabezadocomun1-wifi" src={wifi} alt="wifi" />
 
@@ -24,9 +24,9 @@ function Community() {
                 </div>
 
                 <div className="encabezadocomun1txt2">
-                    <p className="encabezadocomun1txt2-2">Gente como tú</p>
-                    <p className="encabezadocomun1txt2-1">Challenges</p>
-                    <p className="encabezadocomun1txt2-1">Rankings</p>
+                    <a href="./community"  className="encabezadocomun1txt2-2"><p>Gente como tú</p></a>
+                    <a href="./challenges" className="encabezadocomun1txt2-1"><p>Challenges</p></a>
+                    <a href="./ranking"className="encabezadocomun1txt2-1"><p>Ranking</p></a>
                 </div>
 
             </div>
@@ -37,11 +37,16 @@ function Community() {
 
 
       <div className="footerhome">
-        <img onClick={sendonedonation} className="footerhome-img" src={botondonar} alt="" />
-        <Footer />
-      </div>
+        <div className="footerhome-1">
+          <img onClick={sendonedonation} className="footerhome-img" src={botondonar} alt="" />
 
         </div>
+
+      </div>
+
+      <Footer />
+
+    </div>
     )
 }
 

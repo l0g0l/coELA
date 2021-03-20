@@ -7,7 +7,6 @@ import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
 import { useHistory } from 'react-router-dom';
 import quesitoblanco from '../images/quesitoblanco.svg';
-import Logout from '../components/Logout';
 
 import '../styles/_roundup.scss'
 
@@ -19,6 +18,9 @@ const RoundUp = () => {
   const send = () => {
     history.push("/home");
   }
+
+ 
+  
 
   return (
     <div className="containerredondeo">
@@ -56,7 +58,7 @@ const RoundUp = () => {
       </div>
 
 
-     <Logout />
+   
       <Footer />
 
     </div>

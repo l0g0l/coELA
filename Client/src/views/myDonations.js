@@ -1,21 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react'
 import Footer from '../components/Footer';
-// import Logout from '../components/Logout';
 import ruedecita from '../images/ruedecita.svg';
 import fotoperfil from '../images/fotoperfil.svg';
 import informacion from '../images/informacion.svg';
 import wifi from '../images/wifi.svg';
-import botondonar from '../images/botondonar.svg';
+import popup from '../images/popup.svg';
+import botondonar from '../images/botondonar.png'
 import Botonovalado from '../components/botones/Botonovalado'
 import Switch from '@material-ui/core/Switch';
 import grafico from '../images/misdonaciones/grafico.svg';
 import calendario from '../images/misdonaciones/calendario.svg';
-// import wifi from '../images/misdonaciones/grafico.svg';
 import movimientosbanco from '../images/misdonaciones/movimientosbanco.svg';
 import { useHistory } from 'react-router-dom';
+import Modal from '../components/Modal'
 
 
-
+import '../styles/_popup.scss'
 import '../styles/_mydonations.scss'
 
 const MyDonations = () => {
@@ -23,6 +23,12 @@ const MyDonations = () => {
   const sendhome = () => {
     history1.push("/home");
   }
+  const [active,setActive]= useState(false)
+  const toggle = () => {
+      setActive (!active)
+  }
+
+
 
   return (
     <div className="containerencandonation">
@@ -39,10 +45,12 @@ const MyDonations = () => {
             <p className="encabezadoperfil-txt-1">¡Hola Clara! </p>
             <div className="encabezadoperfil-3-3_1">
               <p className="encabezadoperfil-txt-2">5.000 Luzones</p>
-              <img src={informacion} alt="" />
+              <button className="modalbtn" onClick= {toggle}><img src={informacion} alt="" /></button>
+              <Modal active ={active} toggle={toggle}>
 
-            </div>
-
+              <img src={popup} alt=""/>
+              </Modal>
+              </div>
           </div>
           <img className="encabezadoperfil-img" src={fotoperfil} alt="foto perfil" />
         </div>
@@ -52,7 +60,7 @@ const MyDonations = () => {
             defaultChecked
             color="default"
             inputProps={{ 'aria-label': 'checkbox with default color' }} />
-          <p className="encabezadoperfil-txt-3">Anónimas</p>
+          <p className="encabezadoperfil-txt-3">Públicas</p>
 
         </div>
 
@@ -76,11 +84,16 @@ const MyDonations = () => {
     </div>
 
 
-      {/* <Logout /> */}
-      <div className="footerhome">
-        <img onClick={sendhome} className="footerhome-img" src={botondonar} alt=""/>
-      <Footer />
+    <div className="footerhome">
+        <div className="footerhome-1">
+          <img onClick={sendhome} className="footerhome-img" src={botondonar} alt="" />
+
+        </div>
+
       </div>
+
+      <Footer />
+
     </div>
   )
 }

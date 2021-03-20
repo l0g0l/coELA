@@ -46,6 +46,9 @@ body {
     border: none;
     background-color: transparent;
   }
+  .cuadradogr-change {
+    background: #ffff;
+  }
   .cuadradogr {
     display: flex;
     flex-direction: column;
@@ -55,8 +58,8 @@ body {
     color: #33404F;
     width: 108px;
     height: 108px;
-    background: #FFFFFF;
-    opacity: 0.5;
+    background: #C4c1c1;
+    // opacity: 0.5;
     box-shadow: 0px 0px 50px rgb(51 64 79 / 15%);
     border-radius: 5px;
     border: none;
@@ -70,6 +73,7 @@ body {
         border: none;
         background: transparent;
         font-size: 23px;
+        outline: none;
       }
     }
   .btnrect {
@@ -113,6 +117,7 @@ body {
         border: none;
         background: transparent;
         font-size: 23px;
+        outline: none;
       }
       &-txt {
         font-size: 17px;

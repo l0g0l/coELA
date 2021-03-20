@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Footer from '../components/Footer'
 import ruedecita from '../images/ruedecita.svg';
 import fotoperfil from '../images/fotoperfil.svg';
 import informacion from '../images/informacion.svg';
 import wifi from '../images/wifi.svg';
+import popup from '../images/popup.svg';
 import imagen1carr from '../images/carrusel/imagen1carr.svg';
 import imagen2carr from '../images/carrusel/imagen2carr.svg';
 import imagen3carr from '../images/carrusel/imagen3carr.svg';
@@ -15,7 +16,9 @@ import boton3 from '../images/boton3.png';
 import { useHistory } from 'react-router-dom';
 import Carousel from "react-elastic-carousel";
 
+import Modal from '../components/Modal'
 
+import '../styles/_popup.scss'
 import '../styles/_home.scss'
 
 
@@ -45,10 +48,15 @@ const Home = () => {
     history4.push("/onedonation");
   }
 
+  const [active,setActive]= useState(false)
+  const toggle = () => {
+      setActive (!active)
+  }
+
 
 
   return (
-    <div  >
+    <div >
       <div className="encabezadoperfil" >
         <img src={wifi} alt="" />
         <div className="encabezadoperfil-1">
@@ -60,8 +68,12 @@ const Home = () => {
           <div className="encabezadoperfil-3">
             <p className="encabezadoperfil-txt-1">¡Hola Clara! </p>
             <div className="encabezadoperfil-3-3_1">
-              <p className="encabezadoperfil-txt-2">5.000 Luzones</p>
-              <img src={informacion} alt="" />
+              <p className="encabezadoperfil-txt-02">5.000 Luzones</p>
+              <button className="modalbtn" onClick= {toggle}><img src={informacion} alt="" /></button>
+              <Modal active ={active} toggle={toggle}>
+
+              <img src={popup} alt=""/>
+              </Modal>
 
             </div>
 

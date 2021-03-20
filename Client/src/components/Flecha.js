@@ -1,16 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import flecha from '../images/flecha.svg';
+import flecha2 from '../images/flecha2.png';
 
 import '../styles/_flecha.scss'
 
 
-function Flecha() {
+function Flecha(back) {
 
     return (
         <div>
 
-          <Link to={'/home'}><button className="flecha" id="ir a"> <img src={flecha} alt=""/></button></Link>  
+          <a href="./home"><img  className="flecha"  src={flecha2} alt=""/></a>  
         </div>
     )
 }
