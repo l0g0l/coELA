@@ -68,7 +68,7 @@ const Home = () => {
           <div className="encabezadoperfil-3">
             <p className="encabezadoperfil-txt-1">¡Hola Clara! </p>
             <div className="encabezadoperfil-3-3_1">
-              <p className="encabezadoperfil-txt-2">5.000 Luzones</p>
+              <p className="encabezadoperfil-txt-02">5.000 Luzones</p>
               <button className="modalbtn" onClick= {toggle}><img src={informacion} alt="" /></button>
               <Modal active ={active} toggle={toggle}>
 

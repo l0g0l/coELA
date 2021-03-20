@@ -63,7 +63,7 @@ const Luzon = () => {
 
         <a href="https://ffluzon.org/colabora-ela/celebraciones-solidarias/">
           <div className="botondonaciones">
-            <p className="botonesdonaciones-1">Colaboración solidaria</p>
+            <p className="botonesdonaciones-1">Celebraciones solidarias</p>
           </div>
 
           </a>

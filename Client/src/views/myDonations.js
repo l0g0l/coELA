@@ -1,21 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react'
 import Footer from '../components/Footer';
-// import Logout from '../components/Logout';
 import ruedecita from '../images/ruedecita.svg';
 import fotoperfil from '../images/fotoperfil.svg';
 import informacion from '../images/informacion.svg';
 import wifi from '../images/wifi.svg';
+import popup from '../images/popup.svg';
 import botondonar from '../images/botondonar.png'
 import Botonovalado from '../components/botones/Botonovalado'
 import Switch from '@material-ui/core/Switch';
 import grafico from '../images/misdonaciones/grafico.svg';
 import calendario from '../images/misdonaciones/calendario.svg';
-// import wifi from '../images/misdonaciones/grafico.svg';
 import movimientosbanco from '../images/misdonaciones/movimientosbanco.svg';
 import { useHistory } from 'react-router-dom';
+import Modal from '../components/Modal'
 
 
-
+import '../styles/_popup.scss'
 import '../styles/_mydonations.scss'
 
 const MyDonations = () => {
@@ -23,6 +23,11 @@ const MyDonations = () => {
   const sendhome = () => {
     history1.push("/home");
   }
+  const [active,setActive]= useState(false)
+  const toggle = () => {
+      setActive (!active)
+  }
+
 
 
   return (
@@ -40,10 +45,12 @@ const MyDonations = () => {
             <p className="encabezadoperfil-txt-1">¡Hola Clara! </p>
             <div className="encabezadoperfil-3-3_1">
               <p className="encabezadoperfil-txt-2">5.000 Luzones</p>
-              <img src={informacion} alt="" />
+              <button className="modalbtn" onClick= {toggle}><img src={informacion} alt="" /></button>
+              <Modal active ={active} toggle={toggle}>
 
-            </div>
-
+              <img src={popup} alt=""/>
+              </Modal>
+              </div>
           </div>
           <img className="encabezadoperfil-img" src={fotoperfil} alt="foto perfil" />
         </div>
