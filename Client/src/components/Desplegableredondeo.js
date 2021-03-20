@@ -31,10 +31,7 @@ class Desplegableredondeo extends React.Component {
     console.log(this.state[id]);
 
   }
-
-
-
-
+  
   render() {
     const app__content_red = this.state.grey ? "greyButton" : "whiteButton";
     return (
@@ -68,7 +65,7 @@ class Desplegableredondeo extends React.Component {
 
             <div className="app__content">
               <p className="app__content-txt">Selecciona los días</p>
-              <div >
+              <div className="div-despleg">
                 <button id="l" onClick={() => this.changeColor("l")} className={` ${this.state['l']} app__content-btn-red`}>L</button>
                 <button id="m" onClick={() => this.changeColor("m")} className={` ${this.state['m']} app__content-btn-red`}>M</button>
                 <button id="x" onClick={() => this.changeColor("x")} className={` ${this.state['x']} app__content-btn-red`}>X</button>

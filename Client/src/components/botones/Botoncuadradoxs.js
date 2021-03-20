@@ -17,7 +17,7 @@ function Botoncuadradoxs({ texto, pulsar, img }) {
     <button onClick={changecolor} className={`cuadradoxs ${color}`}>
         <div >
             <img className="cuadradoxs-img" src={img} alt="" />
-            <p className="cuadradomxs-txt" >{texto}</p>
+            <p className="cuadradoxs-txt" >{texto}</p>
         </div>
     </button>
 </div>

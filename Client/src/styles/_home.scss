@@ -62,6 +62,10 @@
             margin-left: 19px;
     }
 }
+.fotoysaludo {
+    display: flex;
+    flex-direction: row;
+}
     .carrusel {
         text-align: center;
         &-1 {
@@ -82,7 +86,7 @@
         text-align: left;
         &-1 {
         font-style: normal;
-        font-weight: 700;
+        font-weight: bold;
         font-size: 18px;
         color: #FFFFFF;
         margin:20px 0 20px 20px;
@@ -142,14 +146,19 @@
   }
   button.rec-dot{
     margin-top: 0px;
-    background-color: #F19174;
-    box-shadow: 0 0 1px 3px #F19174;
-    height: 8px;
-    width: 8px;
+    background-color: grey;
+    height: 6px;
+    width: 6px;
+    margin-left: 15px;
+ 
+    
   }
   button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
-    box-shadow: 0 0 1px 3px #F19174;
+    box-shadow: 0 0 0px 3px white;
+    outline: none;
+    margin-left: 15px;
   }
+
  .rec.rec-arrow {
     background:transparent !important;
 }
@@ -157,6 +166,7 @@
     background-color:transparent !important;
  
 }
+
       
       
     

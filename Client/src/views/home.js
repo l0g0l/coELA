@@ -85,7 +85,7 @@ const Home = () => {
 
       <div>
 
-        <Carousel breakPoints={breakPoints}>
+      <Carousel breakPoints={breakPoints} showArrows={false}>
           <div className="item"><img src={imagen1carr} alt="" /></div>
           <div className="item"><img src={imagen2carr} alt="" /></div>
           <div className="item"><img src={imagen3carr} alt="" /></div>
