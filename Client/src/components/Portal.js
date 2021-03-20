@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ReacDOM from 'react-dom'
+import ReactDOM from 'react-dom'
 
 const portalRoot = document.getElementById('portal')
 
@@ -23,7 +23,7 @@ componentWillUndMount = () => {
     render() {
         const  {children} = this.props;
 
-        return ReacDOM.createPortal(children, this.el)
+        return ReactDOM.createPortal(children, this.el)
     }
 }
 

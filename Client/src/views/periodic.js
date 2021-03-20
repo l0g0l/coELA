@@ -1,12 +1,10 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Encabezadocomun from '../components/Encabezadocomun';
-// import Logout from '../components/Logout';
 import { useHistory } from 'react-router-dom';
 import Botoncuadradopeq from '../components/botones/Botoncuadradopeq';
 import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
-import euro from '../images/euro.svg';
 import Desplegableporcentaje from '../components/Desplegableporcentaje'
 import flor1 from '../images/flor1.svg';
 import calendarioblanco from '../images/calendarioblanco.svg';
@@ -23,10 +21,7 @@ const Periodic = () => {
   const sendhome = () => {
     history1.push("/home");
   }
-  let history2 = useHistory();
-  const sendhome2 = () => {
-    history2.push("/home");
-  }
+
 
   return (
     <div className="containerperiodica">

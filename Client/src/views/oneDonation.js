@@ -1,14 +1,11 @@
 import React from 'react'
 import Footer from '../components/Footer'
-import Botonovalado from '../components/botones/Botonovalado'
-// import Logout from '../components/Logout'
 import Flecha from '../components/Flecha';
 import { useHistory } from 'react-router-dom';
 import Botoncuadradogr from '../components/botones/Botoncuadradogr';
 import Botoncuadradomed from '../components/botones/Botoncuadradomed';
 import Botondespleg from '../components/botones/Botondespleg';
 import Botonrect from '../components/botones/Botonrect.js';
-import informacion from '../images/informacion.svg';
 import wifi from '../images/wifi.svg';
 import flor1 from '../images/flor1.svg';
 import flor2 from '../images/flor2.svg';
@@ -24,10 +21,6 @@ import '../styles/_oneDonation.scss'
 const OneDonation = () => {
 
 
-  let history = useHistory();
-  // const send = () => {
-  //   history.push("/home");
-  // }
   let history2 = useHistory();
   const sendcreditcard = () => {
     history2.push("/payment");
@@ -51,7 +44,6 @@ const OneDonation = () => {
 
       <div className="txt">
         <p className="txt-1">Indica la cantidad</p>
-        <img src={informacion} alt="icono de información" />
       </div>
 
       <div className="screen1">
