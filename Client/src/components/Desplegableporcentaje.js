@@ -23,7 +23,7 @@ class Desplegableporcentaje extends React.Component {
           onClick={() => this.toggle(1)}
 
         >{this.state.isOpen1 === true ? '' : ""}
-          <span className="app__toggle-text"></span>
+          <span className="app__toggle-text2">Calcula tu desgravación</span>
           <div className="rotate90">
             <svg
               className={cx("icon", { "icon--expanded": this.state.isOpen1 })}

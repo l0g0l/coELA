@@ -37,10 +37,7 @@ const RoundUp = () => {
       <div className="redondeo-txt-2">
         <p>Ejemplo: Si escoges x1 y compras un café de 0,80€ donarás 0,20€</p>
       </div>
-      <div  className="txt-despleg1">
-        <p>Ajustes avanzados</p>
-
-        </div>
+  
 
         <Desplegableredondeo />
 

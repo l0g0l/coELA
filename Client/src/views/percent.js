@@ -42,10 +42,6 @@ const Percent = () => {
         <p>Ejemplo: Si configuras el 0,5% y tienes una nómina de 1000€, donarás 5€</p>
       </div>
 
-      <div className="txt-despleg1">
-        <p>Calcula tu desgravación</p>
-
-      </div>
 
       <Desplegableporcentaje />
 

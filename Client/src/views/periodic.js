@@ -44,10 +44,7 @@ const Periodic = () => {
       <div className="periodica-txt-2">
         <p>Otros usuarios de la comunidad con tus mismas características donan una media de 1€ al día</p>
       </div>
-      <div  className="txt-despleg1">
-        <p>Calcula tu desgravación</p>
-
-        </div>
+     
 
       <Desplegableporcentaje />
 

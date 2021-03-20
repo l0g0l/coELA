@@ -16,14 +16,23 @@ import "../styles/_desplegableredondeo.scss";
 class Desplegableredondeo extends React.Component {
   state = {
     isOpen1: false,
-    grey: true
+    grey: true,
+    l: 'greyButton',
+    m: 'greyButton',
+    x: 'greyButton',
+    j: 'greyButton',
+    v: 'greyButton',
+    s: 'greyButton',
+    d: 'greyButton'
 
   };
-  changeColor() {
-    this.setState({ grey: !this.state.grey })
-    console.log(this.state);
+  changeColor(id) {
+    this.setState({[id]: this.state[id] === 'greyButton'? 'whiteButton':'greyButton'})
+    console.log(this.state[id]);
 
   }
+
+
 
 
   render() {
@@ -38,7 +47,7 @@ class Desplegableredondeo extends React.Component {
             onClick={() => this.toggle(1)}
 
           >{this.state.isOpen1 === true ? '' : ""}
-            <span className="app__toggle-text"></span>
+            <span className="app__toggle-text">Ajustes avanzados</span>
             <div className="rotate90">
               <svg
                 className={cx("icon", { "icon--expanded": this.state.isOpen1 })}
@@ -59,14 +68,14 @@ class Desplegableredondeo extends React.Component {
 
             <div className="app__content">
               <p className="app__content-txt">Selecciona los días</p>
-              <div className="app__content-btn">
-                <button onClick={this.changeColor.bind(this)} className={` ${app__content_red} app__content-btn-red`} >L</button>
-                <button onClick={this.changeColor.bind(this)} className={` ${app__content_red} app__content-btn-red`}>M</button>
-                <button onClick={this.changeColor.bind(this)} className={` ${app__content_red} app__content-btn-red`}>X</button>
-                <button onClick={this.changeColor.bind(this)} className={` ${app__content_red} app__content-btn-red`}>J</button>
-                <button onClick={this.changeColor.bind(this)} className={` ${app__content_red} app__content-btn-red`}>V</button>
-                <button onClick={this.changeColor.bind(this)} className={` ${app__content_red} app__content-btn-red`}>S</button>
-                <button onClick={this.changeColor.bind(this)} className={` ${app__content_red} app__content-btn-red`}>D</button>
+              <div >
+                <button id="l" onClick={() => this.changeColor("l")} className={` ${this.state['l']} app__content-btn-red`}>L</button>
+                <button id="m" onClick={() => this.changeColor("m")} className={` ${this.state['m']} app__content-btn-red`}>M</button>
+                <button id="x" onClick={() => this.changeColor("x")} className={` ${this.state['x']} app__content-btn-red`}>X</button>
+                <button id="j" onClick={() => this.changeColor("j")} className={` ${this.state['j']} app__content-btn-red`}>J</button>
+                <button id="v" onClick={() => this.changeColor("v")} className={` ${this.state['v']} app__content-btn-red`}>V</button>
+                <button id="s" onClick={() => this.changeColor("s")} className={` ${this.state['s']} app__content-btn-red`}>S</button>
+                <button id="d" onClick={() => this.changeColor("d")} className={` ${this.state['d']} app__content-btn-red`}>D</button>
 
               </div>
 
@@ -89,7 +98,7 @@ class Desplegableredondeo extends React.Component {
 
                 </div>
 
-                
+
 
                 <div className="app__content-4">
                   <p className="app__content-txt"> Máximo de veces al día </p>

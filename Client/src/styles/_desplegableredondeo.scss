@@ -6,8 +6,8 @@
     justify-content: center;
     align-items: center;
     max-width: 500px;
-    padding: 20px;
-  
+    padding:0 20px 40px 20px;
+
     &__text {
       width: 100%;
     }
@@ -19,6 +19,7 @@
       overflow: hidden;
       transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1);
       background: #1F3044;
+      border-radius: 8px;
      
   
       &--gradient {
@@ -54,7 +55,7 @@
       padding: 1rem 0;
       position: relative;
       transition: 300ms;
-      
+      border-radius: 8px;
         &-btn{
 
           &-red {
@@ -193,3 +194,13 @@
   .polygon-color {
     fill: white;
   }
+  .app__toggle--active {
+background: unset;
+  }
+.app__toggle-text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF;
+  margin: 12px 0 10px -11px;
+}
