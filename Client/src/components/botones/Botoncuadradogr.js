@@ -1,26 +1,54 @@
 
-import React, { useState } from 'react';
+// import React from 'react';
 
 
+// function Botoncuadradogr({pulsar,imagen, valor}) {
 
 
+//     return (
+//         <div className="cuadradogr">
+//             <img  className="cuadradogr-img"src={imagen} alt="icono flor"/>
+//             <button  className="cuadradogr-btn">{valor}</button>
 
-function Botoncuadradogr({pulsar,imagen, valor}) {
-    const [color,setColor]=useState('#C4c1c1')
+//         </div>
 
-    const handleChangeBackgroundColor = () => {
-        setColor(color==='#C4c1c1'?'#ffff':'#C4c1c1')
+//     )
+// }
+
+// export default Botoncuadradogr 
+
+
+import React, { Component } from 'react'
+// import flor1 from '../images/flor1.svg';
+// import flor2 from '../images/flor2.svg';
+// import flor3 from '../images/flor3.svg';
+
+export class Botoncuadradogr extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            grey: true
+        }
+    }
+    changeColor() {
+        this.setState({ grey: !this.state.grey })
+        console.log(this.state);
+
     }
 
-    return (
-        <div className="cuadradogr">
-            <img  className="cuadradogr-img"src={imagen} alt="icono flor"/>
-            {/* <button  className="cuadradogr-btn">{valor}</button> */}
-            <button style={{opacity:color}} className='cuadradogr-change' onClick={handleChangeBackgroundColor}>{valor}</button>
+    render() {
+        const cuadradogr_btn_class = this.state.grey ? "greyButton" : "whiteButton";
+        return (
+            <button onClick={this.changeColor.bind(this)} className={`cuadradogr ${cuadradogr_btn_class}`}>
+                <div className={`cuadradogr ${cuadradogr_btn_class}`} >
+                    <img className="cuadradogr-img" src={this.props.imagen} alt="icono flor" />
+                    {this.props.valor}
 
-        </div>
-        
-    )
+                </div>
+            </button>
+        )
+    }
 }
 
-export default Botoncuadradogr 
+export default Botoncuadradogr

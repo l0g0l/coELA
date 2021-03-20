@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../components/Footer';
 import wifi from '../images/wifi.svg';
-import ranking from '../images/ranking.svg';
+import ranking2 from '../images/ranking2.png';
 import { useHistory } from 'react-router-dom';
 import botondonar from '../images/botondonar.png'
 
@@ -30,7 +30,7 @@ export default function CommunityRanking() {
 
             </div>
             <div className="ranking">
-                <img src={ranking} alt="" />
+                <img src={ranking2} alt="" />
             </div>
 
 

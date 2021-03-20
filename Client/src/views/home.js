@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import Footer from '../components/Footer'
-import ruedecita from '../images/ruedecita.svg';
 import fotoperfil from '../images/fotoperfil.svg';
 import informacion from '../images/informacion.svg';
 import wifi from '../images/wifi.svg';
@@ -11,7 +10,7 @@ import imagen3carr from '../images/carrusel/imagen3carr.svg';
 import insignias from '../images/insignias.svg'
 import botondonar from '../images/botondonar.png'
 import boton1 from '../images/boton1.png';
-import boton2 from '../images/boton2.png';
+import minomina from '../images/minomina.png';
 import boton3 from '../images/boton3.png';
 import { useHistory } from 'react-router-dom';
 import Carousel from "react-elastic-carousel";
@@ -61,7 +60,7 @@ const Home = () => {
         <img src={wifi} alt="" />
         <div className="encabezadoperfil-1">
 
-          <img className="encabezado-1-ruedecita" src={ruedecita} alt="icono rudecita configuración" />
+          {/* <img className="encabezado-1-ruedecita" src={ruedecita} alt="icono rudecita configuración" /> */}
         </div>
         <div className="encabezadoperfil-2">
 
@@ -105,7 +104,7 @@ const Home = () => {
       <div className="configdonaciones">
 
         <img onClick={sendroundup} className="configdonaciones-btn-1" src={boton1} alt="" />
-        <img onClick={sendpercent} className="configdonaciones-btn-1" src={boton2} alt="" />
+        <img onClick={sendpercent} className="configdonaciones-btn-1" src={minomina} alt="" />
         <img onClick={sendperiodic} className="configdonaciones-btn-1" src={boton3} />
 
 

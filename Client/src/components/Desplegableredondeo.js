@@ -36,9 +36,9 @@ class Desplegableredondeo extends React.Component {
           <div className="rotate90">
             <svg
               className={cx("icon", { "icon--expanded": this.state.isOpen1 })}
-              viewBox="6 0 12 24"
-            >
-              <polygon points="8 0 6 1.8 14.4 12 6 22.2 8 24 18 12" />
+              viewBox="6 0 12 24">
+
+              <polygon className="polygon-color"points="8 0 6 1.8 14.4 12 6 22.2 8 24 18 12" />
             </svg>
           </div>
         </button>

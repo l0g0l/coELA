@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import Flecha from '../components/Flecha';
 import { useHistory } from 'react-router-dom';
 import Botoncuadradogr from '../components/botones/Botoncuadradogr';
+import Botonovalado from '../components/botones/Botonovalado';
 import Botoncuadradomed from '../components/botones/Botoncuadradomed';
 import Botondespleg from '../components/botones/Botondespleg';
 import Botonrect from '../components/botones/Botonrect.js';
@@ -20,6 +21,13 @@ import '../styles/_oneDonation.scss'
 
 const OneDonation = () => {
 
+  // const [clicked, setClicked] = useState (0)
+
+
+  let history1 = useHistory();
+  const send = () => {
+    history1.push("/onedonation");
+  }
 
   let history2 = useHistory();
   const sendcreditcard = () => {
@@ -78,10 +86,10 @@ const OneDonation = () => {
       </div>
 
 
-
-      {/* <div className="btn-ovalado">
+<div className="btn-ovalado">
         <Botonovalado pulsar={send} texto="Siguiente" color="btn-ovalado-pink" />
-      </div> */}
+      </div> 
+    
 
     
       <Footer />

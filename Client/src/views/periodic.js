@@ -7,6 +7,7 @@ import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
 import Desplegableporcentaje from '../components/Desplegableporcentaje'
 import flor1 from '../images/flor1.svg';
+import euro from '../images/euro.svg';
 import calendarioblanco from '../images/calendarioblanco.svg';
 
 
@@ -30,7 +31,7 @@ const Periodic = () => {
       <div className="periodica">
         <img className="periodica-img" src={flor1} alt="" />
         <input className="periodica-input" type="text" />
-        {/* <img className="periodica-img-2" src={euro} alt="" /> */}
+        <img className="periodica-img-2" src={euro} alt="" />
 
       </div>
 

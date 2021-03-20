@@ -1,19 +1,30 @@
 import React from 'react'
+import { useState } from 'react';
 
 
 
 
-function Botoncuadradomed({pulsar, imagen, texto}) {
 
-    return (
-        <div className="cuadradomed">
+function Botoncuadradomed({ pulsar, imagen, texto }) {
+    const [color, setColor] = useState('greyButton')
 
-            <button onClick={pulsar} className="cuadradomed-btn">
-            <img className="cuadradomed-img" src={imagen} alt="" /></button>
-            <p className="cuadradomed-txt" >{texto}</p>
-        </div>
+    const changecolor = () => {
+        setColor(color === 'greyButton' ? 'whiteButton' : 'greyButton')
+        console.log(color);
 
-    )
+    }
+
+    return <div>
+
+
+        <button onClick={changecolor} className={`cuadradomed ${color}`}>
+            <div >
+                <img className="cuadradomed-img" src={imagen} alt="" />
+                <p className="cuadradomed-txt" >{texto}</p>
+            </div>
+        </button>
+    </div>
+
 }
 
 export default Botoncuadradomed
