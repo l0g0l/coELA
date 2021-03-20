@@ -67,7 +67,7 @@ function Payment() {
 
                 </div>
                 <div className="btnguardar">
-                    <Botonovalado pulsar={sendthanks} texto={'Dona'} color='btn-ovalado-pink ' />
+                    <Botonovalado pulsar={sendthanks} texto={'Dona'} color='btn-ovalado-pinkpercent ' />
                 </div>
 
                 <Footer />

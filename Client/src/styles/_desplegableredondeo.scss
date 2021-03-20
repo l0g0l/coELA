@@ -60,10 +60,10 @@
           &-red {
             width:41px;
             height:41px;
-            background-color:white;
-            opacity: 0.5;
+            // background-color:white;
+            // opacity: 0.5;
             margin: 5px 5px 5px 6px;
-            border-radius: 50px;
+            border-radius: 50%;
             font-size:15px;
             font-weight: bold;
             text-align: center;
@@ -159,6 +159,17 @@
       display: block;
     }
   }
+.greyButton{
+    background-color: #C4c1c1;
+    color: #33404F;
+    outline: none;
+  }
+  
+.whiteButton{
+    background-color: white;
+    color: #33404F;
+    outline: none;
+  }
   
   .icon {
     width: 20px;
@@ -169,7 +180,6 @@
       transform: rotateZ(-179.99deg);
     }
   }
-  
   .rotate90 {
     transform: rotateZ(90deg);
   }

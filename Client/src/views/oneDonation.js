@@ -26,7 +26,7 @@ const OneDonation = () => {
 
   let history1 = useHistory();
   const send = () => {
-    history1.push("/onedonation");
+    history1.push("/payment");
   }
 
   let history2 = useHistory();
