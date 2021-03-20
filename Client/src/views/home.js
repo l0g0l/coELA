@@ -3,14 +3,14 @@ import Footer from '../components/Footer'
 import fotoperfil from '../images/fotoperfil.svg';
 import informacion from '../images/informacion.svg';
 import wifi from '../images/wifi.svg';
-import popup from '../images/popup.svg';
+import popupok from '../images/popupok.png';
 import imagen1carr from '../images/carrusel/imagen1carr.svg';
 import imagen2carr from '../images/carrusel/imagen2carr.svg';
 import imagen3carr from '../images/carrusel/imagen3carr.svg';
 import insignias from '../images/insignias.svg'
 import botondonar from '../images/botondonar.png'
 import boton1 from '../images/boton1.png';
-import minomina from '../images/minomina.png';
+import boton2ok from '../images/boton2ok.png';
 import boton3 from '../images/boton3.png';
 import { useHistory } from 'react-router-dom';
 import Carousel from "react-elastic-carousel";
@@ -71,7 +71,7 @@ const Home = () => {
               <button className="modalbtn" onClick= {toggle}><img src={informacion} alt="" /></button>
               <Modal active ={active} toggle={toggle}>
 
-              <img src={popup} alt=""/>
+              <img className="imgpopup"src={popupok} alt=""/>
               </Modal>
 
             </div>
@@ -104,7 +104,7 @@ const Home = () => {
       <div className="configdonaciones">
 
         <img onClick={sendroundup} className="configdonaciones-btn-1" src={boton1} alt="" />
-        <img onClick={sendpercent} className="configdonaciones-btn-1" src={minomina} alt="" />
+        <img onClick={sendpercent} className="configdonaciones-btn-1" src={boton2ok} alt="" />
         <img onClick={sendperiodic} className="configdonaciones-btn-1" src={boton3} />
 
 
