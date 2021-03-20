@@ -4,6 +4,7 @@ const User = require('../models/userSchema');
 
 exports.onedonation = async(req, res) => {
     console.log('aqui tu donación puntual...')
+    console.log()
 
     let luzones = await User.findOne({ user: req.body.luzones });
 

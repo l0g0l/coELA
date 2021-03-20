@@ -15,6 +15,7 @@ exports.authUser = async (req, res, next) => {
     // Buscar el usuario para ver si esta registrado
     const { user, password } = req.body;
     const user_exist = await User.findOne({ user });
+    console.log(user_exist)
 
 
     if(!user_exist) {
@@ -45,8 +46,10 @@ exports.authUser = async (req, res, next) => {
 
 exports.getUser = async(req, res) => {
     console.log('Aqui el perfil del usuario')
-    const { user, luzones } = req.body;
-    const userProfile = await User.findOne({ user });
-    console.log(userProfile)
-    // res.json(req.body.user)
+    const { User } = req.body;
+    console.log(req.body)
+    //const userProfile = res.status(200).json({name:"Clara", luzones:"5000"});
+    const userProfile = await User.findOne({ User: req.body.name });
+    //console.log(userProfile)
+    console.log(res.json(req.body))
 }
