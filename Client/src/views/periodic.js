@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import Botoncuadradopeq from '../components/botones/Botoncuadradopeq';
 import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
-import Desplegableporcentaje from '../components/Desplegableporcentaje'
+import Desplegableperiodico from '../components/Desplegableperiodico'
 import flor1 from '../images/flor1.svg';
 import euro from '../images/euro.svg';
 import calendarioblanco from '../images/calendarioblanco.svg';
@@ -73,7 +73,7 @@ export class Periodic extends Component {
         </div>
 
 
-        <Desplegableporcentaje />
+        <Desplegableperiodico/>
 
         <div >
           <p className="periodica-txt">Tipo de donación</p>
