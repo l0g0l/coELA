@@ -35,22 +35,26 @@ const MyDonations = () => {
 
       <div className="encabezadoperfil" >
         <img src={wifi} alt="" />
-        <div className="encabezadoperfil-1">
+        <div className="encabezadoperfil-01">
+          <div className="encabezadocomun1txt" >
+            <p className="encabezadocomun1txt-01">Mis Donaciones</p>
+          
+            <img className="ruedecita" src={ruedecita} alt="icono rudecita configuración" />
 
-          <img className="encabezado-1-ruedecita" src={ruedecita} alt="icono rudecita configuración" />
+            </div>
         </div>
         <div className="encabezadoperfil-2">
 
           <div className="encabezadoperfil-3">
             <img className="encabezadoperfil-img" src={fotoperfil} alt="foto perfil" />
             <div className="usuarioluzones">
-              <p className="encabezadoperfil-txt-1">¡Hola Clara! </p>
+              <p className="encabezadoperfil-txt-1">@clarasmith </p>
               <div className="encabezadoperfil-3-3_1">
-                <p className="encabezadoperfil-txt-2">5.000 Luzones</p>
+                <p className="encabezadoperfil-txt-02">5.000 Luzones</p>
                 <button className="modalbtn" onClick={toggle}><img src={informacion} alt="" /></button>
                 <Modal active={active} toggle={toggle}>
 
-                  <img src={popupok} alt="" />
+                  <img className="imgpopup" src={popupok} alt="" />
                 </Modal>
               </div>
             </div>

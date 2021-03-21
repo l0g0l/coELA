@@ -18,7 +18,7 @@ export default function CommunityRanking() {
             <div className="encabezadocomun1" >
                 <img className="encabezadocomun1-wifi" src={wifi} alt="wifi" />
 
-                <div className="encabezadocomun1txt" >
+                <div className="encabezadocomun1com" >
                     <p className="encabezadocomun1txt-1">La Comunidad</p>
                 </div>
 

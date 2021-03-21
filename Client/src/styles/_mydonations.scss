@@ -3,16 +3,14 @@
     background: #1F3044;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-
+    
 
     &-1 {
         margin-bottom: 10px;
         text-align: right;
         margin-right: 20px;
     
-        &-ruedecita {
-            text-align: right;
-        }
+      
     }
     &-img {
 
@@ -26,7 +24,7 @@
     }
         &-txt-1 {
             font-style: normal;
-            font-weight: 700;
+            font-weight: bold;
             font-size: 24px;
             color: #FFFFFF;   
             margin-bottom: 13px;  
@@ -102,4 +100,23 @@
     background: #1F3044;
     border: none;
     outline: none;
+}
+.encabezadocomun1txt {
+    display: flex;
+    justify-content: left;
+    margin-left: 14px;
+ 
+    &-01{
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: #EDEDED;
+        margin-right: 175px;
+      
+    }
+}
+.encabezadoperfil-01 {
+    margin-bottom: 10px;
 }

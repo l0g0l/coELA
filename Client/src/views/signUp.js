@@ -1,6 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import md5 from 'md5';
+import wifi from '../images/wifi.svg';
+import ojo from '../images/ojo.svg';
+
 
 
 import '../styles/_signup.scss';
@@ -35,6 +38,7 @@ export default function SignUp() {
 
   return (
     <div className="form">
+      <img className="encabezadoregis-wifi" src={wifi} alt=""/>
       <h3 className="form-txt" >Regístrate</h3>
 
       <form className="form-div" onSubmit={handleSubmit(onSubmit)}>
@@ -42,7 +46,7 @@ export default function SignUp() {
           <input
             type="text"
             name="name"
-            className="form-input"
+            className="form-div-btnuser"
             autoFocus
             placeholder="Nombre completo"
             ref={register({
@@ -58,7 +62,7 @@ export default function SignUp() {
           <input
             type="text"
             name="dni"
-            className="form-input"
+            className="form-div-btnuser"
             placeholder="DNI"
             ref={register({
               required: {
@@ -77,7 +81,7 @@ export default function SignUp() {
           <input
             type="text"
             name="email"
-            className="form-input"
+            className="form-div-btnuser"
             placeholder="Email"
             ref={register({
               required: {
@@ -95,7 +99,7 @@ export default function SignUp() {
           <input
             type="text"
             name="user"
-            className="form-input"
+            className="form-div-btnuser"
             placeholder="Usuario"
             ref={register({
               required: {
@@ -106,11 +110,12 @@ export default function SignUp() {
             })}
           />
           {errors.user && <p className="errorMsg">{errors.user.message}</p>}
-
+          <div className="ojodentro">
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Contraseña"
+            className="inputojo"
             ref={register({
               required: {
                 value: true,
@@ -121,12 +126,15 @@ export default function SignUp() {
                 message: <p>Por favor introduzca una Password válida</p>
               },
             })}
+            
           />
+          <img className ="ojo"src={ojo} alt="mostrar contraseña"/>
+
           {errors.password && (
             <p className="errorMsg">{errors.password.message}</p>
           )}
 
-       
+</div>
         
         <p className="form-div-txt-1">¿Ya tienes cuenta?<a href='./' id="Inicia sesión" className="form-div-txt-2" >Inicia sesión</a></p>
        

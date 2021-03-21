@@ -1,40 +1,34 @@
 .form {
     text-align: center;
-    margin-top: 109px;   
+      
 
     &-txt {
         color: white;
         font-style: normal;
         font-weight: bold;
         font-size: 30px;
-        margin:0 0 64px 0;
+        margin:55px 0 67px 0;
     }
     &-div {
         background-color:#1F3044;
-        padding: 60px 0 108px 0;
+        padding: 50px 0 30px 0;
         border-top-left-radius: 45px;
         border-top-right-radius: 45px;
-        div:focus{
-            outline: none;
-            color:#00DDA3 ;
-        }
-        label{
-            background-color:#1F3044;
-            color: #00DDA3;
-        } 
-    input{
-        border:2px solid #00DDA3; 
-        margin-bottom: 14px; 
+     
+    &-btnuser{
+        border: 2px solid #00DDA3;
+        margin-bottom: 30px;
         color: white;
         padding: 15px 23px;
         width: 271px;
         height: 26px;
-        font-size: 25px;
+        font-size: 16px;
+        border-radius: 4px;
     }
     ::placeholder {
-        color: #00DDA3;
+        color: white;
         font-size: 19px;
-        text-align: center;
+        text-align: left;
       }
         &-error {
             color: white;
@@ -43,16 +37,16 @@
         &-txt-1 {
             font-style: normal;
             font-weight: normal;
-            font-size: 17px;
+            font-size: 15px;
             color: #FFFFFF;
-            margin-bottom: 110px;
-            margin-top: 20px;
+            margin-bottom: 67px;
+             
             
         }
         &-txt-2 {
             font-style: normal;
             font-weight: normal;
-            font-size: 18px;
+            font-size: 15px;
             color:#00DDA3;
             margin-bottom: 110px;
             text-decoration-line: underline;
@@ -67,12 +61,16 @@
             align-items: center;
             padding: 17px 98px;
             font-style: normal;
-            font-size: 19px;
+            font-size: 18px;
             font-weight: bold;
             color: #33404F;
+            border:none;
+            outline: none;
         }
     }
-
+.encabezadoregis-wifi {
+    margin-bottom: 0px;
+}
 
 
 
