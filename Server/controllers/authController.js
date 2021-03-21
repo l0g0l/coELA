@@ -45,7 +45,7 @@ exports.authUser = async (req, res, next) => {
 
 exports.getUser = async(req, res) => {
     console.log('Aqui el perfil del usuario')
-
+   
     const user_profile = await User.findOne({ user });
 
     if (user_profile){

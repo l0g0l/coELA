@@ -33,12 +33,17 @@ app.use( express.json() );
 // Rutas de la app
 app.use('/api/', require('./routes/newUser'));
 app.use('/api/login', require('./routes/auth'));
+//cambio a api/profile porque es la misma peticion, solo q cambia el tipo get a post
 app.use('/api/profile', require('./routes/auth'));
-app.use('/api/profile/donations', require('./routes/donations'));
-app.use('/api/profile/donations/onedonation', require('./routes/donations'));
-app.use('/api/profile/donations/percent', require('./routes/donations'));
-app.use('/api/profile/donations/roundup', require('./routes/donations'));
-app.use('/api/profile/donations/periodic', require('./routes/donations'));
+app.use('/api/profile', require('./routes/auth'));
+app.use('/api/profile/donation', require('./routes/donations'));
+
+// ### Necesito una ruta por tipo de donacion?? o me vale con 1? todas las donaciones equivalen a 100 luzones
+
+app.use('/api/profile/donation/onedonation', require('./routes/donations'));
+// app.use('/api/profile/donations/percent', require('./routes/donations'));
+// app.use('/api/profile/donations/roundup', require('./routes/donations'));
+// app.use('/api/profile/donations/periodic', require('./routes/donations'));
 
 
 // Arrancar la app

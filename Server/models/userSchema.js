@@ -1,40 +1,32 @@
-
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const { periodic } = require('../controllers/donationController');
 const Schema  = mongoose.Schema;
-
 const userSchema = new Schema({
    
-    name: {
-        type: String,
-        trim: true
-    }, 
-    user: {
-        type: Array,
-        Date: Date.now(),
-        trim: true,
-        unique: true
-    },
-
-    avatar: {
-        type: String,
-        trim: true
-    },
-    dni: {
-        type: String,
-        unique: true,
-        trim: true
-    },
-    email: {
-        type: String,
-        trim: true,
-        unique: true
-    },
-    password: {
-        type: String,
-        trim: true
-    },
+    name: {type: String,  trim: true },
+    //user puede ser un objeto que contenga config cuando haya config activas reales
+    user: {type: String,  trim: true },
+    avatar: {type: String,  trim: true },
+    dni: {type: String,  trim: true },
+    email: {type: String,  trim: true },
+    password: {type: String,  trim: true },
+    created: { type: Date, default: Date.now },
+    luzonesT: {type: Number, default: 100 ,trim: true },
     donations: {
-        type: Array,
+        type: {
+            onedonation: {
+                type: Boolean
+            },
+            roundup:{
+                type: Boolean
+            },
+            periodic: {
+                type: Boolean
+            },
+            percetn: {
+                type: Boolean
+            }
+        },
         luzones: {
             type: Number,
             trim: true
@@ -61,8 +53,9 @@ const userSchema = new Schema({
             trim: true
             }
         },
-    },
+    }
 })
+
 
 
 
