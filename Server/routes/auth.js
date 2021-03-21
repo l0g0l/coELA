@@ -7,8 +7,8 @@ const auth = require('../middleware/auth');
 
 router.post('/', 
     [
-        check('user', 'Agrega un email válido').not().isEmpty(),
-        check('password', 'El password no puede ir vacio').not().isEmpty()
+        check('user', 'Usuario incorrecto').not().isEmpty(),
+        check('password', 'Password incorrecto').not().isEmpty()
     ],
     authController.authUser
 );

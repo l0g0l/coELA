@@ -46,10 +46,19 @@ exports.authUser = async (req, res, next) => {
 
 exports.getUser = async(req, res) => {
     console.log('Aqui el perfil del usuario')
-    const { User } = req.body;
-    console.log(req.body)
-    //const userProfile = res.status(200).json({name:"Clara", luzones:"5000"});
-    const userProfile = await User.findOne({ User: req.body.name });
-    //console.log(userProfile)
-    console.log(res.json(req.body))
+    // res.json({user: req.user} );
+    // const {user, avatar, luzones} = req.body
+    const user_profile = await User.findOne({ user });
+    // if(user_profile === user){  
+
+   
+
+    if (user_profile){
+        res.json(user_profile)
+    }
+    
+    console.log(user_profile)
+    console.log({user: 'El Usuario que se ha logado'})
 }
+
+
