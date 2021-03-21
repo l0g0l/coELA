@@ -1,5 +1,5 @@
 .containerluzon {
-    padding:144px 0 0 0;
+    padding:144px 0 144px 0;
 }
 
 .encabezadocomun1 {
@@ -14,7 +14,7 @@
 
     &-1 {
         font-style: normal;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 24px;
         line-height: 28px;
         color: #EDEDED;
@@ -58,6 +58,7 @@
     width: 92px;
     height: 92px;
     background: #44505E;
+    border-radius: 8px;
 
 }
 .botonesdonaciones {
@@ -69,8 +70,8 @@
        
         border-radius: 10px;
         font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
+        font-weight: 500;
+        font-size: 13px;
         color: #FFFFFF;
         outline: none;
         text-align: center;
@@ -118,7 +119,7 @@
 }
 .txt {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 15px;
     color: #FFFFFF;
     margin: 20px 0 10px 11px;

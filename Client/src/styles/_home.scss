@@ -1,16 +1,22 @@
 .containerencandonation {
-    padding: 242px 0 0 0;
+    padding: 242px 0 170px 0;
     & .encabezadoperfil {
         position: fixed;
         top: 0;
     }
+}
+.usuarioluzones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
 }
 .encabezadoperfil {
     text-align: center;
     background: #1F3044;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    padding-bottom: 20px;
+
     &-1 {
         margin-bottom: 10px;
         text-align: right;
@@ -24,7 +30,9 @@
     }
     &-2 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    margin-left: 40px;
+    padding-bottom: 13px;
 
     }
         &-txt-1 {
@@ -32,15 +40,19 @@
             font-weight: 700;
             font-size: 35px;
             color: #FFFFFF;   
-            margin-bottom: 13px;   
+            margin-bottom: 13px; 
+            text-align:left; 
         }
     &-3 {
-        display: flex; 
-        flex-direction: column;
+        
+        display: flex;
+        width:245px;
+        justify-content: space-between;
+        
             &-3_1 {
                 display: flex;
-                flex-direction: row;
-                margin-right: 5px; 
+                align-items: center;
+               
                      }
     }
         &-txt-2 {
@@ -56,10 +68,8 @@
             font-style: normal;
             font-weight: 700;
             font-size: 20px;
-            color: #00DDA3;
-            margin-top: 14px;
-            margin-right: 10px;
-            margin-left: 19px;
+            color: #00DDA3; 
+            
     }
 }
 .fotoysaludo {
@@ -79,7 +89,7 @@
         &-1 {
             width: 368px;
             margin-top: -6px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
     }
     .txthome {
@@ -139,17 +149,20 @@
     justify-content: center;
     height: 110px;
     width: 50%;
-    margin: 15px 0 0 0;
+    margin: 20px 0 0px 0;
     outline: none;
     box-shadow: none;
     
   }
+
   button.rec-dot{
     margin-top: 0px;
     background-color: grey;
     height: 6px;
     width: 6px;
     margin-left: 15px;
+    margin-bottom: 20px;
+
  
     
   }
@@ -157,19 +170,23 @@
     box-shadow: 0 0 0px 3px white;
     outline: none;
     margin-left: 15px;
+    margin-bottom: 20px;
   }
 
- .rec.rec-arrow {
-    background:transparent !important;
-}
-.rec.rec-arrow:hover {
-    background-color:transparent !important;
+//  .rec.rec-arrow {
+//     background:transparent !important;
+// }
+// .rec.rec-arrow:hover {
+//     background-color:transparent !important;
  
-}
+// }
 .imgpopup {
     width: 360px;
 }
-
-      
-      
+.cJeRRR {
+  
+    box-shadow: 0 0 1px 3px rgb(255 255 255) !important;
+    outline: none !important;
+   
+}
     

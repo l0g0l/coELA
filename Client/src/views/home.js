@@ -65,7 +65,9 @@ const Home = () => {
         <div className="encabezadoperfil-2">
 
           <div className="encabezadoperfil-3">
-            <p className="encabezadoperfil-txt-1">¡Hola Clara! </p>
+          <img className="encabezadoperfil-img" src={fotoperfil} alt="foto perfil" />
+          <div className="usuarioluzones">
+          <p className="encabezadoperfil-txt-1">¡Hola Clara! </p>
             <div className="encabezadoperfil-3-3_1">
               <p className="encabezadoperfil-txt-02">5.000 Luzones</p>
               <button className="modalbtn" onClick= {toggle}><img src={informacion} alt="" /></button>
@@ -77,7 +79,10 @@ const Home = () => {
             </div>
 
           </div>
-          <img className="encabezadoperfil-img" src={fotoperfil} alt="foto perfil" />
+       
+
+          </div>
+          
         </div>
 
 
