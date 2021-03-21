@@ -1,10 +1,11 @@
 .footer {
     position: fixed;
     bottom: 0;
-    width: 101%;
+    width: 100%;
     background-color: #44505E;
     border-top-left-radius: 8px;
     border-top-right-radius: 10px;
+    height: 85px;
     ul {
       display: flex;
       justify-content: space-between;
@@ -14,11 +15,14 @@
         align-items: center;
         justify-content: center;
         padding: 20px;
-        font-size: 14px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
         text-decoration: none;
         text-align: center;
         a {
           color: white;
+       
         }
     
         img {
@@ -27,5 +31,8 @@
         }
       }
     }
+  }
+  .filtered {
+    filter: hue-rotate(-180deg);
   }
   

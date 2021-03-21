@@ -1,17 +1,16 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Footer from '../components/Footer'
-import ruedecita from '../images/ruedecita.svg';
 import fotoperfil from '../images/fotoperfil.svg';
 import informacion from '../images/informacion.svg';
 import wifi from '../images/wifi.svg';
-import popup from '../images/popup.svg';
+import popupok from '../images/popupok.png';
 import imagen1carr from '../images/carrusel/imagen1carr.svg';
 import imagen2carr from '../images/carrusel/imagen2carr.svg';
 import imagen3carr from '../images/carrusel/imagen3carr.svg';
 import insignias from '../images/insignias.svg'
 import botondonar from '../images/botondonar.png'
 import boton1 from '../images/boton1.png';
-import boton2 from '../images/boton2.png';
+import boton2ok from '../images/boton2ok.png';
 import boton3 from '../images/boton3.png';
 import { useHistory } from 'react-router-dom';
 import Carousel from "react-elastic-carousel";
@@ -48,9 +47,9 @@ const Home = () => {
     history4.push("/onedonation");
   }
 
-  const [active,setActive]= useState(false)
+  const [active, setActive] = useState(false)
   const toggle = () => {
-      setActive (!active)
+    setActive(!active)
   }
 
 
@@ -61,24 +60,28 @@ const Home = () => {
         <img src={wifi} alt="" />
         <div className="encabezadoperfil-1">
 
-          <img className="encabezado-1-ruedecita" src={ruedecita} alt="icono rudecita configuración" />
         </div>
         <div className="encabezadoperfil-2">
 
           <div className="encabezadoperfil-3">
-            <p className="encabezadoperfil-txt-1">¡Hola Clara! </p>
-            <div className="encabezadoperfil-3-3_1">
-              <p className="encabezadoperfil-txt-02">5.000 Luzones</p>
-              <button className="modalbtn" onClick= {toggle}><img src={informacion} alt="" /></button>
-              <Modal active ={active} toggle={toggle}>
+            <img className="encabezadoperfil-img" src={fotoperfil} alt="foto perfil" />
+            <div className="usuarioluzones">
+              <p className="encabezadoperfil-txt-1">¡Hola Clara! </p>
+              <div className="encabezadoperfil-3-3_1">
+                <p className="encabezadoperfil-txt-02">5.000 Luzones</p>
+                <button className="modalbtn" onClick={toggle}><img src={informacion} alt="" /></button>
+                <Modal active={active} toggle={toggle}>
 
-              <img src={popup} alt=""/>
-              </Modal>
+                  <img className="imgpopup" src={popupok} alt="" />
+                </Modal>
+
+              </div>
 
             </div>
 
+
           </div>
-          <img className="encabezadoperfil-img" src={fotoperfil} alt="foto perfil" />
+
         </div>
 
 
@@ -86,7 +89,7 @@ const Home = () => {
 
       <div>
 
-        <Carousel breakPoints={breakPoints}>
+        <Carousel breakPoints={breakPoints} showArrows={false}>
           <div className="item"><img src={imagen1carr} alt="" /></div>
           <div className="item"><img src={imagen2carr} alt="" /></div>
           <div className="item"><img src={imagen3carr} alt="" /></div>
@@ -105,8 +108,8 @@ const Home = () => {
       <div className="configdonaciones">
 
         <img onClick={sendroundup} className="configdonaciones-btn-1" src={boton1} alt="" />
-        <img onClick={sendpercent} className="configdonaciones-btn-1" src={boton2} alt="" />
-        <img onClick={sendperiodic} className="configdonaciones-btn-1" src={boton3} />
+        <img onClick={sendpercent} className="configdonaciones-btn-1" src={boton2ok} alt="" />
+        <img onClick={sendperiodic} className="configdonaciones-btn-1" src={boton3} alt=""/>
 
 
       </div>

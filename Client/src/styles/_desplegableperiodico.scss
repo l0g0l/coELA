@@ -55,32 +55,24 @@
 
         &-div1 {
           display: flex;
-          justify-content:space-around;
-          &-inp {
-            width: 60px;
+          justify-content:flex-start;
+          &-inpP {
+            width: 64px;
             background: #44505E;
             border-radius: 8px;
             color: white;
-            margin-right: 10px;
-            text-align: center;
             margin-bottom: 8px;
+            margin-right: 34px;
+            margin-left: 20px;
           }
-          ::placeholder {
-            color: white;
-            text-align: center;
+        
+
+          &-txtP {
             font-style: normal;
             font-weight: normal;
-            font-size: 15px;
-            
-
-          }
-
-          &-txt {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
+            font-size: 13px;
             color: #FFFFFF;
-            margin: 11px 42px 10px 23px;
+            margin: 10px 0 10px 11px;
           }
 
         }
@@ -104,12 +96,12 @@
            
           }
 
-          &-txt {
+          &-txtP {
             font-style: normal;
             font-weight: normal;
-            font-size: 14px;
+            font-size: 13px;
             color: #FFFFFF;
-            margin: 10px 49px 10px 11px;
+            margin: 10px 15px 10px 11px;
           }
 
         }
@@ -129,15 +121,15 @@
             margin-bottom: 20px;
             font-style: normal;
             font-weight: normal;
-            font-size: 15px;  
+            font-size: 15px;
           }
 
-          &-txt {
+          &-txtP {
             font-style: normal;
             font-weight: normal;
-            font-size: 14px;
+            font-size: 13px;
             color: #FFFFFF;
-            margin: 10px 46px 10px 11px;
+            margin: 10px 13px 10px 11px;
           }
 
         }
@@ -171,14 +163,12 @@
       transition: background-color 300ms;
       border: none;
       outline: none;
-      &--active {
-        background-color: #44505E;
+      &--active {  
         color: white  ;
         font-size: 14px;
         font-style: normal;
         font-weight: 700;
         
-      
       }
     }
   
@@ -224,4 +214,7 @@
     font-size: 16px;
     color: #FFFFFF;
     margin: 12px 0 10px -16px;
+  }
+  .euroblanco  {
+    width: 20px;
   }

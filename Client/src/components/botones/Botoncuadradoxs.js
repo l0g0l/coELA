@@ -1,16 +1,27 @@
 import React from 'react'
+import { useState } from 'react';
+
 
 
 function Botoncuadradoxs({ texto, pulsar, img }) {
-    return (
-        <div className="cuadradoxs">
-            
-        <button onClick={pulsar} className="cuadradoxs-btn">
-        <img className="cuadradoxs-img" src={img} alt="" /></button>
+    const [color, setColor] = useState('greyButton')
+
+    const changecolor = () => {
+        setColor(color === 'greyButton' ? 'whiteButton' : 'greyButton')
+        console.log(color);
+
+    }
+    return <div>
+
+
+    <button onClick={changecolor} className={`cuadradoxs ${color}`}>
+        <div >
+            <img className="cuadradoxs-img" src={img} alt="" />
             <p className="cuadradoxs-txt" >{texto}</p>
-    </div >
-    
-    )
+        </div>
+    </button>
+</div>
+
 }
 
 export default Botoncuadradoxs

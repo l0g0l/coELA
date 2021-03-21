@@ -1,6 +1,8 @@
 import React from 'react'
 import Footer from '../components/Footer';
 import wifi from '../images/wifi.svg';
+import graficomedia from '../images/graficomedia.svg';
+import metododonacion from '../images/metododonacion.svg';
 import { useHistory } from 'react-router-dom';
 import botondonar from '../images/botondonar.png'
 
@@ -19,7 +21,7 @@ function Community() {
             <div className="encabezadocomun1" >
                 <img className="encabezadocomun1-wifi" src={wifi} alt="wifi" />
 
-                <div className="encabezadocomun1txt" >
+                <div className="encabezadocomun1com" >
                     <p className="encabezadocomun1txt-1">La Comunidad</p>
                 </div>
 
@@ -31,8 +33,14 @@ function Community() {
 
             </div>
 
-            <div className="redondeo-txt-2">
-        <p>Estadísticas de gente de la comunidad con tus mismas carácterísticas (edad, hijos, ingresos, gastos...</p>
+            <div className="redondeo-txt-comunnity">
+        <p>Estadísticas de gente de la comunidad con tus mismas carácterísticas (edad, hijos, ingresos, gastos...)</p>
+      </div>
+      <div className="grafico1">
+        <img src={graficomedia} alt=""/>
+        </div>
+        <div className="grafico2"> 
+               <img  src={metododonacion} alt=""/>
       </div>
 
 

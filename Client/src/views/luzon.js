@@ -22,7 +22,7 @@ const Luzon = () => {
       <div className="encabezadocomun1" >
         <img className="encabezadocomun1-wifi" src={wifi} alt="wifi" />
 
-        <div className="encabezadocomun1txt" >
+        <div className="encabezadocomun1com" >
           <p className="encabezadocomun1txt-1">Fundación Luzón</p>
         </div>
 
@@ -37,7 +37,7 @@ const Luzon = () => {
 
       <div className="botonesdonaciones">
 
-        <a href="https://ffluzon.org/colabora-ela/hazte-socio/">
+        <a href="https://ffluzon.org/colabora-ela/hazte-socio/" target="_blank">
           <div className="botondonaciones">
             <p className="botonesdonaciones-1">Hazte socio</p>
           </div>
@@ -45,7 +45,7 @@ const Luzon = () => {
         </a>
 
 
-        <a href="https://ffluzon.org/colabora-ela/crea-tu-reto-ela/">
+        <a href="https://ffluzon.org/colabora-ela/crea-tu-reto-ela/" target="_blank">
           <div className="botondonaciones">
             <p className="botonesdonaciones-1">Crea tu reto por la ELA</p>
           </div>
@@ -53,7 +53,7 @@ const Luzon = () => {
         </a>
 
 
-        <a href="https://ffluzon.org/colabora-ela/hazte-voluntario/">
+        <a href="https://ffluzon.org/colabora-ela/hazte-voluntario/" target="_blank">
           <div className="botondonaciones">
             <p className="botonesdonaciones-1">Hazte voluntario</p>
           </div>
@@ -61,7 +61,7 @@ const Luzon = () => {
         </a>
 
 
-        <a href="https://ffluzon.org/colabora-ela/celebraciones-solidarias/">
+        <a href="https://ffluzon.org/colabora-ela/celebraciones-solidarias/" target="_blank">
           <div className="botondonaciones">
             <p className="botonesdonaciones-1">Celebraciones solidarias</p>
           </div>

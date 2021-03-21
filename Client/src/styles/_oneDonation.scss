@@ -16,8 +16,8 @@
 
     &-2 {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: left;
+        margin-left: 30px;
     }   
         &-txt-1 {
             font-style: normal;
@@ -41,7 +41,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 20px;
-    & .cuadradogr:first-child img {
+    & button.cuadradogr:first-child img {
         margin-bottom: 27px;
     }
 
@@ -74,22 +74,22 @@
       
     &-1 {
         font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
+        font-weight: bold;
+        font-size: 16px;
         color: #FFFFFF;
-        margin:20px 199px 20px 21px;
+        margin:20px 199px 20px 20px;
     }
     &-2 {
         font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
+        font-weight: bold;
+        font-size: 16px;
         color: #FFFFFF;
-        margin:40px 20px 20px 21px;
+        margin:40px 20px 20px 20px;
     }
     &-3 {
         font-style: normal;
-        font-weight: normal;
-        font-size: 17px;
+        font-weight: 500;
+        font-size: 15px;
         color: #FFFFFF;
         margin-bottom: 15px;
     

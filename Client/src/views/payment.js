@@ -5,7 +5,9 @@ import flecha2 from '../images/flecha2.png';
 import wifi from '../images/wifi.svg';
 import mastercard from '../images/mastercard.svg';
 import { useHistory } from 'react-router-dom';
+// import Botoncuadradogr from '../components/botones/Botoncuadradogr';
 import botoncuadradogr from '../images/botoncuadradogr.svg';
+import flor2 from '../images/flor2.svg';
 
 
 import '../styles/_payment.scss'
@@ -33,11 +35,11 @@ function Payment() {
             <p className="txt-tarjeta">Vas a donar</p>
 
             <div className="encabezadocomun-txt">
-
-                <img className="botongr" src={botoncuadradogr} alt="" />
+            {/* <Botoncuadradogr valor={'25€'} imagen={flor2}/> */}
+            <img className="botongr" src={botoncuadradogr} alt="" />
 
             </div>
-            <p className="txt-tarjeta">Introduce tu tarjeta bancaria</p>
+            <p className="txt-tarjeta-1">Introduce tu tarjeta bancaria</p>
             <div className="tarjeta">
 
                 <p className="tarjeta-input-txt">Titular</p>
@@ -46,15 +48,16 @@ function Payment() {
                     <img className="tarjeta-input-mastercard" src={mastercard} />
                 </div>
 
-                <div >
-                    <p className="tarjeta-input-txt">Número de tarjeta</p>
-                    <input src={mastercard} type="text" className="tarjeta-input-txt-2" placeholder="**** **** **** 4747"></input>
-                </div>
-
                 <div className="div">
+                    <div>
+                    <p className="tarjeta-input-txt-tarj">Número de tarjeta</p>
+                    <input src={mastercard} type="text" className="tarjeta-input-txt-2" placeholder="**** **** **** 4747"></input>
+                    </div>
+
+              
 
                     <div className="div-1">
-                        <p className="div-1-p">Fecha de caducidad</p>
+                        <p className="div-1-p">Caducidad</p>
                         <input type="text" className="div-1-in" placeholder="07/21" />
 
                     </div>
@@ -67,7 +70,7 @@ function Payment() {
 
                 </div>
                 <div className="btnguardar">
-                    <Botonovalado pulsar={sendthanks} texto={'Dona'} color='btn-ovalado-pink ' />
+                    <Botonovalado func={sendthanks} texto={'Dona'} color='btn-ovalado-pinkpercent ' />
                 </div>
 
                 <Footer />

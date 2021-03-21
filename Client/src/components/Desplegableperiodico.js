@@ -1,40 +1,20 @@
-import React, { Component } from 'react'
+import React from "react";
 import cx from "classnames";
 import Collapse from "@kunukn/react-collapse";
+import europeq from '../images/europeq.png';
 
 
 
 
-import "../styles/_desplegableporcentaje.scss";
+import "../styles/_desplegableperiodico.scss";
 
-class Desplegableporcentaje extends Component {
-  constructor(props) {
-    super(props);
-    this.handleChangeNomina = this.handleChangeNomina.bind(this);
-    this.state = {
-      isOpen1: false,
-      nomina: 0,
-    };
+class Desplegableperiodico extends React.Component {
+  state = {
+    isOpen1: false,
 
-  }
-
-  handleChangeNomina(event) {
-    console.log('CAMBIO EN LA NOMINA')
-    console.log(event.target.value)
-    this.setState({nomina: event.target.value})
-    console.log(this.state.nomina)
-  }
+  };
 
   render() {
-    let anual = this.state.nomina * parseFloat(this.props.multiplicador_value) / 100
-    let desgrabacion = 0
-    if (anual <= 150) {
-      desgrabacion = anual * 80 / 100
-    } else {
-      desgrabacion = (150 * 80 / 100) + ((anual - 150) * 35 / 100)
-    }
-    console.log(anual)
-    console.log(desgrabacion)
     return (
       <div className="app">
         <button
@@ -64,19 +44,21 @@ class Desplegableporcentaje extends Component {
           <div className="app__content">
           
             <div className="app__content-div1">
-              <p className="app__content-div1-txt">Tu nómina anual</p>
-              <input type="text" className="app__content-div1-inp" placeholder="12000" onChange={this.handleChangeNomina} defaultValue={this.state.nomina || null}/>
-              <input type="text" className="app__content-div1-inp" Value={this.props.multiplicador_value || null}/>
+             
+              <input type="text" className="app__content-div1-inpP" />
+              {/* <img className="euroblanco"src={europeq} alt="euro"/> */}
+              <input type="text" className="app__content-div1-inp"/>
+              <p className="app__content-div1-txtP">durante 1 año</p>
             </div>
           
             <div className="app__content-div2">
-              <p className="app__content-div2-txt">Donarás al año</p>
-              <input type="text" className="app__content-div2-inp" value={anual || 0}/>
+              <p className="app__content-div2-txtP">Donarás al año</p>
+              <input type="text" className="app__content-div2-inp"/>
             </div>
 
             <div className="app__content-div3">
-              <p className="app__content-div3-txt">Te desgravarás</p>
-              <input type="text" className="app__content-div3-inp" value={desgrabacion || 0}/>
+              <p className="app__content-div3-txtP">Te desgravarás</p>
+              <input type="text" className="app__content-div3-inp"/>
             </div>
 
             <div className="app__content-div4">
@@ -101,4 +83,4 @@ class Desplegableporcentaje extends Component {
   };
 }
 
-export default Desplegableporcentaje;
+export default Desplegableperiodico;

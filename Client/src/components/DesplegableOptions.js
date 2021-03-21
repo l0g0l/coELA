@@ -4,7 +4,7 @@ function DesplegableOptions() {
     return (
         <div >
             <select  className="desplegableoptions">
-            <option></option>
+                <option value=""></option>
                 <option>Automático</option>
                 <option>Manual vía notificaciones</option>
                 <option>Desde tu cuenta bancaria</option>
