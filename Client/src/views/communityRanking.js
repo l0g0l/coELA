@@ -4,6 +4,7 @@ import wifi from '../images/wifi.svg';
 import ranking2 from '../images/ranking2.png';
 import { useHistory } from 'react-router-dom';
 import botondonar from '../images/botondonar.png'
+import flor1 from '../images/flor1.svg';
 
 import '../styles/_communityRanking.scss'
 
@@ -27,6 +28,13 @@ export default function CommunityRanking() {
                     <a href="./challenges" className="encabezadocomun1txt2-1"><p>Challenges</p></a>
                     <a href="./ranking"className="encabezadocomun1txt2-2"><p>Ranking</p></a>
                 </div>
+
+            </div>
+            <div className="fraseranking">
+                <p>Puesto</p>
+                <img src={flor1} alt=""/>
+                <p>Luzones</p>
+
 
             </div>
             <div className="ranking">
