@@ -15,8 +15,7 @@ exports.authUser = async (req, res, next) => {
     // Buscar el usuario para ver si esta registrado
     const { user, password } = req.body;
     const user_exist = await User.findOne({ user });
-    console.log(user_exist)
-
+    // console.log(usuario);
 
     if(!user_exist) {
         res.status(401).json({msg : 'El Usuario No Existe'});
@@ -29,9 +28,9 @@ exports.authUser = async (req, res, next) => {
     if(password === user_exist.password ) {
         // Crear JWT
         const token = jwt.sign({
-            id: user._id,
-            name: user.name,
-            email: user.email
+            id: user_exist._id,
+            name: user_exist.name,
+            email: user_exist.email
         }, process.env.SECRETA, {
             expiresIn: '8h'
         }  );
@@ -44,21 +43,6 @@ exports.authUser = async (req, res, next) => {
     }
 }
 
-exports.getUser = async(req, res) => {
-    console.log('Aqui el perfil del usuario')
-    // res.json({user: req.user} );
-    // const {user, avatar, luzones} = req.body
-    const user_profile = await User.findOne({ user });
-    // if(user_profile === user){  
-
-   
-
-    if (user_profile){
-        res.json(user_profile)
-    }
-    
-    console.log(user_profile)
-    console.log({user: 'El Usuario que se ha logado'})
-}
-
-
+// exports.authUser = (req, res, next) => {
+//     res.json({user: req.user } );
+// }

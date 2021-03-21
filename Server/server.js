@@ -1,11 +1,11 @@
 const express = require('express');
 const conectarDB = require('./config/db');
 const cors = require('cors');
-const routes = require('./routes');
-
+const morgan = require('morgan')
 
 // crear el servidor
 const app = express();
+
 
 // Conectar a la base de datos
 conectarDB();
@@ -22,16 +22,29 @@ const port = process.env.PORT || 4000;
 // Habilitar leer los valores de un body
 app.use( express.json() );
 
-// Rutas de la app
-app.use('/api/', require('./routes/newUser'));
-app.use('/api/login', require('./routes/auth'));
-app.use('/api/profile', require('./routes/auth'));
-app.use('/api/profile/donations', require('./routes/donations'));
-app.use('/api/profile/donations/onedonation', require('./routes/onedonation'));
-app.use('/api/profile/donations/percent', require('./routes/percent'));
-app.use('/api/profile/donations/roundup', require('./routes/roundup'));
-app.use('/api/profile/donations/periodic', require('./routes/periodic'));
+app.use(morgan('tiny'))
+app.disable('etag');
 
+app.use('/api/user', require('./routes/user'));
+app.use('/api/donation', require('./routes/donations'));
+app.use('/api/plot', require('./routes/plot'));
+
+/* curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/donation/info -d '{"user": "r0j4z0"}'
+curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/donation/create -d '{"user": "r0j4z0"}'
+curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/user/info -d '{"user": "r0j4z0"}'
+curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/donation/info -d '{"user": "r0j4z0"}'  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTVlODI4M2Q3YmMwMzAxYzAwYjA2MyIsIm5hbWUiOiJGZXJuYW5kbyBHb256w6FsZXoiLCJlbWFpbCI6InIwajR6MEBnbWFpbC5jb20iLCJpYXQiOjE2MTYzNjE1MjksImV4cCI6MTYxNjM5MDMyOX0.LsR8vNDat3t5LqTt8TRd1pc5ze64uG-XPma1fueGc34'
+ */
+
+/*
+'/api/user/signup'
+'/api/user/signin'
+'/api/user/info'
+'/api/user/update'
+'/api/donation/create'
+'/api/donation/info' 
+'/api/plot/average_donation'
+'/api/plot/piechart'
+*/
 
 // Arrancar la app
 app.listen(port)
