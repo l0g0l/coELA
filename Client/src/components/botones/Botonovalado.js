@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Botonovalado = ({texto, color, disabled}, func) => {
+const Botonovalado = ({func, texto, color, disabled}) => {
 
     return (
         <div >

@@ -25,7 +25,7 @@ export class OneDonation extends Component {
     this.updateBotonesDinero = this.updateBotonesDinero.bind(this);
     this.updateBotonesMetodo = this.updateBotonesMetodo.bind(this);
     this.send = this.send.bind(this);
-    this.send = this.sendcreditcard.bind(this);
+    this.sendcreditcard = this.sendcreditcard.bind(this);
 
     this.state = {
         botones_dinero: {},
@@ -134,7 +134,7 @@ export class OneDonation extends Component {
 
 
         <div className="btn-ovalado">
-          <Botonovalado pulsar={this.send} texto="Siguiente" color="btn-ovalado-pink" disabled={siguiente_disabled} />
+          <Botonovalado func={this.send} texto="Siguiente" color="btn-ovalado-pink" disabled={siguiente_disabled} />
         </div>
 
 

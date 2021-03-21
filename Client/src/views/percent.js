@@ -8,10 +8,12 @@ import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
 import porcentajeblanco from '../images/porcentajeblanco.svg';
 import Desplegableporcentaje from '../components/Desplegableporcentaje';
+import Modal from '../components/Modal'
 
-
-
+import '../styles/_popup.scss'
 import '../styles/_percent.scss'
+
+
 
 export class Percent extends Component {
   constructor(props) {
@@ -25,6 +27,7 @@ export class Percent extends Component {
         siguiente_disabled: true
     }
   }
+ 
 
   updateBotonesMultiplicador(newBotones) {
     console.log('NEW BOTONES')

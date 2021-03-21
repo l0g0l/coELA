@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Footer from '../components/Footer'
 import fotoperfil from '../images/fotoperfil.svg';
 import informacion from '../images/informacion.svg';
@@ -47,9 +47,9 @@ const Home = () => {
     history4.push("/onedonation");
   }
 
-  const [active,setActive]= useState(false)
+  const [active, setActive] = useState(false)
   const toggle = () => {
-      setActive (!active)
+    setActive(!active)
   }
 
 
@@ -60,29 +60,28 @@ const Home = () => {
         <img src={wifi} alt="" />
         <div className="encabezadoperfil-1">
 
-          {/* <img className="encabezado-1-ruedecita" src={ruedecita} alt="icono rudecita configuración" /> */}
         </div>
         <div className="encabezadoperfil-2">
 
           <div className="encabezadoperfil-3">
-          <img className="encabezadoperfil-img" src={fotoperfil} alt="foto perfil" />
-          <div className="usuarioluzones">
-          <p className="encabezadoperfil-txt-1">¡Hola Clara! </p>
-            <div className="encabezadoperfil-3-3_1">
-              <p className="encabezadoperfil-txt-02">5.000 Luzones</p>
-              <button className="modalbtn" onClick= {toggle}><img src={informacion} alt="" /></button>
-              <Modal active ={active} toggle={toggle}>
+            <img className="encabezadoperfil-img" src={fotoperfil} alt="foto perfil" />
+            <div className="usuarioluzones">
+              <p className="encabezadoperfil-txt-1">¡Hola Clara! </p>
+              <div className="encabezadoperfil-3-3_1">
+                <p className="encabezadoperfil-txt-02">5.000 Luzones</p>
+                <button className="modalbtn" onClick={toggle}><img src={informacion} alt="" /></button>
+                <Modal active={active} toggle={toggle}>
 
-              <img className="imgpopup"src={popupok} alt=""/>
-              </Modal>
+                  <img className="imgpopup" src={popupok} alt="" />
+                </Modal>
+
+              </div>
 
             </div>
 
-          </div>
-       
 
           </div>
-          
+
         </div>
 
 
@@ -90,7 +89,7 @@ const Home = () => {
 
       <div>
 
-      <Carousel breakPoints={breakPoints} showArrows={false}>
+        <Carousel breakPoints={breakPoints} showArrows={false}>
           <div className="item"><img src={imagen1carr} alt="" /></div>
           <div className="item"><img src={imagen2carr} alt="" /></div>
           <div className="item"><img src={imagen3carr} alt="" /></div>
@@ -110,7 +109,7 @@ const Home = () => {
 
         <img onClick={sendroundup} className="configdonaciones-btn-1" src={boton1} alt="" />
         <img onClick={sendpercent} className="configdonaciones-btn-1" src={boton2ok} alt="" />
-        <img onClick={sendperiodic} className="configdonaciones-btn-1" src={boton3} />
+        <img onClick={sendperiodic} className="configdonaciones-btn-1" src={boton3} alt=""/>
 
 
       </div>

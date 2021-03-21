@@ -24,18 +24,19 @@ export default function CommunityRanking() {
                 </div>
 
                 <div className="encabezadocomun1txt2">
-                    <a href="./community"  className="encabezadocomun1txt2-1"><p>Gente como tú</p></a>
+                    <a href="./community" className="encabezadocomun1txt2-1"><p>Gente como tú</p></a>
                     <a href="./challenges" className="encabezadocomun1txt2-1"><p>Challenges</p></a>
-                    <a href="./ranking"className="encabezadocomun1txt2-2"><p>Ranking</p></a>
+                    <a href="./ranking" className="encabezadocomun1txt2-2"><p>Ranking</p></a>
                 </div>
 
             </div>
             <div className="fraseranking">
-                <p>Puesto</p>
-                <img src={flor1} alt=""/>
-                <p>Luzones</p>
-
-
+                <p className="txtranking">Puesto</p>
+           
+            <div className="fraseranking-1">
+                <img className="fraseranking-1-img" src={flor1} alt="" />
+                <p className="fraseranking-1-txt" >Luzones</p>
+            </div>
             </div>
             <div className="ranking">
                 <img src={ranking2} alt="" />
