@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from 'react'
 import cx from "classnames";
 import Collapse from "@kunukn/react-collapse";
 
@@ -7,13 +7,34 @@ import Collapse from "@kunukn/react-collapse";
 
 import "../styles/_desplegableporcentaje.scss";
 
-class Desplegableporcentaje extends React.Component {
-  state = {
-    isOpen1: false,
+class Desplegableporcentaje extends Component {
+  constructor(props) {
+    super(props);
+    this.handleChangeNomina = this.handleChangeNomina.bind(this);
+    this.state = {
+      isOpen1: false,
+      nomina: 0,
+    };
 
-  };
+  }
+
+  handleChangeNomina(event) {
+    console.log('CAMBIO EN LA NOMINA')
+    console.log(event.target.value)
+    this.setState({nomina: event.target.value})
+    console.log(this.state.nomina)
+  }
 
   render() {
+    let anual = this.state.nomina * parseFloat(this.props.multiplicador_value) / 100
+    let desgrabacion = 0
+    if (anual <= 150) {
+      desgrabacion = anual * 80 / 100
+    } else {
+      desgrabacion = (150 * 80 / 100) + ((anual - 150) * 35 / 100)
+    }
+    console.log(anual)
+    console.log(desgrabacion)
     return (
       <div className="app">
         <button
@@ -44,18 +65,18 @@ class Desplegableporcentaje extends React.Component {
           
             <div className="app__content-div1">
               <p className="app__content-div1-txt">Tu nómina anual</p>
-              <input type="text" className="app__content-div1-inp" placeholder="12.000€"/>
-              <input type="text" className="app__content-div1-inp"/>
+              <input type="text" className="app__content-div1-inp" placeholder="12000" onChange={this.handleChangeNomina} defaultValue={this.state.nomina || null}/>
+              <input type="text" className="app__content-div1-inp" Value={this.props.multiplicador_value || null}/>
             </div>
           
             <div className="app__content-div2">
               <p className="app__content-div2-txt">Donarás al año</p>
-              <input type="text" className="app__content-div2-inp"/>
+              <input type="text" className="app__content-div2-inp" value={anual || 0}/>
             </div>
 
             <div className="app__content-div3">
               <p className="app__content-div3-txt">Te desgravarás</p>
-              <input type="text" className="app__content-div3-inp"/>
+              <input type="text" className="app__content-div3-inp" value={desgrabacion || 0}/>
             </div>
 
             <div className="app__content-div4">

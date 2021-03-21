@@ -44,10 +44,17 @@ export class Percent extends Component {
 
   render () {
     let multiplicadorpulsado = false
+    let multiplicador = {
+      1: 0.5,
+      2: 1,
+      3: 2
+    }
+    let multiplicador_aplicado = null
     let siguiente_disabled = this.state.siguiente_disabled
     for (const btn in this.state.botones_multiplicador) {
       if (this.state.botones_multiplicador[btn].clicked == true) {
         multiplicadorpulsado = true
+        multiplicador_aplicado =  multiplicador[btn]
       }
     }
     if (multiplicadorpulsado) {
@@ -74,7 +81,7 @@ export class Percent extends Component {
       </div>
 
 
-      <Desplegableporcentaje />
+      <Desplegableporcentaje multiplicador_value={multiplicador_aplicado}/>
 
       <div >
         <p className="porcentaje-txt">Tipo de donación</p>
