@@ -1,12 +1,7 @@
-
-//Este fichero reemplaza al original
-
-
 const express = require('express');
 const conectarDB = require('./config/db');
 const cors = require('cors');
-const routes = require('./routes');
-
+const morgan = require('morgan')
 
 // crear el servidor
 const app = express();
@@ -27,23 +22,29 @@ const port = process.env.PORT || 4000;
 // Habilitar leer los valores de un body
 app.use( express.json() );
 
+app.use(morgan('tiny'))
+app.disable('etag');
 
-// routes
-//app.use('/', routes());
-// Rutas de la app
-app.use('/api/', require('./routes/newUser'));
-app.use('/api/login', require('./routes/auth'));
-//cambio a api/profile porque es la misma peticion, solo q cambia el tipo get a post
-app.use('/api/profile', require('./routes/auth'));
-app.use('/api/profile/donation', require('./routes/donations'));
+app.use('/api/user', require('./routes/user'));
+app.use('/api/donation', require('./routes/donations'));
+app.use('/api/plot', require('./routes/plot'));
 
-// ### Necesito una ruta por tipo de donacion?? o me vale con 1? todas las donaciones equivalen a 100 luzones
+/* curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/donation/info -d '{"user": "r0j4z0"}'
+curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/donation/create -d '{"user": "r0j4z0"}'
+curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/user/info -d '{"user": "r0j4z0"}'
+curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/donation/info -d '{"user": "r0j4z0"}'  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTVlODI4M2Q3YmMwMzAxYzAwYjA2MyIsIm5hbWUiOiJGZXJuYW5kbyBHb256w6FsZXoiLCJlbWFpbCI6InIwajR6MEBnbWFpbC5jb20iLCJpYXQiOjE2MTYzNjE1MjksImV4cCI6MTYxNjM5MDMyOX0.LsR8vNDat3t5LqTt8TRd1pc5ze64uG-XPma1fueGc34'
+ */
 
-//app.use('/api/profile/donation/onedonation', require('./routes/donations'));
-// app.use('/api/profile/donations/percent', require('./routes/donations'));
-// app.use('/api/profile/donations/roundup', require('./routes/donations'));
-// app.use('/api/profile/donations/periodic', require('./routes/donations'));
-
+/*
+'/api/user/signup'
+'/api/user/signin'
+'/api/user/info'
+'/api/user/update'
+'/api/donation/create'
+'/api/donation/info' 
+'/api/plot/average_donation'
+'/api/plot/piechart'
+*/
 
 // Arrancar la app
 app.listen(port)

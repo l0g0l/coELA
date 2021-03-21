@@ -1,72 +1,48 @@
 const User = require('../models/userSchema');
+const { validationResult } = require('express-validator');
 
-// Creo que solo haría falta un enpoitn, una peticion de tipo post
-// Porque haga la transaccion que haga sumara 100 luzones en el perfil del usuario
-// Esto es: 
+// Parámetros de entrada:
+// req.body.user: Usuario que hace la donación
 
-exports.donation = async(req, res) => {
-    console.log('aqui tu donacion...');
-    console.log('esta donación equivale a 100 luzones..');
-    //Aqui va la funcion de agregar luzones al array del esquema: 100 en cada transaccion
-    //Suma 100 luzonesT del esquema User
-    //const luzones Update = User.luzonesT + 100
-    // de esta forma modificaría el total, modificaría el numero de luzones que tiene
-    //Pero NO estoy conservando el numero anterior No guardo el histórico
-    const luzones = await User.findOne({luzones: req.body.luzonesT});
-    try {
-    luzones + 100
-    console.log('esta donación equivale a 100 luzones..');
-        await User.save();
-        res.json({msg : 'Has sumado 100 luzones'});
-    } catch (error) {
-        console.log(error);
+exports.createDonation = async (req, res) => {
+    // Mostrar mensajes de error de express validator
+    const errors = validationResult(req);
+    if(!errors.isEmpty()) {
+        console.log(req.body)
+        return res.status(400).json({errors: errors.array()});
     }
-};
+    let usuario = await User.findOne({ user: req.body.user });
 
+    if (!usuario) {
+        res.status(401).json({msg : 'El Usuario No Existe'});
+    }
+    if (usuario.luzonesTotal) {
+        usuario.luzonesTotal = usuario.luzonesTotal + 100
+    } else {
+        usuario.luzonesTotal = 100
+    }
+    if (usuario.donationsTotal) {
+        usuario.donationsTotal = usuario.donationsTotal + 1
+    } else {
+        usuario.donationsTotal = 1
+    }
+    console.log(usuario)
 
-// exports.onedonation = async(req, res) => {
-//     console.log('aqui tu donación puntual...');
-//     console.log('esta donación equivale a 100 luzones..');
-//     //Aqui va la funcion de agregar luzones al array del esquema: 100 en cada transaccion
-//     //Suma 100 luzonesT del esquema User
-//     //const luzones Update = User.luzonesT + 100
-//     // de esta forma modificaría el total, modificaría el numero de luzones que tiene
-//     //Pero NO estoy conservando el numero anterior No guardo el histórico
-//     const luzones = await User.findOne({luzones: req.body.luzonesT});
-//     try {
-//     luzones + 100
-//     console.log('esta donación equivale a 100 luzones..');
-//         await User.save();
-//         res.json({msg : 'Has sumado 100 luzones'});
-//     } catch (error) {
-//         console.log(error);
-//     }
-// };
+    await usuario.save()
+    res.json({msg: 'donacion realizada'})
+}
 
-// exports.percent = (req, res) => {
-//     console.log('aqui el portcentaje de tu nomina..');
-//     console.log('esta donación equivale a 100 luzones..');
-//     //Aqui va la funcion de agregar luzones al array del esquema: 100 en cada transaccion
-// };
+exports.infoDonation = async (req, res) => {
+    // Mostrar mensajes de error de express validator
+    const errors = validationResult(req);
+    if(!errors.isEmpty()) {
+        console.log(req.body)
+        return res.status(400).json({errors: errors.array()});
+    }
+    let usuario = await User.findOne({ user: req.body.user });
 
-// exports.periodic = (req, res) => {
-//     console.log('aqui tu donación puntual...');
-//     console.log('esta donación equivale a 100 luzones..');
-//     //Aqui va la funcion de agregar luzones al array del esquema: 100 en cada transaccion
-// };
-
-// exports.roundup = (req, res) => {
-//     console.log('aqui el redondeo de tus compras..');
-//     console.log('esta donación equivale a 100 luzones..');
-//     //Aqui va la funcion de agregar luzones al array del esquema: 100 en cada transaccion
-    
-// };
-
-
-//Agrega 100luzones al array de luzones del User
-
-// cont totalLuzones;
-// const pay = 100
-// const donation = User.donations.luzones;
-// 
-// [...donation]
+    if (!usuario) {
+        res.status(401).json({msg : 'El Usuario No Existe'});
+    }
+    res.json({donationsTotal: usuario.donationsTotal, luzonesTotal: usuario.luzonesTotal})
+}
