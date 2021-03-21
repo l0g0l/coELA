@@ -15,6 +15,7 @@ module.exports = (req, res, next ) => {
             try {
                 const user = jwt.verify(token, process.env.SECRETA );
                 req.user = user;
+                
             } catch (error) {
                 console.log(error);
                 console.log('JWT no valido');

@@ -19,4 +19,3 @@ const conectarDB = async () => {
 
 module.exports = conectarDB;
 
-// Solo se conecta en local a la BBDD, hay que darle una vuelta con Atlas

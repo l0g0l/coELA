@@ -1,3 +1,7 @@
+
+//Este fichero reemplaza al original
+
+
 const express = require('express');
 const conectarDB = require('./config/db');
 const cors = require('cors');
@@ -29,7 +33,12 @@ app.use( express.json() );
 // Rutas de la app
 app.use('/api/', require('./routes/newUser'));
 app.use('/api/login', require('./routes/auth'));
-// app.use('/api/donations', require('./routes/donations'));
+app.use('/api/profile', require('./routes/auth'));
+app.use('/api/profile/donations', require('./routes/donations'));
+app.use('/api/profile/donations/onedonation', require('./routes/donations'));
+app.use('/api/profile/donations/percent', require('./routes/donations'));
+app.use('/api/profile/donations/roundup', require('./routes/donations'));
+app.use('/api/profile/donations/periodic', require('./routes/donations'));
 
 
 // Arrancar la app

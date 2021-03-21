@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose')
 const Schema  = mongoose.Schema;
 
@@ -8,11 +9,15 @@ const userSchema = new Schema({
         trim: true
     }, 
     user: {
-        type: String,
-        trim: true,
+        type: Array,
         Date: Date.now(),
+        trim: true,
         unique: true
+    },
 
+    avatar: {
+        type: String,
+        trim: true
     },
     dni: {
         type: String,
@@ -28,42 +33,35 @@ const userSchema = new Schema({
         type: String,
         trim: true
     },
-    
-    luzonesTotal: {
-        type: Number,
-        trim: true
-    },
-    luzonesLast: {
-        type: Number,
-        trim: true
-    },
-    lastDonation: {
-        type: Number,
-        //Date: Date.Now,
-
-    },
-    payby: {
-        card: {
-        type: Boolean,
-        trim: true
+    donations: {
+        type: Array,
+        luzones: {
+            type: Number,
+            trim: true
         },
-        paypal: {
-        type:  Boolean,
-        trim: true
+        euros: {
+            type: Number,
+            trim: true
         },
-        ccc: {
-        type:  Boolean,
-        trim: true
+        payby: {
+            card: {
+            type: Boolean,
+            trim: true
+            },
+            paypal: {
+            type:  Boolean,
+            trim: true
+            },
+            ccc: {
+            type:  Boolean,
+            trim: true
+            },
+            cripto: {
+            type:  Boolean,
+            trim: true
+            }
         },
-        cripto: {
-        type:  Boolean,
-        trim: true
-        }
     },
-   
-
-   
-  
 })
 
 
