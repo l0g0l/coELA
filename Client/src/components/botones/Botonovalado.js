@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Botonovalado = ({texto, color, pulsar}) => {
+const Botonovalado = ({texto, color, pulsar, disabled}) => {
 
     return (
         <div >
-         <button onClick={pulsar} className={color}>{texto}</button>
+         <button onClick={pulsar} className={disabled?'btn-ovalado-grey':color} disabled={disabled?true:""}>{texto}</button>
 
         </div>
     )

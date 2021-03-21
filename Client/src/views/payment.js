@@ -5,7 +5,8 @@ import flecha2 from '../images/flecha2.png';
 import wifi from '../images/wifi.svg';
 import mastercard from '../images/mastercard.svg';
 import { useHistory } from 'react-router-dom';
-import Botoncuadradogr from '../components/botones/Botoncuadradogr';
+// import Botoncuadradogr from '../components/botones/Botoncuadradogr';
+import botoncuadradogr from '../images/botoncuadradogr.svg';
 import flor2 from '../images/flor2.svg';
 
 
@@ -34,7 +35,8 @@ function Payment() {
             <p className="txt-tarjeta">Vas a donar</p>
 
             <div className="encabezadocomun-txt">
-            <Botoncuadradogr valor={'25€'} imagen={flor2}/>
+            {/* <Botoncuadradogr valor={'25€'} imagen={flor2}/> */}
+            <img className="botongr" src={botoncuadradogr} alt="" />
 
             </div>
             <p className="txt-tarjeta-1">Introduce tu tarjeta bancaria</p>

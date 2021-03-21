@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react'
 import Footer from '../components/Footer';
 import Encabezadocomun from '../components/Encabezadocomun';
 import { useHistory } from 'react-router-dom';
@@ -13,16 +13,44 @@ import Desplegableporcentaje from '../components/Desplegableporcentaje';
 
 import '../styles/_percent.scss'
 
+export class Percent extends Component {
+  constructor(props) {
+    super(props);
 
-const Percent = () => {
+    this.updateBotonesMultiplicador = this.updateBotonesMultiplicador.bind(this);
+    this.send = this.send.bind(this);
 
-  let history1 = useHistory();
-  const sendhome = () => {
-    history1.push("/home");
+    this.state = {
+        botones_multiplicador: {},
+        siguiente_disabled: true
+    }
   }
- 
 
-  return (
+  updateBotonesMultiplicador(newBotones) {
+    console.log('NEW BOTONES')
+    console.log(newBotones)
+    this.setState({botones_multiplicador: newBotones});
+    console.log(this.state.multiplicador)
+    console.log('NEW BOTONES END')
+
+  }
+  
+  send = () => {
+    this.props.history.push('/home');
+  }
+
+  render () {
+    let multiplicadorpulsado = false
+    let siguiente_disabled = this.state.siguiente_disabled
+    for (const btn in this.state.botones_multiplicador) {
+      if (this.state.botones_multiplicador[btn].clicked == true) {
+        multiplicadorpulsado = true
+      }
+    }
+    if (multiplicadorpulsado) {
+      siguiente_disabled = false
+    }
+    return (
     <div className="containerporcentaje">
       <Encabezadocomun texto={'Porcentaje de la nómina'} src={porcentajeblanco} />
       <div className="porcentaje">
@@ -30,9 +58,9 @@ const Percent = () => {
       </div>
 
       <div className="porcentaje-btnmed">
-        <Botoncuadradopeq valor={'0,5%'} />
-        <Botoncuadradopeq valor={'1%'} />
-        <Botoncuadradopeq valor={'2%'} />
+        <Botoncuadradopeq valor={'0,5%'} state={this.state.botones_multiplicador} set_state={this.updateBotonesMultiplicador} btn_id={1}/>
+        <Botoncuadradopeq valor={'1%'} state={this.state.botones_multiplicador} set_state={this.updateBotonesMultiplicador} btn_id={2}/>
+        <Botoncuadradopeq valor={'2%'} state={this.state.botones_multiplicador} set_state={this.updateBotonesMultiplicador} btn_id={3}/>
       </div>
       <div className="porcentaje-btnrect">
         <Botonrect texto={'Otro porcentaje'} />
@@ -56,7 +84,7 @@ const Percent = () => {
       <div className="btnguardar">
 
         <div className="btnguardar-1">
-          <Botonovalado pulsar={sendhome} texto={'Guardar'} color='btn-ovalado-pink' />
+          <Botonovalado pulsar={this.send} texto={'Guardar'} color='btn-ovalado-pink' disabled={siguiente_disabled}/>
 
         </div>
 
@@ -70,6 +98,7 @@ const Percent = () => {
       <Footer />
 
     </div>
-  )
+    )
+  }
 }
 export default Percent
