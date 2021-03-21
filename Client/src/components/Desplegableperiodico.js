@@ -15,6 +15,14 @@ class Desplegableperiodico extends React.Component {
   };
 
   render() {
+    console.log(this.props.periodicidad.value)
+    let anual = this.props.periodicidad.value * this.props.cantidad
+    let desgrabacion = 0
+    if (anual <= 150) {
+      desgrabacion = anual * 80 / 100
+    } else {
+      desgrabacion = (150 * 80 / 100) + ((anual - 150) * 35 / 100)
+    }
     return (
       <div className="app">
         <button
@@ -45,20 +53,20 @@ class Desplegableperiodico extends React.Component {
           
             <div className="app__content-div1">
              
-              <input type="text" className="app__content-div1-inpP" />
+              <input type="text" className="app__content-div1-inpP" value={this.props.cantidad} />
               {/* <img className="euroblanco"src={europeq} alt="euro"/> */}
-              <input type="text" className="app__content-div1-inp"/>
+              <input type="text" className="app__content-div1-inp" value={this.props.periodicidad.literal}/>
               <p className="app__content-div1-txtP">durante 1 año</p>
             </div>
           
             <div className="app__content-div2">
               <p className="app__content-div2-txtP">Donarás al año</p>
-              <input type="text" className="app__content-div2-inp"/>
+              <input type="text" className="app__content-div2-inp" value={anual || 0}/>
             </div>
 
             <div className="app__content-div3">
               <p className="app__content-div3-txtP">Te desgravarás</p>
-              <input type="text" className="app__content-div3-inp"/>
+              <input type="text" className="app__content-div3-inp" value={desgrabacion || 0}/>
             </div>
 
             <div className="app__content-div4">

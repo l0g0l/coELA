@@ -19,11 +19,13 @@ export class Periodic extends Component {
     super(props);
 
     this.updateBotonesMultiplicador = this.updateBotonesMultiplicador.bind(this);
+    this.handleChangeCantidad = this.handleChangeCantidad.bind(this)
     this.send = this.send.bind(this);
 
     this.state = {
         botones_multiplicador: {},
-        siguiente_disabled: true
+        siguiente_disabled: true,
+        cantidad: 1,
     }
   }
 
@@ -35,6 +37,13 @@ export class Periodic extends Component {
     console.log('NEW BOTONES END')
 
   }
+
+  handleChangeCantidad(event) {
+    console.log('CAMBIO EN LA CANTIDAD')
+    console.log(event.target.value)
+    this.setState({cantidad: event.target.value})
+    console.log(this.state.cantidad)
+  }
   
   send = () => {
     this.props.history.push('/periodic');
@@ -43,9 +52,18 @@ export class Periodic extends Component {
   render () {
     let multiplicadorpulsado = false
     let siguiente_disabled = this.state.siguiente_disabled
+    let periodicidad_elegida = ""
+    let periodicidad = {
+      1: {literal: "Dia", value: 365},
+      2: {literal: "Semana", value: 52},
+      3: {literal: "Mes", value: 12}
+    }
+
     for (const btn in this.state.botones_multiplicador) {
       if (this.state.botones_multiplicador[btn].clicked == true) {
         multiplicadorpulsado = true
+        periodicidad_elegida = periodicidad[btn]
+
       }
     }
     if (multiplicadorpulsado) {
@@ -57,7 +75,7 @@ export class Periodic extends Component {
 
         <div className="periodica">
           <img className="periodica-img" src={flor1} alt="" />
-          <input className="periodica-input" type="text" />
+          <input className="periodica-input" type="text" onChange={this.handleChangeCantidad} defaultValue={this.state.cantidad|| null}/>
           <img className="periodica-img-2" src={euro} alt="" />
 
         </div>
@@ -73,7 +91,7 @@ export class Periodic extends Component {
         </div>
 
 
-        <Desplegableperiodico/>
+        <Desplegableperiodico cantidad={this.state.cantidad} periodicidad={periodicidad_elegida}/>
 
         <div >
           <p className="periodica-txt">Tipo de donación</p>
