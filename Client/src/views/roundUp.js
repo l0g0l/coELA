@@ -24,16 +24,13 @@ export class RoundUp extends Component {
   }
 
   updateBotonesMultiplicador(newBotones) {
-    console.log('NEW BOTONES')
-    console.log(newBotones)
-    this.setState({botones_multiplicador: newBotones});
-    console.log(this.state.multiplicador)
-    console.log('NEW BOTONES END')
 
+    this.setState({botones_multiplicador: newBotones});
+  
   }
   
   send = () => {
-    this.props.history.push('/home');
+    this.props.history.push('/roundup');
   }
 
   render () {

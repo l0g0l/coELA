@@ -37,7 +37,7 @@ export class Periodic extends Component {
   }
   
   send = () => {
-    this.props.history.push('/home');
+    this.props.history.push('/periodic');
   }
 
   render () {

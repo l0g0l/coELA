@@ -44,7 +44,7 @@ class Desplegableporcentaje extends React.Component {
           
             <div className="app__content-div1">
               <p className="app__content-div1-txt">Tu nómina anual</p>
-              <input type="text" className="app__content-div1-inp"/>
+              <input type="text" className="app__content-div1-inp" placeholder="12.000€"/>
               <input type="text" className="app__content-div1-inp"/>
             </div>
           

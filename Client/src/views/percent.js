@@ -36,8 +36,11 @@ export class Percent extends Component {
   }
   
   send = () => {
-    this.props.history.push('/home');
+    this.props.history.push('/percent');
   }
+
+ 
+
 
   render () {
     let multiplicadorpulsado = false
@@ -84,7 +87,7 @@ export class Percent extends Component {
       <div className="btnguardar">
 
         <div className="btnguardar-1">
-          <Botonovalado pulsar={this.send} texto={'Guardar'} color='btn-ovalado-pink' disabled={siguiente_disabled}/>
+          <Botonovalado pulsar={this.send} func={this.percent} texto={'Guardar'} color='btn-ovalado-pink' disabled={siguiente_disabled}/>
 
         </div>
 
