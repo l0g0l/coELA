@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const donationController = require('../controllers/donationController')
+const percentController = require('../controllers/percentController')
 
 router.post('/', 
  
-    donationController.donation
+percentController.percent
 );
 
 module.exports = router;

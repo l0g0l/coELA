@@ -10,7 +10,7 @@ exports.newUser = async (req, res) => {
         return res.status(400).json({errors: errors.array()});
     }
     // Verificar si el usuario ya estuvo registrado
-    //const { email, password } = req.body;
+ 
 
     let usuario = await User.findOne({ user: req.body.user });
 

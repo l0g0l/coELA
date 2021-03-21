@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const donationController = require('../controllers/donationController')
+const roundupController = require('../controllers/roundupController')
 
 router.post('/', 
  
-    donationController.donation
+    roundupController.roundup
 );
 
 module.exports = router;
