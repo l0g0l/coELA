@@ -27,13 +27,23 @@ const userSchema = new Schema({
     password: {
         type: String,
         trim: true
-    },
-    
-    luzones: {
+    },    
+    luzonesTotal: {
         type: Number,
         trim: true
     },
-
+    luzonesLast: {
+        type: Number,
+        trim: true
+    },
+    donationsTotal: {
+        type: Number,
+        trim: true
+    },
+    donationsLast: {
+        type: Date
+        //Date: Date.Now,
+    },
     payby: {
         card: {
         type: Boolean,
@@ -51,8 +61,11 @@ const userSchema = new Schema({
         type:  Boolean,
         trim: true
         }
-    }
+    },
+   
 
+   
+  
 })
 
 
