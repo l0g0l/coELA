@@ -1,5 +1,7 @@
 const User = require('../models/userSchema');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+require('dotenv').config({ path: 'variables.env'});
 const { validationResult } = require('express-validator');
 
 exports.newUser = async (req, res) => {
@@ -30,8 +32,26 @@ console.log(req.body)
     // user.password = await bcrypt.hash(password, salt );
 
     
-        await user.save();
-        res.json({msg : 'Usuario Creado Correctamente'});
+     await user.save();
+    // crear y firmar jwt
+
+    const payload= {
+        id: user._id,
+            name: user.name,
+          
+
+    }
+
+    // firmar jwt
+    jwt.sign(payload, process.env.SECRETA, {
+        expiresIn: '8h'
+    }, (error, token)=>{
+        if(error)throw error;
+        res.json({token: token});
+    })
+
+//hasta aqui token
+      
     } catch (error) {
         console.log(error);
     }
