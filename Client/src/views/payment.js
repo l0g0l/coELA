@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import Botonovalado from '../components/botones/Botonovalado';
 import Footer from '../components/Footer'
 import flecha2 from '../images/flecha2.png';
 import wifi from '../images/wifi.svg';
 import mastercard from '../images/mastercard.svg';
 import { useHistory } from 'react-router-dom';
-// import Botoncuadradogr from '../components/botones/Botoncuadradogr';
+import axios from 'axios';
 import botoncuadradogr from '../images/botoncuadradogr.svg';
-import flor2 from '../images/flor2.svg';
 
 
 import '../styles/_payment.scss'
+
+const baseurl = 'http://localhost:4000/api/donation/create';
+const axios_jwt = {
+  headers: {
+     Authorization: "Bearer " + localStorage.getItem('currentJWT')
+  }
+}
+
 
 
 function Payment() {
@@ -18,6 +25,17 @@ function Payment() {
     const sendthanks = () => {
         history1.push("/thanks");
     }
+
+const [userdata, setUserData] = useState({})
+
+      const MakeDonation = async () => {
+        const resultado = await axios.post(baseurl, { user: localStorage.getItem('currentUser')}, axios_jwt)
+        setUserData(resultado.data);
+        console.log(resultado.data);
+       sendthanks()
+      }
+  
+ 
 
     return (
         <div className="containerpayment">
@@ -35,7 +53,6 @@ function Payment() {
             <p className="txt-tarjeta">Vas a donar</p>
 
             <div className="encabezadocomun-txt">
-            {/* <Botoncuadradogr valor={'25€'} imagen={flor2}/> */}
             <img className="botongr" src={botoncuadradogr} alt="" />
 
             </div>
@@ -70,7 +87,7 @@ function Payment() {
 
                 </div>
                 <div className="btnguardar">
-                    <Botonovalado func={sendthanks} texto={'Dona'} color='btn-ovalado-pinkpercent ' />
+                    <Botonovalado func={MakeDonation} texto={'Dona'} color='btn-ovalado-pinkpercent ' />
                 </div>
 
                 <Footer />

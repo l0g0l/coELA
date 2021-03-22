@@ -48,11 +48,11 @@ export default function SignUp() {
             name="name"
             className="form-div-btnuser"
             autoFocus
-            placeholder="Nombre completo"
+            placeholder="Nombre"
             ref={register({
               required: {
                 value: true,
-                message: <p className="errorMsg">Por favor introduzca su Nombre completo</p>
+                message: <p className="errorMsg">Por favor introduzca su Nombre</p>
               },
 
             })}
