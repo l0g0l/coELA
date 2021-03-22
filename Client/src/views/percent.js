@@ -1,16 +1,13 @@
 import React, { Component } from 'react'
 import Footer from '../components/Footer';
 import Encabezadocomun from '../components/Encabezadocomun';
-import { useHistory } from 'react-router-dom';
 import Botoncuadradopeq from '../components/botones/Botoncuadradopeq';
 import Botonrect from '../components/botones/Botonrect.js';
 import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
 import porcentajeblanco from '../images/porcentajeblanco.svg';
 import Desplegableporcentaje from '../components/Desplegableporcentaje';
-import Modal from '../components/Modal'
 
-import '../styles/_popup.scss'
 import '../styles/_percent.scss'
 
 
