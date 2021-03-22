@@ -1,13 +1,13 @@
 .form {
     text-align: center;
-      
+
 
     &-txt {
         color: white;
         font-style: normal;
         font-weight: bold;
         font-size: 30px;
-        margin:55px 0 67px 0;
+        margin:70px 0 67px 0;
     }
     &-div {
         background-color:#1F3044;
@@ -17,17 +17,20 @@
      
         &-btnuser{
             border: 2px solid #00DDA3;
-            margin-bottom: 30px;
+            margin-bottom: 16px;
             color: white;
             padding: 15px 23px;
             width: 271px;
             height: 26px;
             font-size: 16px;
             border-radius: 4px;
-            &-errorMsg {
-                color: white;
-                font-size: 10px;
-            }
+            outline: none;
+           
+    }
+    .errorMsg {
+        color: white;
+        font-size: 15px;
+        margin-bottom: 6px;
     }
     ::placeholder {
         color: white;
@@ -40,7 +43,7 @@
             font-weight: normal;
             font-size: 15px;
             color: #FFFFFF;
-            margin-bottom: 67px;
+            margin-bottom: 104px;
              
             
         }

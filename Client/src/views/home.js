@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
 import Footer from '../components/Footer'
 import fotoperfil from '../images/fotoperfil.svg';
 import informacion from '../images/informacion.svg';
@@ -28,7 +29,29 @@ const breakPoints = [
 
 ];
 
+const baseurl = 'http://localhost:4000/api/user/info';
+const axios_jwt = {
+  headers: {
+     Authorization: "Bearer " + localStorage.getItem('currentJWT')
+  }
+}
+
 const Home = () => {
+
+  const [userdata,setUserData] = useState({});
+
+  useEffect(() => {
+    getUserData();
+    console.log(userdata)
+  }, []);
+
+
+  const getUserData = async () => {
+    const response = await axios.post(baseurl, { user: localStorage.getItem('currentUser')}, axios_jwt)
+    setUserData(response.data)
+  }
+
+
 
   let history1 = useHistory();
   const sendperiodic = () => {
@@ -48,12 +71,10 @@ const Home = () => {
   }
 
   const [active, setActive] = useState(false)
-  
+ 
   const toggle = () => {
     setActive(!active)
   }
-
-
 
   return (
     <div >
@@ -67,9 +88,9 @@ const Home = () => {
           <div className="encabezadoperfil-3">
             <img className="encabezadoperfil-img" src={fotoperfil} alt="foto perfil" />
             <div className="usuarioluzones">
-              <p className="encabezadoperfil-txt-1">¡Hola Clara! </p>
+              <p className="encabezadoperfil-txt-1">{userdata.name} </p>
               <div className="encabezadoperfil-3-3_1">
-                <p className="encabezadoperfil-txt-02">5.000 Luzones</p>
+                <p className="encabezadoperfil-txt-02">{userdata.luzonesTotal || 0} Luzones</p>
                 <button className="modalbtn" onClick={toggle}><img src={informacion} alt="" /></button>
                 <Modal active={active} toggle={toggle}>
 

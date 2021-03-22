@@ -43,7 +43,7 @@ class Login extends Component {
             })
             .then(response => {
 
-                if (response.token && response.token !== "") {
+                if (localStorage.getItem('currentUser', this.state.form.user) && localStorage.getItem('currentJWT', response.token)) {
                     cookies.set('user', this.state.form.user)
                     window.location.href = "./home"
 

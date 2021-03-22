@@ -130,7 +130,8 @@ export default function SignUp() {
           />
           <img className ="ojo"src={ojo} alt="mostrar contraseña"/>
 
-          {errors.password && (<p >{errors.password.message}</p>)}
+          {errors.password && 
+          (<p >{errors.password.message}</p>)}
 
 </div>
         
