@@ -15,7 +15,7 @@ import MyDonations from '../views/myDonations'
 import Community from '../views/community'
 import CommunityChallenges from '../views/communityChallenges'
 import CommunityRanking from '../views/communityRanking'
-
+import PrivateRoute from './privateroutes'
 
 
 const Routes = () => {
@@ -24,19 +24,19 @@ const Routes = () => {
       <Switch>
         <Route  exact path='/' component={Login}></Route>
         <Route  path='/signup' component={SignUp}></Route>
-        <Route  path="/home" component={Home}></Route>
-        <Route  path="/onedonation" component={OneDonation}></Route>
-        <Route  path="/payment" component={Payment}></Route>
-        <Route  path="/thanks" component={Thanks}></Route>
-        <Route  path="/roundup" component={RoundUp}></Route>
-        <Route  path="/percent" component={Percent}></Route>
-        <Route  path="/periodic" component={Periodic}></Route>
-        <Route  path="/luzon" component={Luzon}></Route> 
-        <Route  path="/luzonews" component={Luzonews}></Route> 
-        <Route  path="/mydonations" component={MyDonations}></Route> 
-        <Route  path="/community" component={Community}></Route> 
-        <Route  path="/challenges" component={CommunityChallenges}></Route> 
-        <Route  path="/ranking" component={CommunityRanking}></Route> 
+        <PrivateRoute  path="/home" component={Home}></PrivateRoute>
+        <PrivateRoute  path="/onedonation" component={OneDonation}></PrivateRoute>
+        <PrivateRoute  path="/payment" component={Payment}></PrivateRoute>
+        <PrivateRoute  path="/thanks" component={Thanks}></PrivateRoute>
+        <PrivateRoute  path="/roundup" component={RoundUp}></PrivateRoute>
+        <PrivateRoute  path="/percent" component={Percent}></PrivateRoute>
+        <PrivateRoute  path="/periodic" component={Periodic}></PrivateRoute>
+        <PrivateRoute  path="/luzon" component={Luzon}></PrivateRoute> 
+        <PrivateRoute  path="/luzonews" component={Luzonews}></PrivateRoute> 
+        <PrivateRoute  path="/mydonations" component={MyDonations}></PrivateRoute> 
+        <PrivateRoute  path="/community" component={Community}></PrivateRoute> 
+        <PrivateRoute  path="/challenges" component={CommunityChallenges}></PrivateRoute> 
+        <PrivateRoute  path="/ranking" component={CommunityRanking}></PrivateRoute> 
 
 
 

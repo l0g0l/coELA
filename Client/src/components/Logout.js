@@ -1,37 +1,37 @@
-import React, { Component } from 'react';
-import Cookies from 'universal-cookie'
+// import React, { Component } from 'react';
 
 
-const cookies = new Cookies();
 
-class Logout extends Component {
+// const cookies = new Cookies();
 
-    // cerrarSesion = () => {
-    //     cookies.remove('user');
-    //     window.location.href = "./"
-    // }
+// class Logout extends Component {
 
-    // componentDidMount() {
-    //     if (!cookies.get('user')) {
-    //         window.location.href = "/"
-    //     }
-    // }
+//     cerrarSesion = () => {
+//         cookies.remove('user');
+//         window.location.href = "./"
+//     }
 
-    render() {
+//     componentDidMount() {
+//         if (!cookies.get('user')) {
+//             window.location.href = "/"
+//         }
+//     }
+
+//     render() {
 
       
-        console.log('user: '+cookies.get('user'));
-        return (
-            <div className="container">
-                <div className="content">
-                     <div>
+//         console.log('user: '+cookies.get('user'));
+//         return (
+//             <div className="container">
+//                 <div className="content">
+//                      <div>
                     
 
-                        <button onClick={() => this.cerrarSesion()}> Cerrar sesión</button>
-                    </div> 
-                </div>
-            </div>
-        )
-    }
-}
-export default Logout
+//                         <button onClick={() => this.cerrarSesion()}> Cerrar sesión</button>
+//                     </div> 
+//                 </div>
+//             </div>
+//         )
+//     }
+// }
+// export default Logout
