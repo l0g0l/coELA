@@ -1,7 +1,6 @@
 import React from "react";
 import cx from "classnames";
 import Collapse from "@kunukn/react-collapse";
-import europeq from '../images/europeq.png';
 
 
 

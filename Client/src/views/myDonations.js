@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Footer from '../components/Footer';
 import ruedecita from '../images/ruedecita.svg';
 import fotoperfil from '../images/fotoperfil.svg';
@@ -13,10 +13,22 @@ import calendario from '../images/misdonaciones/calendario.svg';
 import movimientosbanco from '../images/misdonaciones/movimientosbanco.svg';
 import { useHistory } from 'react-router-dom';
 import Modal from '../components/Modal'
+import axios from 'axios';
+
 
 
 import '../styles/_popup.scss'
 import '../styles/_mydonations.scss'
+
+const baseurl = 'http://localhost:4000/api/user/info';
+const axios_jwt = {
+  headers: {
+     Authorization: "Bearer " + localStorage.getItem('currentJWT')
+  }
+}
+
+
+
 
 const MyDonations = () => {
   let history1 = useHistory();
@@ -26,6 +38,19 @@ const MyDonations = () => {
   const [active, setActive] = useState(false)
   const toggle = () => {
     setActive(!active)
+  }
+
+  const [userdata,setUserData] = useState({});
+
+  useEffect(() => {
+    getUserData();
+    console.log(userdata)
+  }, []);
+
+
+  const getUserData = async () => {
+    const response = await axios.post(baseurl, { user: localStorage.getItem('currentUser')}, axios_jwt)
+    setUserData(response.data)
   }
 
 
@@ -48,9 +73,9 @@ const MyDonations = () => {
           <div className="encabezadoperfil-3">
             <img className="encabezadoperfil-img" src={fotoperfil} alt="foto perfil" />
             <div className="usuarioluzones">
-              <p className="encabezadoperfil-txt-1">@clarasmith </p>
+              <p className="encabezadoperfil-txt-1">@{userdata.user}</p>
               <div className="encabezadoperfil-3-3_1">
-                <p className="encabezadoperfil-txt-02">5.000 Luzones</p>
+                <p className="encabezadoperfil-txt-02">{userdata.luzonesTotal || 0} Luzones</p>
                 <button className="modalbtn" onClick={toggle}><img src={informacion} alt="" /></button>
                 <Modal active={active} toggle={toggle}>
 

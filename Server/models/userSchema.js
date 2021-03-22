@@ -30,7 +30,8 @@ const userSchema = new Schema({
     },    
     luzonesTotal: {
         type: Number,
-        trim: true
+        trim: true,
+        default:0
     },
     luzonesLast: {
         type: Number,

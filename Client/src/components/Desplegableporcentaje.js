@@ -66,7 +66,7 @@ class Desplegableporcentaje extends Component {
             <div className="app__content-div1">
               <p className="app__content-div1-txt">Tu nómina anual</p>
               <input type="text" className="app__content-div1-inp" placeholder="12000" onChange={this.handleChangeNomina} defaultValue={this.state.nomina || null}/>
-              <input type="text" className="app__content-div1-inp" Value={this.props.multiplicador_value || null}/>
+              <input type="text" className="app__content-div1-inp" value={this.props.multiplicador_value || null}/>
             </div>
           
             <div className="app__content-div2">

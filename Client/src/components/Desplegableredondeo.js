@@ -33,7 +33,7 @@ class Desplegableredondeo extends React.Component {
   }
   
   render() {
-    const app__content_red = this.state.grey ? "greyButton" : "whiteButton";
+    // const app__content_red = this.state.grey ? "greyButton" : "whiteButton";
     return (
       <div>
         <div className="app">
