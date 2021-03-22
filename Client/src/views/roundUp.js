@@ -6,6 +6,9 @@ import Desplegableredondeo from '../components/Desplegableredondeo';
 import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
 import quesitoblanco from '../images/quesitoblanco.svg';
+import Modal from '../components/Modal'
+
+import '../styles/_popup.scss'
 
 import '../styles/_roundup.scss'
 
@@ -14,25 +17,30 @@ export class RoundUp extends Component {
     super(props);
 
     this.updateBotonesMultiplicador = this.updateBotonesMultiplicador.bind(this);
-    this.send = this.send.bind(this);
+    this.toggle = this.toggle.bind(this);
 
     this.state = {
-        botones_multiplicador: {},
-        siguiente_disabled: true
+      botones_multiplicador: {},
+      siguiente_disabled: true,
+      active: false
     }
+  }
+  toggle() {
+    this.setState({ active: !this.state.active })
+    // this.props.history.push('/roundup');
   }
 
   updateBotonesMultiplicador(newBotones) {
 
-    this.setState({botones_multiplicador: newBotones});
-  
-  }
-  
-  send = () => {
-    this.props.history.push('/roundup');
+    this.setState({ botones_multiplicador: newBotones });
+
   }
 
-  render () {
+  // send = () => {
+  //   this.props.history.push('/roundup');
+  // }
+
+  render() {
     let multiplicadorpulsado = false
     let siguiente_disabled = this.state.siguiente_disabled
     for (const btn in this.state.botones_multiplicador) {
@@ -51,9 +59,9 @@ export class RoundUp extends Component {
         </div>
 
         <div className="redondeo-btnmed">
-          <Botoncuadradopeq valor={'x1'} state={this.state.botones_multiplicador} set_state={this.updateBotonesMultiplicador} btn_id={1}/>
-          <Botoncuadradopeq valor={'x2'} state={this.state.botones_multiplicador} set_state={this.updateBotonesMultiplicador} btn_id={2}/>
-          <Botoncuadradopeq valor={'x3'} state={this.state.botones_multiplicador} set_state={this.updateBotonesMultiplicador} btn_id={3}/>
+          <Botoncuadradopeq valor={'x1'} state={this.state.botones_multiplicador} set_state={this.updateBotonesMultiplicador} btn_id={1} />
+          <Botoncuadradopeq valor={'x2'} state={this.state.botones_multiplicador} set_state={this.updateBotonesMultiplicador} btn_id={2} />
+          <Botoncuadradopeq valor={'x3'} state={this.state.botones_multiplicador} set_state={this.updateBotonesMultiplicador} btn_id={3} />
         </div>
         <div className="redondeo-txt-2">
           <p>Ejemplo: Si escoges x1 y compras un café de 0,80€ donarás 0,20€</p>
@@ -71,7 +79,11 @@ export class RoundUp extends Component {
 
         </div>
         <div className="btnend">
-          <Botonovalado pulsar={this.send} texto={'Guardar'} color="btn-ovalado-pink" disabled={siguiente_disabled} />
+          <Botonovalado func={this.toggle} texto={'Guardar'} color="btn-ovalado-pink" disabled={siguiente_disabled} />
+          <Modal active={this.state.active} toggle={this.toggle}>
+
+           <h1 className="popupmsg">Configuración guardadda correctamente</h1>
+          </Modal>
 
         </div>
 

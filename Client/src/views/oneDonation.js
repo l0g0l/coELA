@@ -35,11 +35,11 @@ export class OneDonation extends Component {
   }
 
   updateBotonesDinero(newBotones) {
-    console.log('NEW BOTONES')
-    console.log(newBotones)
+    // console.log('NEW BOTONES')
+    // console.log(newBotones)
     this.setState({botones_dinero: newBotones});
-    console.log(this.state.botones_dinero)
-    console.log('NEW BOTONES END')
+    // console.log(this.state.botones_dinero)
+    // console.log('NEW BOTONES END')
 
   }
 
@@ -53,7 +53,7 @@ export class OneDonation extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    console.log(`COMPONENTDIDUPDATE ONEDONATION`)
+    // console.log(`COMPONENTDIDUPDATE ONEDONATION`)
 
   }
     

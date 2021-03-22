@@ -42,7 +42,7 @@ const Home = () => {
 
   useEffect(() => {
     getUserData();
-    console.log(userdata)
+    // console.log(userdata)
   }, []);
 
 
@@ -91,7 +91,7 @@ const Home = () => {
               <p className="encabezadoperfil-txt-1">¡Hola {userdata.name}! </p>
               <div className="encabezadoperfil-3-3_1">
                 <p className="encabezadoperfil-txt-02">{userdata.luzonesTotal || 0} Luzones</p>
-                <button className="modalbtn" onClick={toggle}><img src={informacion} alt="" /></button>
+                <button className="modalbtn" onClick={toggle}><img src={informacion} alt="información" /></button>
                 <Modal active={active} toggle={toggle}>
 
                   <img className="imgpopup" src={popupok} alt="" />
