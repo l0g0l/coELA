@@ -15,25 +15,26 @@
         border-top-left-radius: 45px;
         border-top-right-radius: 45px;
      
-    &-btnuser{
-        border: 2px solid #00DDA3;
-        margin-bottom: 30px;
-        color: white;
-        padding: 15px 23px;
-        width: 271px;
-        height: 26px;
-        font-size: 16px;
-        border-radius: 4px;
+        &-btnuser{
+            border: 2px solid #00DDA3;
+            margin-bottom: 30px;
+            color: white;
+            padding: 15px 23px;
+            width: 271px;
+            height: 26px;
+            font-size: 16px;
+            border-radius: 4px;
+            &-errorMsg {
+                color: white;
+                font-size: 10px;
+            }
     }
     ::placeholder {
         color: white;
         font-size: 19px;
         text-align: left;
       }
-        &-error {
-            color: white;
-            font-size: 5px;
-        }
+      
         &-txt-1 {
             font-style: normal;
             font-weight: normal;
