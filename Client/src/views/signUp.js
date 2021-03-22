@@ -14,7 +14,7 @@ export default function SignUp() {
 
 
   const { register, handleSubmit, errors } = useForm();
-  const baseurl = 'http://localhost:4000/api/'
+  const baseurl = 'http://localhost:4000/api/user/signup'
 
   const onSubmit = async (data, e) => {
     e.target.reset();
@@ -52,12 +52,12 @@ export default function SignUp() {
             ref={register({
               required: {
                 value: true,
-                message: <p>Por favor introduzca su Nombre completo</p>
+                message: <p className="errorMsg">Por favor introduzca su Nombre completo</p>
               },
 
             })}
           />
-          {errors.name && <p className="errorMsg">{errors.name.message}</p>}
+          {errors.name && <p >{errors.name.message}</p>}
          
           <input
             type="text"
@@ -67,16 +67,16 @@ export default function SignUp() {
             ref={register({
               required: {
                 value: true,
-                message: <p>Por favor introduzca su DNI</p>
+                message: <p className="errorMsg">Por favor introduzca su DNI</p>
               },
               pattern: {
                 value1: /^(\d{8})([A-Z])$/,
                 value2:/^[XYZ]\d{7,8}[A-Z]$/,
-                message: <p>Por favor introduzca un DNI válido</p>
+                message: <p className="errorMsg">Por favor introduzca un DNI válido</p>
               },
             })}
           />
-          {errors.dni && <p className="errorMsg">{errors.dni.message}</p>}
+          {errors.dni && <p >{errors.dni.message}</p>}
 
           <input
             type="text"
@@ -86,15 +86,15 @@ export default function SignUp() {
             ref={register({
               required: {
                 value: true,
-                message: <p>Por favor introduzca un Email</p>
+                message: <p className="errorMsg">Por favor introduzca un Email</p>
               },
               pattern: {
                 value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
-                message: <p>Por favor introduzca un Email válido</p>
+                message: <p className="errorMsg">Por favor introduzca un Email válido</p>
               },
             })}
           />
-          {errors.email && <p className="errorMsg">{errors.email.message}</p>}
+          {errors.email && <p>{errors.email.message}</p>}
 
           <input
             type="text"
@@ -104,12 +104,12 @@ export default function SignUp() {
             ref={register({
               required: {
                 value: true,
-                message: <p>Por favor introduzca Usuario</p>
+                message: <p className="errorMsg">Por favor introduzca Usuario</p>
               },
 
             })}
           />
-          {errors.user && <p className="errorMsg">{errors.user.message}</p>}
+          {errors.user && <p >{errors.user.message}</p>}
           <div className="ojodentro">
           <input
             type="password"
@@ -119,20 +119,18 @@ export default function SignUp() {
             ref={register({
               required: {
                 value: true,
-                message: <p>Por favor introduzca una Password</p>
+                message: <p className="errorMsg">Por favor introduzca una Password</p>
               },
               pattern: {
                 value: /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/,
-                message: <p>Por favor introduzca una Password válida</p>
+                message: <p className="errorMsg">Por favor introduzca una Password válida</p>
               },
             })}
             
           />
           <img className ="ojo"src={ojo} alt="mostrar contraseña"/>
 
-          {errors.password && (
-            <p className="errorMsg">{errors.password.message}</p>
-          )}
+          {errors.password && (<p >{errors.password.message}</p>)}
 
 </div>
         

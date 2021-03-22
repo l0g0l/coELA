@@ -5,7 +5,6 @@ import Botoncuadradopeq from '../components/botones/Botoncuadradopeq';
 import Desplegableredondeo from '../components/Desplegableredondeo';
 import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
-import { useHistory } from 'react-router-dom';
 import quesitoblanco from '../images/quesitoblanco.svg';
 
 import '../styles/_roundup.scss'
