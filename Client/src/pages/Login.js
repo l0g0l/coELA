@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
-import Cookies from 'universal-cookie';
 import logo from '../images/logo.svg';
 import wifi from '../images/wifi.svg';
 import ojo from '../images/ojo.svg';
@@ -9,7 +8,7 @@ import ojo from '../images/ojo.svg';
 import '../styles/_login.scss';
 
 const baseurl = 'http://localhost:4000/api/user/signin';
-const cookies = new Cookies();
+
 
 
 
@@ -46,7 +45,6 @@ class Login extends Component {
                 if (response.token && response.token !== "") {
                     localStorage.setItem('currentUser', this.state.form.user)
                     localStorage.setItem('currentJWT', response.token)
-                    cookies.set('user', this.state.form.user)
                     window.location.href = "./home"
 
                 } else { alert("Usuario o Contraseña incorrecto") }
@@ -56,7 +54,7 @@ class Login extends Component {
             })
     }
     componentDidMount() {
-        if (cookies.get('user')) {
+        if (localStorage.getItem('currentJWT')) {
             window.location.href = "/home"
         }
     }
