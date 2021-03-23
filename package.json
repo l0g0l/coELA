@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/l0g0l/tripulaciones.git"
   },
+  "dependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
