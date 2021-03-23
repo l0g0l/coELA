@@ -51,6 +51,6 @@ curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/donat
 */
 
 // Arrancar la app
-app.listen(port)
-    
+app.listen(port, '0.0.0.0')
+
     console.log(`El servidor esta funcionando en el puerto ${port}`);
