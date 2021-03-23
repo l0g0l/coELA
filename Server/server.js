@@ -19,6 +19,8 @@ app.use( cors(opcionesCors) );
 // Puerto de la app
 const port = process.env.PORT || 4000;
 
+console.log(process.env)
+
 // Habilitar leer los valores de un body
 app.use( express.json() );
 app.use('/', express.static('./public/build/'))
@@ -50,4 +52,5 @@ curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/donat
 
 // Arrancar la app
 app.listen(port)
+    
     console.log(`El servidor esta funcionando en el puerto ${port}`);
