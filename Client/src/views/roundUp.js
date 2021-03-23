@@ -7,10 +7,12 @@ import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
 import quesitoblanco from '../images/quesitoblanco.svg';
 import Modal from '../components/Modal'
+import { Link } from 'react-router-dom';
+
 
 import '../styles/_popup.scss'
-
 import '../styles/_roundup.scss'
+
 
 export class RoundUp extends Component {
   constructor(props) {
@@ -81,8 +83,11 @@ export class RoundUp extends Component {
         <div className="btnend">
           <Botonovalado func={this.toggle} texto={'Guardar'} color="btn-ovalado-pink" disabled={siguiente_disabled} />
           <Modal active={this.state.active} toggle={this.toggle}>
+              <div className="modalconfig">
+              <p className="popupmsg">Tu configuración se ha guardado y <span>activado</span> correctamente</p>
+              <Link to='/home'><button>Ir a inicio</button></Link>
 
-           <h1 className="popupmsg">Configuración guardadda correctamente</h1>
+              </div>
           </Modal>
 
         </div>

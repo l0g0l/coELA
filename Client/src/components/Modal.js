@@ -5,7 +5,7 @@ import '../styles/_popup.scss'
 
 export class Modal extends Component {
     render() {
-        const { children, toggle, active } = this.props
+        const { children, toggle, active, close } = this.props
 
 
         return (
@@ -13,7 +13,10 @@ export class Modal extends Component {
                 {active && (
                     <div className='wrapper'>
                         <div className='window'>
-                            <button className='closeBtn' onClick={toggle}>X</button>
+                            {close ? <button className='closeBtn' onClick={toggle}>X</button>
+                            : undefined
+                        }
+                           
                             <div>{children}</div>
                         </div>
                         <div onClick={toggle} className='background'/>

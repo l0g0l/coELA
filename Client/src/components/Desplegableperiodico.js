@@ -60,12 +60,12 @@ class Desplegableperiodico extends React.Component {
           
             <div className="app__content-div2">
               <p className="app__content-div2-txtP">Donarás al año</p>
-              <input type="text" className="app__content-div2-inp" value={anual || 0}/>
+              <input type="text" className="app__content-div2-inp" value={anual || 0}/><p className="euroinput">€</p>
             </div>
 
             <div className="app__content-div3">
               <p className="app__content-div3-txtP">Te desgravarás</p>
-              <input type="text" className="app__content-div3-inp" value={desgrabacion || 0}/>
+              <input type="text" className="app__content-div3-inp" value={desgrabacion || 0}/><p className="euroinput euro2">€</p>
             </div>
 
             <div className="app__content-div4">

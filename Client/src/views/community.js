@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import wifi from '../images/wifi.svg';
 import graficomedia from '../images/graficomedia.svg';
 import metododonacion from '../images/metododonacion.svg';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import botondonar from '../images/botondonar.png'
 
 import '../styles/_community.scss'
@@ -26,9 +26,9 @@ function Community() {
                 </div>
 
                 <div className="encabezadocomun1txt2">
-                    <a href="./community"  className="encabezadocomun1txt2-2"><p>Gente como tú</p></a>
-                    <a href="./challenges" className="encabezadocomun1txt2-1"><p>Challenges</p></a>
-                    <a href="./ranking"className="encabezadocomun1txt2-1"><p>Ranking</p></a>
+                    <Link to="./community"  className="encabezadocomun1txt2-2"><p>Gente como tú</p></Link>
+                    <Link to="./challenges" className="encabezadocomun1txt2-1"><p>Challenges</p></Link>
+                    <Link to="./ranking"className="encabezadocomun1txt2-1"><p>Ranking</p></Link>
                 </div>
 
             </div>
@@ -37,16 +37,16 @@ function Community() {
         <p>Estadísticas de gente de la comunidad con tus mismas carácterísticas (edad, hijos, ingresos, gastos...)</p>
       </div>
       <div className="grafico1">
-        <img src={graficomedia} alt=""/>
+        <img src={graficomedia} alt="graficomedia"/>
         </div>
         <div className="grafico2"> 
-               <img  src={metododonacion} alt=""/>
+               <img  src={metododonacion} alt="metododonacion"/>
       </div>
 
 
       <div className="footerhome">
         <div className="footerhome-1">
-          <img onClick={sendonedonation} className="footerhome-img" src={botondonar} alt="" />
+          <img onClick={sendonedonation} className="footerhome-img" src={botondonar} alt="botondonar" />
 
         </div>
 

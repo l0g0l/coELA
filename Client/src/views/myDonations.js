@@ -77,7 +77,7 @@ const MyDonations = () => {
               <div className="encabezadoperfil-3-3_1">
                 <p className="encabezadoperfil-txt-02">{userdata.luzonesTotal || 0} Luzones</p>
                 <button className="modalbtn" onClick={toggle}><img src={informacion} alt="" /></button>
-                <Modal active={active} toggle={toggle}>
+                <Modal  close={true} active={active} toggle={toggle}>
 
                   <img className="imgpopup" src={popupok} alt="" />
                 </Modal>

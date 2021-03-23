@@ -1,16 +1,16 @@
 import React from 'react'
 import Images from '../images/images'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const Footer = () => {
   return(
     <footer className="footer">
       <ul>
-        <li><Link to={'/home'}> <img    src={Images.home.default} alt='Home'/>Inicio</Link></li>
-        <li><Link to={'/mydonations'}> <img src={Images.donations.default} alt='Donaciones' />Donaciones</Link></li>
-        <li><Link to={'/community'}> <img src={Images.comunity.default} alt='Comunidad' />Comunidad</Link></li>
-        <li><Link to={'/luzon'}> <img src={Images.luzon.default} alt='Luzón' />Luzón</Link></li>
+        <li><NavLink to={'/home'} activeClassName="footeractivate"><img src={Images.home.default} alt='Home'/>Inicio</NavLink></li>
+        <li><NavLink to={'/mydonations'} activeClassName="footeractivate"> <img src={Images.donations.default} alt='Donaciones' />Donaciones</NavLink></li>
+        <li><NavLink to={'/community'} activeClassName="footeractivate"> <img src={Images.comunity.default} alt='Comunidad' />Comunidad</NavLink></li>
+        <li><NavLink to={'/luzon'} activeClassName="footeractivate"> <img src={Images.luzon.default} alt='Luzón' />Luzón</NavLink></li>
 
       </ul>
     </footer>

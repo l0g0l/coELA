@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../components/Footer';
 import wifi from '../images/wifi.svg';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import botondonar from '../images/botondonar.png'
 import imagen1carr from '../images/carrusel/imagen1carr.svg';
 import imagen2carr from '../images/carrusel/imagen2carr.svg';
@@ -29,9 +29,9 @@ function CommunityChallenges() {
                 </div>
 
                 <div className="encabezadocomun1txt2">
-                    <a href="./community"  className="encabezadocomun1txt2-1"><p>Gente como tú</p></a>
-                    <a href="./challenges" className="encabezadocomun1txt2-2"><p>Challenges</p></a>
-                    <a href="./ranking"className="encabezadocomun1txt2-1"><p>Ranking</p></a>
+                    <Link to="./community"  className="encabezadocomun1txt2-2"><p>Gente como tú</p></Link>
+                    <Link to="./challenges" className="encabezadocomun1txt2-1"><p>Challenges</p></Link>
+                    <Link to="./ranking"className="encabezadocomun1txt2-1"><p>Ranking</p></Link>
                 </div>
 
             </div>

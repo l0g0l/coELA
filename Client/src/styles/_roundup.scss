@@ -39,8 +39,42 @@
 .btnend {
     text-align: center;
 }
-.popupmsg {
-    color: white;
-    font-size: 20px;
+// .popupmsg {
+//     color: white;
+//     font-size: 20px;
+//     text-align: center;
+ 
+// }
+.modalconfig {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    background-color:#1F3044;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    & .closeBtn {
+        display: none;
+    }
+    p{ 
+        color: white;
+        width: 80%;
+        span {
+            color: #00DDA3;
+        }
+    }
+    button {
+        background-color: #00DDA3;
+        color: #33404F;
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        width: 200px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 14px 8px;
+        margin-top: 30px;
+    }
 }

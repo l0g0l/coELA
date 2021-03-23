@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../components/Footer';
 import wifi from '../images/wifi.svg';
 import ranking2 from '../images/ranking2.png';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import botondonar from '../images/botondonar.png'
 import flor1 from '../images/flor1.svg';
 
@@ -24,9 +24,9 @@ export default function CommunityRanking() {
                 </div>
 
                 <div className="encabezadocomun1txt2">
-                    <a href="./community" className="encabezadocomun1txt2-1"><p>Gente como tú</p></a>
-                    <a href="./challenges" className="encabezadocomun1txt2-1"><p>Challenges</p></a>
-                    <a href="./ranking" className="encabezadocomun1txt2-2"><p>Ranking</p></a>
+                    <Link to="./community"  className="encabezadocomun1txt2-2"><p>Gente como tú</p></Link>
+                    <Link to="./challenges" className="encabezadocomun1txt2-1"><p>Challenges</p></Link>
+                    <Link to="./ranking"className="encabezadocomun1txt2-1"><p>Ranking</p></Link>
                 </div>
 
             </div>
