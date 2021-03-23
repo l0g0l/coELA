@@ -35,11 +35,11 @@ export class Percent extends Component {
 
 
   updateBotonesMultiplicador(newBotones) {
-    console.log('NEW BOTONES')
-    console.log(newBotones)
+    // console.log('NEW BOTONES')
+    // console.log(newBotones)
     this.setState({botones_multiplicador: newBotones});
-    console.log(this.state.multiplicador)
-    console.log('NEW BOTONES END')
+    // console.log(this.state.multiplicador)
+    // console.log('NEW BOTONES END')
 
   }
   
@@ -56,6 +56,7 @@ export class Percent extends Component {
     let multiplicador_aplicado = null
     let siguiente_disabled = this.state.siguiente_disabled
     for (const btn in this.state.botones_multiplicador) {
+      // eslint-disable-next-line
       if (this.state.botones_multiplicador[btn].clicked == true) {
         multiplicadorpulsado = true
         multiplicador_aplicado =  multiplicador[btn]

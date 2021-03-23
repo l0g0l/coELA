@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Footer from '../components/Footer';
 import Encabezadocomun from '../components/Encabezadocomun';
-import { useHistory } from 'react-router-dom';
 import Botoncuadradopeq from '../components/botones/Botoncuadradopeq';
 import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
@@ -37,11 +36,11 @@ export class Periodic extends Component {
   }
 
   updateBotonesMultiplicador(newBotones) {
-    console.log('NEW BOTONES')
-    console.log(newBotones)
+    // console.log('NEW BOTONES')
+    // console.log(newBotones)
     this.setState({botones_multiplicador: newBotones});
-    console.log(this.state.multiplicador)
-    console.log('NEW BOTONES END')
+    // console.log(this.state.multiplicador)
+    // console.log('NEW BOTONES END')
 
   }
 
@@ -67,6 +66,7 @@ export class Periodic extends Component {
     }
 
     for (const btn in this.state.botones_multiplicador) {
+      // eslint-disable-next-line
       if (this.state.botones_multiplicador[btn].clicked == true) {
         multiplicadorpulsado = true
         periodicidad_elegida = periodicidad[btn]

@@ -44,7 +44,8 @@ const MyDonations = () => {
 
   useEffect(() => {
     getUserData();
-    console.log(userdata)
+    
+    // console.log(userdata)
   }, []);
 
 

@@ -28,7 +28,7 @@ class Desplegableredondeo extends React.Component {
   };
   changeColor(id) {
     this.setState({[id]: this.state[id] === 'greyButton'? 'whiteButton':'greyButton'})
-    console.log(this.state[id]);
+    // console.log(this.state[id]);
 
   }
   

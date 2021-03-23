@@ -8,7 +8,7 @@ function Botoncuadradoxs({ texto, pulsar, img }) {
 
     const changecolor = () => {
         setColor(color === 'greyButton' ? 'whiteButton' : 'greyButton')
-        console.log(color);
+        // console.log(color);
 
     }
     return <div>

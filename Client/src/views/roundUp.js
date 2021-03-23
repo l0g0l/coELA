@@ -46,6 +46,7 @@ export class RoundUp extends Component {
     let multiplicadorpulsado = false
     let siguiente_disabled = this.state.siguiente_disabled
     for (const btn in this.state.botones_multiplicador) {
+      // eslint-disable-next-line
       if (this.state.botones_multiplicador[btn].clicked == true) {
         multiplicadorpulsado = true
       }

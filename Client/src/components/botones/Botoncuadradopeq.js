@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { useState } from 'react';
 
 
 
@@ -24,6 +23,7 @@ export class Botoncuadradopeq extends Component {
         
         for (const btn in boton_states) {
             // console.log(`LOL ${btn}`)
+            // eslint-disable-next-line
             if (btn != btn_id) {
                 boton_states[btn].clicked = false
             }
@@ -38,7 +38,7 @@ export class Botoncuadradopeq extends Component {
     }
 
     componentDidMount() {
-        // console.log(`COMPONENTDIDMOUNT ${this.props.btn_id}`)
+        // eslint-disable-next-line
         if (this.props.state[this.props.btn_id] && this.props.state[this.props.btn_id].clicked != !this.state.grey){
             this.setState({ grey: !this.props.state[this.props.btn_id].clicked})
         }
@@ -46,6 +46,7 @@ export class Botoncuadradopeq extends Component {
 
     componentDidUpdate(prevProps) {
         // console.log(`COMPONENTDIDUPDATE ${this.props.btn_id}`)
+        // eslint-disable-next-line
         if (this.props.state[this.props.btn_id] && this.props.state[this.props.btn_id].clicked != !this.state.grey){
             this.setState({ grey: !this.props.state[this.props.btn_id].clicked})
         }    

@@ -33,8 +33,8 @@ class Desplegableporcentaje extends Component {
     } else {
       desgrabacion = (150 * 80 / 100) + ((anual - 150) * 35 / 100)
     }
-    console.log(anual)
-    console.log(desgrabacion)
+    // console.log(anual)
+    // console.log(desgrabacion)
     return (
       <div className="app">
         <button

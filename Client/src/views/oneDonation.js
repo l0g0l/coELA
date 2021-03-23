@@ -1,7 +1,6 @@
-import React, {useState, useEffect, Component} from 'react'
+import React, {Component} from 'react'
 import Footer from '../components/Footer'
 import Flecha from '../components/Flecha';
-import { useHistory } from 'react-router-dom';
 import Botoncuadradogr from '../components/botones/Botoncuadradogr';
 import Botonovalado from '../components/botones/Botonovalado';
 import Botoncuadradomed from '../components/botones/Botoncuadradomed';
@@ -71,11 +70,13 @@ export class OneDonation extends Component {
     let metodopulsado = false
     let siguiente_disabled = this.state.siguiente_disabled
     for (const btn in this.state.botones_dinero) {
+      // eslint-disable-next-line
       if (this.state.botones_dinero[btn].clicked == true) {
         dineropulsado = true
       }
     }
     for (const btn in this.state.botones_metodo) {
+      // eslint-disable-next-line
       if (this.state.botones_metodo[btn].clicked == true) {
         metodopulsado = true
       }

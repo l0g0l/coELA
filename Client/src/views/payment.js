@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Botonovalado from '../components/botones/Botonovalado';
 import Footer from '../components/Footer'
 import flecha2 from '../images/flecha2.png';
@@ -31,7 +31,7 @@ const [userdata, setUserData] = useState({})
       const MakeDonation = async () => {
         const resultado = await axios.post(baseurl, { user: localStorage.getItem('currentUser')}, axios_jwt)
         setUserData(resultado.data);
-        console.log(resultado.data);
+        console.log(userdata);
        sendthanks()
       }
   
@@ -41,10 +41,10 @@ const [userdata, setUserData] = useState({})
         <div className="containerpayment">
             <div className="encabezadocomun" >
 
-                <img className="encabezado-wifi" src={wifi} alt="" />
+                <img className="encabezado-wifi" src={wifi} alt="wifi" />
 
                 <div className="encabezado-2">
-                    <a href="./onedonation"><img  className="flecha"  src={flecha2} alt=""/></a>  
+                    <a href="./onedonation"><img  className="flecha"  src={flecha2} alt="flecha"/></a>  
 
                     <p className="encabezado-txt-1">Hacer una donación ahora</p>
                 </div>
@@ -53,7 +53,7 @@ const [userdata, setUserData] = useState({})
             <p className="txt-tarjeta">Vas a donar</p>
 
             <div className="encabezadocomun-txt">
-            <img className="botongr" src={botoncuadradogr} alt="" />
+            <img className="botongr" src={botoncuadradogr} alt="botoncuadradogr" />
 
             </div>
             <p className="txt-tarjeta-1">Introduce tu tarjeta bancaria</p>
@@ -62,7 +62,7 @@ const [userdata, setUserData] = useState({})
                 <p className="tarjeta-input-txt">Titular</p>
                 <div className="tarjeta-input">
                     <input type="text" className="tarjeta-input-txt-1" placeholder="Clara Smith García" />
-                    <img className="tarjeta-input-mastercard" src={mastercard} />
+                    <img className="tarjeta-input-mastercard" src={mastercard} alt="mastercard" />
                 </div>
 
                 <div className="div">

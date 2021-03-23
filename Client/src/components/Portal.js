@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 
 const portalRoot = document.getElementById('portal')
 
 
-export class Portal extends Component {
+export class Portal extends React.Component {
 constructor(props) {
     super(props)
 

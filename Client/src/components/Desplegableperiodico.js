@@ -14,7 +14,7 @@ class Desplegableperiodico extends React.Component {
   };
 
   render() {
-    console.log(this.props.periodicidad.value)
+    // console.log(this.props.periodicidad.value)
     let anual = this.props.periodicidad.value * this.props.cantidad
     let desgrabacion = 0
     if (anual <= 150) {
