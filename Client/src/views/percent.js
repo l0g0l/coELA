@@ -7,6 +7,8 @@ import DesplegableOptions from '../components/DesplegableOptions';
 import Botonovalado from '../components/botones/Botonovalado';
 import porcentajeblanco from '../images/porcentajeblanco.svg';
 import Desplegableporcentaje from '../components/Desplegableporcentaje';
+import Modal from '../components/Modal'
+import { Link } from 'react-router-dom';
 
 import '../styles/_percent.scss'
 
@@ -17,14 +19,20 @@ export class Percent extends Component {
     super(props);
 
     this.updateBotonesMultiplicador = this.updateBotonesMultiplicador.bind(this);
-    this.send = this.send.bind(this);
+    this.toggle = this.toggle.bind(this);
 
     this.state = {
         botones_multiplicador: {},
-        siguiente_disabled: true
+        siguiente_disabled: true,
+        active: false
     }
   }
  
+  toggle() {
+    this.setState({ active: !this.state.active })
+    // this.props.history.push('/roundup');
+  }
+
 
   updateBotonesMultiplicador(newBotones) {
     console.log('NEW BOTONES')
@@ -35,10 +43,6 @@ export class Percent extends Component {
 
   }
   
-  send = () => {
-    this.props.history.push('/percent');
-  }
-
  
 
 
@@ -94,8 +98,14 @@ export class Percent extends Component {
       <div className="btnguardar">
 
         <div className="btnguardar-1">
-          <Botonovalado pulsar={this.send} func={this.percent} texto={'Guardar'} color='btn-ovalado-pink' disabled={siguiente_disabled}/>
+          <Botonovalado func={this.toggle} texto={'Guardar'} color='btn-ovalado-pink' disabled={siguiente_disabled}/>
+          <Modal active={this.state.active} toggle={this.toggle}>
+              <div className="modalconfig">
+              <p className="popupmsg">Tu configuración se ha guardado y <span>activado</span> correctamente</p>
+              <Link to='/home'><button>Ir a inicio</button></Link>
 
+              </div>
+          </Modal>
         </div>
 
         <div >

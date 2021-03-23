@@ -27,7 +27,8 @@
     
         img {
           width: 40px;
-          // filter: invert(100%);
+          position: relative;
+          filter: brightness(0) invert(1);
         }
       }
     }
@@ -35,4 +36,10 @@
   .filtered {
     filter: hue-rotate(-180deg);
   }
+  .footeractivate {
+    color: #00DDA3 !important;
+    img {
+      filter: brightness(1) invert(0) !important;
+    }
+   } 
   

@@ -65,18 +65,18 @@ class Desplegableporcentaje extends Component {
           
             <div className="app__content-div1">
               <p className="app__content-div1-txt">Tu nómina anual</p>
-              <input type="text" className="app__content-div1-inp" placeholder="12000" onChange={this.handleChangeNomina} defaultValue={this.state.nomina || null}/>
-              <input type="text" className="app__content-div1-inp" value={this.props.multiplicador_value || null}/>
+              <input type="text" className="app__content-div1-inp" placeholder="12000" onChange={this.handleChangeNomina} defaultValue={this.state.nomina || null}/><p className="euroinput">€</p>
+              <input type="text" className="app__content-div1-inp" value={this.props.multiplicador_value || null}/><p className="euroinput">%</p>
             </div>
           
             <div className="app__content-div2">
               <p className="app__content-div2-txt">Donarás al año</p>
-              <input type="text" className="app__content-div2-inp" value={anual || 0}/>
+              <input type="text" className="app__content-div2-inp" value={anual || 0}/><p className="euroinput">€</p>
             </div>
 
             <div className="app__content-div3">
               <p className="app__content-div3-txt">Te desgravarás</p>
-              <input type="text" className="app__content-div3-inp" value={desgrabacion || 0}/>
+              <input type="text" className="app__content-div3-inp" value={desgrabacion || 0}/><p className="euroinput euro2">€</p>
             </div>
 
             <div className="app__content-div4">

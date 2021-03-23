@@ -9,6 +9,8 @@ import Desplegableperiodico from '../components/Desplegableperiodico'
 import flor1 from '../images/flor1.svg';
 import euro from '../images/euro.svg';
 import calendarioblanco from '../images/calendarioblanco.svg';
+import Modal from '../components/Modal'
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,13 +22,18 @@ export class Periodic extends Component {
 
     this.updateBotonesMultiplicador = this.updateBotonesMultiplicador.bind(this);
     this.handleChangeCantidad = this.handleChangeCantidad.bind(this)
-    this.send = this.send.bind(this);
+    this.toggle = this.toggle.bind(this);
 
     this.state = {
         botones_multiplicador: {},
         siguiente_disabled: true,
         cantidad: 1,
+        active: false
     }
+  }
+  toggle() {
+    this.setState({ active: !this.state.active })
+    // this.props.history.push('/roundup');
   }
 
   updateBotonesMultiplicador(newBotones) {
@@ -105,7 +112,14 @@ export class Periodic extends Component {
         <div className="btnguardar">
 
           <div className="btnguardar-1">
-            <Botonovalado pulsar={this.send} texto={'Guardar'} color='btn-ovalado-pink' disabled={siguiente_disabled}/>
+            <Botonovalado func={this.toggle} texto={'Guardar'} color='btn-ovalado-pink' disabled={siguiente_disabled}/>
+            <Modal active={this.state.active} toggle={this.toggle}>
+              <div className="modalconfig">
+              <p className="popupmsg">Tu configuración se ha guardado y <span>activado</span> correctamente</p>
+              <Link to='/home'><button>Ir a inicio</button></Link>
+
+              </div>
+          </Modal>
 
           </div>
 

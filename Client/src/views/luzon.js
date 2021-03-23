@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import botondonar from '../images/botondonar.png'
 import wifi from '../images/wifi.svg';
 import comonosfinanciamos from '../images/comonosfinanciamos.svg';
@@ -27,8 +27,8 @@ const Luzon = () => {
         </div>
 
         <div className="encabezadocomun1txt2">
-        <a href="./luzon"  className="encabezadocomun1txt2-2"><p>La Fundación</p></a>
-        <a href="./luzonews"  className="encabezadocomun1txt2-1"><p>Noticias</p></a>
+        <Link to="./luzon"  className="encabezadocomun1txt2-2"><p>La Fundación</p></Link>
+        <Link to="./luzonews"  className="encabezadocomun1txt2-1"><p>Noticias</p></Link>
         </div>
 
 

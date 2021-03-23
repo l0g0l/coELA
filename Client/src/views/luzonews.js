@@ -1,6 +1,5 @@
 import React from 'react';
 import Footer from '../components/Footer';
-// import Logout from '../components/Logout';
     import wifi from '../images/wifi.svg';
 import noticia1 from '../images/noticias/noticia1.svg';
 import noticia2 from '../images/noticias/noticia2.svg';
@@ -8,7 +7,7 @@ import noticia3 from '../images/noticias/noticia3.svg';
 import noticia4 from '../images/noticias/noticia4.svg';
 import noticia5 from '../images/noticias/noticia5.svg';
 import noticia6 from '../images/noticias/noticia6.svg';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import botondonar from '../images/botondonar.png'
 
 import '../styles/_luzonews.scss'
@@ -30,8 +29,8 @@ const Luzonews = () => {
         </div>
 
         <div className="encabezadocomun1txt2">
-        <a href="./luzon"  className="encabezadocomun1txt2-1"><p>La Fundación</p></a>
-        <a href="./luzonews"  className="encabezadocomun1txt2-2"><p>Noticias</p></a>
+        <Link to="./luzon"  className="encabezadocomun1txt2-2"><p>La Fundación</p></Link>
+        <Link to="./luzonews"  className="encabezadocomun1txt2-1"><p>Noticias</p></Link>
         </div>
 
         </div>
