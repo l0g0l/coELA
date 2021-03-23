@@ -1,6 +1,6 @@
 import React from 'react'
 import Images from '../images/images'
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const Footer = () => {
