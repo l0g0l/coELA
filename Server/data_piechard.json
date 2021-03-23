@@ -1,0 +1,20 @@
+[
+    {
+      "id": "nomina",
+      "label": "Nomina",
+      "value": 17,
+      "color": "rgb(217, 65, 38)"
+    },
+    {
+      "id": "periodica",
+      "label": "Periódica",
+      "value": 25,
+      "color": "rgb(187, 217, 38)"
+    },
+    {
+      "id": "redondeo",
+      "label": "Redondeo",
+      "value": 58,
+      "color": "rgb(38, 190, 217)"
+    }
+  ]

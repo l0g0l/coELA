@@ -1,0 +1,32 @@
+[
+    {
+        "month": "Sept.",
+        "donation": 17.8,
+        "donationColor": "hsl(155, 99%, 58%)"
+    },
+    {
+        "month": "Oct.",
+        "donation": 16.2,
+        "donationColor": "hsl(155, 99%, 58%)"
+    },
+    {
+        "month": "Nov.",
+        "donation": 18.1,
+        "donationColor": "hsl(155, 99%, 58%)"
+    },
+    {
+        "month": "Dic.",
+        "donation": 22.1,
+        "donationColor": "hsl(155, 99%, 58%)"
+    },
+    {
+        "month": "Ene.",
+        "donation": 14.5,
+        "donationColor": "hsl(155, 99%, 58%)"
+    },
+    {
+        "month": "Feb.",
+        "donation": 15.8,
+        "donationColor": "hsl(155, 99%, 58%)"
+    }
+]
