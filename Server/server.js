@@ -17,7 +17,7 @@ const opcionesCors = {
 app.use( cors(opcionesCors) );
 
 // Puerto de la app
-const port = process.env.PORT || 4000;
+const port = process.env.BACK_PORT || 4000;
 
 // Habilitar leer los valores de un body
 app.use( express.json() );
