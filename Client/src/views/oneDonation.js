@@ -87,7 +87,7 @@ export class OneDonation extends Component {
     return (
       <div className="containeronedonation">
 
-        <div className="encabezado" >
+        <div className="encabezadocomun" >
 
           <img className="encabezado-wifi" src={wifi} alt="" />
 
