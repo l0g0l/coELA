@@ -20,7 +20,7 @@ import axios from 'axios';
 import '../styles/_popup.scss'
 import '../styles/_mydonations.scss'
 
-const baseurl = 'http://localhost:4000/api/user/info';
+const baseurl = '/api/user/info';
 const axios_jwt = {
   headers: {
      Authorization: "Bearer " + localStorage.getItem('currentJWT')

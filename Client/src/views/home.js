@@ -29,7 +29,7 @@ const breakPoints = [
 
 ];
 
-const baseurl = 'http://localhost:4000/api/user/info';
+const baseurl = '/api/user/info';
 const axios_jwt = {
   headers: {
      Authorization: "Bearer " + localStorage.getItem('currentJWT')

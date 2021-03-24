@@ -7,7 +7,7 @@ import ojo from '../images/ojo.svg';
 
 import '../styles/_login.scss';
 
-const baseurl = 'https://still-shore-32750.herokuapp.com/api/user/signin';
+const baseurl = '/api/user/signin';
 
 class Login extends Component {
     state = {

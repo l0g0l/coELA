@@ -14,7 +14,7 @@ export default function SignUp() {
 
 
   const { register, handleSubmit, errors } = useForm();
-  const baseurl = 'http://localhost:4000/api/user/signup'
+  const baseurl = '/api/user/signup'
 
   const onSubmit = async (data, e) => {
     e.target.reset();

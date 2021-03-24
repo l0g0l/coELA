@@ -11,7 +11,7 @@ import botoncuadradogr from '../images/botoncuadradogr.svg';
 
 import '../styles/_payment.scss'
 
-const baseurl = 'http://localhost:4000/api/donation/create';
+const baseurl = '/api/donation/create';
 const axios_jwt = {
   headers: {
      Authorization: "Bearer " + localStorage.getItem('currentJWT')
