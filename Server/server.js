@@ -31,7 +31,7 @@ app.use('/api/user', require('./routes/user'));
 app.use('/api/donation', require('./routes/donations'));
 app.use('/api/plot', require('./routes/plot'));
 app.get('*', (req,res)=>{
-    res.sendFile(path.join(__dirname+'/../Client/public/build/index.html'))
+    res.sendFile(path.join(__dirname+'/../Client/build/index.html'))
 });
 /* curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/donation/info -d '{"user": "r0j4z0"}'
 curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/donation/create -d '{"user": "r0j4z0"}'
