@@ -1,0 +1,14 @@
+cuando hagais cambios en la parte de react
+desde tripulaciones/Client ejecutar:
+npm run build
+
+Para acceder a la web ahora solo se usa el nodejs, con lo cual tenis que hacer un npm start en la carpeta tripulaciones/Server y acceder por el puerto 4001
+
+http://localhost:4001
+
+Para ver los logs de nodejs heroku:
+
+heroku logs --tail
+
+
+

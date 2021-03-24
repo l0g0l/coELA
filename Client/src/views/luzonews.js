@@ -29,8 +29,8 @@ const Luzonews = () => {
         </div>
 
         <div className="encabezadocomun1txt2">
-        <Link to="./luzon"  className="encabezadocomun1txt2-2"><p>La Fundación</p></Link>
-        <Link to="./luzonews"  className="encabezadocomun1txt2-1"><p>Noticias</p></Link>
+        <Link to="./luzon"  className="encabezadocomun1txt2-1"><p>La Fundación</p></Link>
+        <Link to="./luzonews"  className="encabezadocomun1txt2-2"><p>Noticias</p></Link>
         </div>
 
         </div>

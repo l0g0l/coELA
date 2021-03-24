@@ -77,7 +77,7 @@ const Home = () => {
   }
 
   return (
-    <div >
+    <div className="containerhome">
       <div className="encabezadoperfil" >
         <img src={wifi} alt="" />
         <div className="encabezadoperfil-1">

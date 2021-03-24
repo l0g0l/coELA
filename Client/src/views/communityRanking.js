@@ -24,9 +24,9 @@ export default function CommunityRanking() {
                 </div>
 
                 <div className="encabezadocomun1txt2">
-                    <Link to="./community"  className="encabezadocomun1txt2-2"><p>Gente como tú</p></Link>
+                    <Link to="./community"  className="encabezadocomun1txt2-1"><p>Gente como tú</p></Link>
                     <Link to="./challenges" className="encabezadocomun1txt2-1"><p>Challenges</p></Link>
-                    <Link to="./ranking"className="encabezadocomun1txt2-1"><p>Ranking</p></Link>
+                    <Link to="./ranking"className="encabezadocomun1txt2-2"><p>Ranking</p></Link>
                 </div>
 
             </div>
