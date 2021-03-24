@@ -23,15 +23,17 @@ console.log(process.env)
 
 // Habilitar leer los valores de un body
 app.use( express.json() );
-app.use('/', express.static('./public/build/'))
+//app.use('/', express.static('./public/build/'))
 app.use(morgan('tiny'))
 app.disable('etag');
 
 app.use('/api/user', require('./routes/user'));
 app.use('/api/donation', require('./routes/donations'));
 app.use('/api/plot', require('./routes/plot'));
+console.log(__dirname+'/../Client/build/index.html')
+app.use(express.static(path.resolve(__dirname, '../Client/build')))
 app.get('*', (req,res)=>{
-    res.sendFile(path.join(__dirname+'/../Client/build/index.html'))
+    res.sendFile(path.resolve(__dirname, '../Client/build', 'index.html'))
 });
 /* curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/donation/info -d '{"user": "r0j4z0"}'
 curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/donation/create -d '{"user": "r0j4z0"}'
