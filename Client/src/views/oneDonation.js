@@ -85,7 +85,7 @@ export class OneDonation extends Component {
       siguiente_disabled = false
     }
     return (
-      <div>
+      <div className="containeronedonation">
 
         <div className="encabezado" >
 
