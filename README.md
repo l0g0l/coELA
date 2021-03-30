@@ -32,8 +32,8 @@ Despliegue
 
 Preview  
 ---  
-![Pantalla login coELA](/home/lucia/Documentos/Bootcamp/tripulaciones/Client/src/images/coELA.png)
-![Pantalla home coELA](/home/lucia/Documentos/Bootcamp/tripulaciones/Client/src/images/coELA-home.png)  
+![coELA](https://user-images.githubusercontent.com/74728521/113062535-2ffa3680-91b4-11eb-821a-fd3e3294c635.png)
+![coELA-home](https://user-images.githubusercontent.com/74728521/113062538-3092cd00-91b4-11eb-8d87-e45452119aac.png)
 
 Tecnologías  
 ---  
@@ -43,3 +43,6 @@ Las tecnologías utilizadas en este proyecto han sido:
 3. Node js (Framework Express)
 4. BBDD Mongodb
 5. JWT
+6. Heroku (despliegue)
+
+
