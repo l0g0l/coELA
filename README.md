@@ -23,11 +23,20 @@ Comenzando
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
 *Pre-requisitos*
-Node js V.10.19.0
-MongoDB shell version v4.4.3
+Node js v10.19.0  
+MongoDB shell version v4.4.3  
+npm v7.6.0  
+Visual Studio Code
 
 
-*Instalación*
+*Instalación y arranque*  
+git clone  
+cd Server  
+npm i  
+npm start  
+cd Client  
+npm i  
+npm start  
 
 Despliegue  
 ---  
