@@ -22,9 +22,9 @@ Comenzando
 ---  
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
-##Pre-requisitos
+*Pre-requisitos*
 
-##Instalación
+*Instalación*
 
 Despliegue  
 ---  
@@ -32,5 +32,14 @@ Despliegue
 
 Preview  
 ---  
-![Pantalla login coELA](/home/lucia/Documentos/Bootcamp/tripulaciones/Client/src/images/coELA.jpg)
-![Pantalla home coELA](/home/lucia/Documentos/Bootcamp/tripulaciones/Client/src/images/coELA-home.jpg)
+![Pantalla login coELA](/home/lucia/Documentos/Bootcamp/tripulaciones/Client/src/images/coELA.png)
+![Pantalla home coELA](/home/lucia/Documentos/Bootcamp/tripulaciones/Client/src/images/coELA-home.png)  
+
+Tecnologías  
+---  
+Las tecnologías utilizadas en este proyecto han sido:  
+1. React js
+2. React Form Hooks
+3. Node js (Framework Express)
+4. BBDD Mongodb
+5. JWT
