@@ -5,11 +5,11 @@ Proyecto fin de Bootcamp,cuyo cliente real ha sido al Fundación Luzón (contra 
 
 Aplicación Web que le permite a la asociación facilitar la manera que tienen sus asociados/simpatizantes de donar permitiendo desde hacer donaciones instantáneas, hasta integrar la aplicación con su entidad bancaria para que las donaciones se realicen en base a distintos eventos/indicadores.
 
-Esas donaciones se confirgurarán en el perfil del usuario pudiendo ser de 3 tipos: 
--Redondeo en sus compras, pudiendo categorizar el tipo de compra, días de la semana y transacciones máximas al día
--Porcentaje, en este caso de su nómina, pudiendo elegir el tanto por ciento que desea donar
--Periódica, pudiendo elegir la cantidad que desee y cada cuánto tiempo querría hacer la donación
-Existen calculadoras de desgravación las cuales le informan de, según la cantidad donada, cuánto podría desgravarse
+Esas donaciones se confirgurarán en el perfil del usuario pudiendo ser de 3 tipos:  
+-Redondeo en sus compras, pudiendo categorizar el tipo de compra, días de la semana y transacciones máximas al día  
+-Porcentaje, en este caso de su nómina, pudiendo elegir el tanto por ciento que desea donar  
+-Periódica, pudiendo elegir la cantidad que desee y cada cuánto tiempo querría hacer la donación  
+Existen calculadoras de desgravación las cuales le informan de, según la cantidad donada, cuánto podría desgravarse  
 
 A su vez, existe la posibilidad de la donación instantánea, pudiendo elegir la cantidad y el método de pago.
 
