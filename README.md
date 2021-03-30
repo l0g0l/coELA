@@ -21,3 +21,16 @@ La fase 2 del proyecto sería la implementación en una aplicación bancaria, si
 Comenzando  
 ---  
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
+
+##Pre-requisitos
+
+##Instalación
+
+Despliegue  
+---  
+[coELA](https://coela.herokuapp.com/)
+
+Preview  
+---  
+![Pantalla login coELA](/home/lucia/Documentos/Bootcamp/tripulaciones/Client/src/images/coELA.jpg)
+![Pantalla home coELA](/home/lucia/Documentos/Bootcamp/tripulaciones/Client/src/images/coELA-home.jpg)
