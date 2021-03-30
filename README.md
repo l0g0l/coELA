@@ -1,28 +1,18 @@
-RUTA TRABAJO GIT
-1.- Abrimos VS 
-2.- Abro rama y entro en ella: git checkout -b (nombre) DEV
-	2.1.- Solo crear rama: git branch 
-  2.2.- Para cambiar de rama a main: git checkout main
-3.- Trabajar y pushear con frecuencia haciendo commits muy descriptivos 
-	3.1.- git add -A, git commit -m “xxxxx”, git push origin (nombre de rama (sprint-DEV) NUNCA A MAIN, solo se hará un push a MAIN cuando haya que entregar a cliente
-4.- Antes de unir mi rama a DEV SIEMPRE hacer un pull request (es mucho más fácil solucionar conflicto en un pull request que es un push ya subido a DEV) 
-5.- Hacemos pull request, si se aceptan los cambios se fusiona directamente a DEV remoto. SIEMPRE borrar la rama mergeada en el repo y en local: git branch -d 
-    (nombre de la rama) 
-6.- git checkout DEV
-7.- git pull origin DEV 
-    merge upstream/dev
-8.- git merge sprint X (desde la rama DEV)
-    solucionar conflictos
-9.- git add -A
-10.- git commit -m "solución conflictos # que se correspondan con el sprint X"
-11.- git push origin DEV
 
+#coELA
 
-MARIOLA
-pull request a Lucia si acepta, Mariola se pasa a DEV 
-git checkout DEV 
-git fetch upstream 
-git merge upstream/DEV 
-git push origin DEV 
-git checkout a rama (client o server) 
-git merge DEV
+Proyecto fin de Bootcamp,cuyo cliente real ha sido al Fundación Luzón (contra el ELA). 
+
+Aplicación Web que le permite a la asociación facilitar la manera que tienen sus asociados/simpatizantes de donar permitiendo desde hacer donaciones instantáneas, hasta integrar la aplicación con su entidad bancaria para que las donaciones se realicen en base a distintos eventos/indicadores.
+
+Esas donaciones se confirgurarán en el perfil del usuario pudiendo ser de 3 tipos: 
+-Redondeo en sus compras, pudiendo categorizar el tipo de compra, días de la semana y transacciones máximas al día
+-Porcentaje, en este caso de su nómina, pudiendo elegir el tanto por ciento que desea donar
+-Periódica, pudiendo elegir la cantidad que desee y cada cuánto tiempo querría hacer la donación
+Existen calculadoras de desgravación las cuales le informan de, según la cantidad donada, cuánto podría desgravarse
+
+A su vez, existe la posibilidad de la donación instantánea, pudiendo elegir la cantidad y el método de pago.
+
+En cualquiera de los tipos de donación elegida, el usuario se verá recompensado con "Luzones", puntos que se le otorgan por cada transacción que realice, incentivándole mediante esos Luzones a que consiga insignias de diferentes tipos en un ranking virtual, donde se premia el número de donaciones, no el dinero aportado.
+
+La fase 2 del proyecto sería la implementación en una aplicación bancaria, sin olvidar pequeños aportes que se podrían incluir en la web de la Fundación.
