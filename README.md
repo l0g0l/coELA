@@ -1,5 +1,5 @@
 
-#coELA  
+coELA  
 ---  
 
 Proyecto fin de Bootcamp,cuyo cliente real ha sido la Fundación Luzón (contra el ELA). 
@@ -16,7 +16,7 @@ A su vez, existe la posibilidad de la donación instantánea, pudiendo elegir la
 
 En cualquiera de los tipos de donación elegida, el usuario se verá recompensado con "Luzones", puntos que se le otorgan por cada transacción que realice, incentivándole mediante esos Luzones a que consiga insignias de diferentes tipos en un ranking virtual, donde se premia el número de donaciones, no el dinero aportado.
 
-La fase 2 del proyecto sería la implementación en una aplicación bancaria, sin olvidar pequeños aportes que se podrían incluir en la web de la Fundación.  
+La fase 2 del proyecto sería la implementación en una aplicación bancaria, sin olvidar pequeños aportes que se podrían incluir en la web de la Fundación.
+Comenzando  
 ---  
-#Comenzando rocket
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
