@@ -7,6 +7,7 @@ import '../styles/style.scss'
 const Layout = ({ children }) => {
   return (
     <>
+    
       <main>{children}</main>
      
     </>

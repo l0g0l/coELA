@@ -33,12 +33,12 @@ export class Percent extends Component {
     // this.props.history.push('/roundup');
   }
 
-
+// actualiza el state de percent, newBotones es la linea 35 del componente (boton-states)
   updateBotonesMultiplicador(newBotones) {
     // console.log('NEW BOTONES')
-    // console.log(newBotones)
+    console.log(newBotones)
     this.setState({botones_multiplicador: newBotones});
-    // console.log(this.state.multiplicador)
+    
     // console.log('NEW BOTONES END')
 
   }

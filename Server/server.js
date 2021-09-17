@@ -25,11 +25,11 @@ console.log(process.env)
 app.use( express.json() );
 //app.use('/', express.static('./public/build/'))
 app.use(morgan('tiny'))
-app.disable('etag');
+app.disable('etag'); // desactivar el caché
 
 app.use('/api/user', require('./routes/user'));
 app.use('/api/donation', require('./routes/donations'));
-app.use('/api/plot', require('./routes/plot'));
+app.use('/api/plot', require('./routes/plot')); // llamada para pintar los gráficos
 console.log(__dirname+'/../Client/build/index.html')
 app.use(express.static(path.resolve(__dirname, '../Client/build')))
 app.get('*', (req,res)=>{
@@ -53,6 +53,6 @@ curl -H 'Content-Type: application/json' -X POST http://localhost:4000/api/donat
 */
 
 // Arrancar la app
-app.listen(port, '0.0.0.0')
+app.listen(port, '0.0.0.0') // para que se cargue en cualquier IP libre
 
     console.log(`El servidor esta funcionando en el puerto ${port}`);
